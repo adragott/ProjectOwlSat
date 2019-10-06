@@ -1,4 +1,3 @@
 (fp_lib_table
-  (lib (name fp)(type Legacy)(uri ${KIPRJMOD}/fp.pretty)(options "")(descr ""))
-  (lib (name MS561101BA03-50)(type Legacy)(uri ${KIPRJMOD}/fp.pretty/MS561101BA03-50.mod)(options "")(descr ""))
+  (lib (name MS561101BA03-50)(type Legacy)(uri ${KIPRJMOD}/fp/MS561101BA03-50.mod)(options "")(descr ""))
 )

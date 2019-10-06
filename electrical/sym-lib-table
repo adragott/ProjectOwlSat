@@ -3,4 +3,5 @@
   (lib (name 2041021-4)(type Legacy)(uri ${KIPRJMOD}/lib/2041021-4.lib)(options "")(descr "SD Card Cage"))
   (lib (name TwoMonth_ProjectFlyingPenguin-rescue)(type Legacy)(uri ${KIPRJMOD}/TwoMonth_ProjectFlyingPenguin-rescue.lib)(options "")(descr ""))
   (lib (name NX3008PBKS_115)(type Legacy)(uri ${KIPRJMOD}/lib/NX3008PBKS_115.lib)(options "")(descr ""))
+  (lib (name FlyingPenguin)(type Legacy)(uri ${KIPRJMOD}/FlyingPenguin.lib)(options "")(descr ""))
 )
