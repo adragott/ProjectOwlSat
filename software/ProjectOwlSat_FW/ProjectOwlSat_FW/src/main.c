@@ -37,3 +37,8 @@ int main (void)
 {
 	system_init();
 }
+
+void owlsat_init(void)
+{
+
+}

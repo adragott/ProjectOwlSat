@@ -87,9 +87,8 @@
 // From module: Part identification macros
 #include <parts.h>
 
-// From module: RTC - Real Time Counter in Count Mode (Callback APIs)
-#include <rtc_count.h>
-#include <rtc_count_interrupt.h>
+// From module: RTC - Real Time Counter in Calendar Mode (Polled APIs)
+#include <rtc_calendar.h>
 #include <rtc_tamper.h>
 
 // From module: SAM D21/R21/D11/L21/DA1/L22 USB Dual role interface
@@ -112,6 +111,10 @@
 
 // From module: SERCOM SPI - Serial Peripheral Interface (Polled APIs)
 #include <spi.h>
+
+// From module: SERCOM USART - Serial Communications (Callback APIs)
+#include <usart.h>
+#include <usart_interrupt.h>
 
 // From module: SYSTEM - Clock Management for SAMD21/R21/DA/HA
 #include <clock.h>

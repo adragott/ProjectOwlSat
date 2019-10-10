@@ -1,0 +1,4298 @@
+
+ProjectOwlSat_FW.elf:     file format elf32-littlearm
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00001a54  00000000  00000000  00010000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .relocate     00000844  20000000  00001a54  00020000  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000214  20000844  00002298  00020844  2**2
+                  ALLOC
+  3 .stack        00002000  20000a58  000024ac  00020844  2**0
+                  ALLOC
+  4 .ARM.attributes 00000028  00000000  00000000  00020844  2**0
+                  CONTENTS, READONLY
+  5 .comment      00000059  00000000  00000000  0002086c  2**0
+                  CONTENTS, READONLY
+  6 .debug_info   0001c1a8  00000000  00000000  000208c5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00002ceb  00000000  00000000  0003ca6d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_loc    00003c92  00000000  00000000  0003f758  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_aranges 000004d0  00000000  00000000  000433ea  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_ranges 000008d0  00000000  00000000  000438ba  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_macro  00004c3e  00000000  00000000  0004418a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_line   00009abb  00000000  00000000  00048dc8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_str    00094fdb  00000000  00000000  00052883  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_frame  00000e84  00000000  00000000  000e7860  2**2
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <exception_table>:
+       0:	58 2a 00 20 1d 0f 00 00 19 0f 00 00 19 0f 00 00     X*. ............
+	...
+      2c:	19 0f 00 00 00 00 00 00 00 00 00 00 19 0f 00 00     ................
+      3c:	19 0f 00 00 19 0f 00 00 19 0f 00 00 19 0f 00 00     ................
+      4c:	19 0f 00 00 65 08 00 00 19 0f 00 00 19 0f 00 00     ....e...........
+      5c:	89 01 00 00 19 0f 00 00 05 08 00 00 15 08 00 00     ................
+      6c:	25 08 00 00 35 08 00 00 45 08 00 00 55 08 00 00     %...5...E...U...
+      7c:	19 0f 00 00 19 0f 00 00 19 0f 00 00 19 0f 00 00     ................
+      8c:	19 0f 00 00 19 0f 00 00 19 0f 00 00 19 0f 00 00     ................
+      9c:	19 0f 00 00 19 0f 00 00 19 0f 00 00 19 0f 00 00     ................
+      ac:	19 0f 00 00 00 00 00 00                             ........
+
+000000b4 <__do_global_dtors_aux>:
+      b4:	b510      	push	{r4, lr}
+      b6:	4c06      	ldr	r4, [pc, #24]	; (d0 <__do_global_dtors_aux+0x1c>)
+      b8:	7823      	ldrb	r3, [r4, #0]
+      ba:	2b00      	cmp	r3, #0
+      bc:	d107      	bne.n	ce <__do_global_dtors_aux+0x1a>
+      be:	4b05      	ldr	r3, [pc, #20]	; (d4 <__do_global_dtors_aux+0x20>)
+      c0:	2b00      	cmp	r3, #0
+      c2:	d002      	beq.n	ca <__do_global_dtors_aux+0x16>
+      c4:	4804      	ldr	r0, [pc, #16]	; (d8 <__do_global_dtors_aux+0x24>)
+      c6:	e000      	b.n	ca <__do_global_dtors_aux+0x16>
+      c8:	bf00      	nop
+      ca:	2301      	movs	r3, #1
+      cc:	7023      	strb	r3, [r4, #0]
+      ce:	bd10      	pop	{r4, pc}
+      d0:	20000844 	.word	0x20000844
+      d4:	00000000 	.word	0x00000000
+      d8:	00001a54 	.word	0x00001a54
+
+000000dc <frame_dummy>:
+      dc:	4b08      	ldr	r3, [pc, #32]	; (100 <frame_dummy+0x24>)
+      de:	b510      	push	{r4, lr}
+      e0:	2b00      	cmp	r3, #0
+      e2:	d003      	beq.n	ec <frame_dummy+0x10>
+      e4:	4907      	ldr	r1, [pc, #28]	; (104 <frame_dummy+0x28>)
+      e6:	4808      	ldr	r0, [pc, #32]	; (108 <frame_dummy+0x2c>)
+      e8:	e000      	b.n	ec <frame_dummy+0x10>
+      ea:	bf00      	nop
+      ec:	4807      	ldr	r0, [pc, #28]	; (10c <frame_dummy+0x30>)
+      ee:	6803      	ldr	r3, [r0, #0]
+      f0:	2b00      	cmp	r3, #0
+      f2:	d100      	bne.n	f6 <frame_dummy+0x1a>
+      f4:	bd10      	pop	{r4, pc}
+      f6:	4b06      	ldr	r3, [pc, #24]	; (110 <frame_dummy+0x34>)
+      f8:	2b00      	cmp	r3, #0
+      fa:	d0fb      	beq.n	f4 <frame_dummy+0x18>
+      fc:	4798      	blx	r3
+      fe:	e7f9      	b.n	f4 <frame_dummy+0x18>
+     100:	00000000 	.word	0x00000000
+     104:	20000848 	.word	0x20000848
+     108:	00001a54 	.word	0x00001a54
+     10c:	00001a54 	.word	0x00001a54
+     110:	00000000 	.word	0x00000000
+
+00000114 <_system_extint_init>:
+		const enum system_clock_apb_bus bus,
+		const uint32_t mask)
+{
+	switch (bus) {
+		case SYSTEM_CLOCK_APB_APBA:
+			PM->APBAMASK.reg |= mask;
+     114:	2140      	movs	r1, #64	; 0x40
+ * \note When SYSTEM module is used, this function will be invoked by
+ * \ref system_init() automatically if the module is included.
+ */
+void _system_extint_init(void);
+void _system_extint_init(void)
+{
+     116:	b500      	push	{lr}
+     118:	4a15      	ldr	r2, [pc, #84]	; (170 <_system_extint_init+0x5c>)
+     11a:	b083      	sub	sp, #12
+     11c:	6993      	ldr	r3, [r2, #24]
+
+	/* Configure the generic clock for the module and enable it */
+	struct system_gclk_chan_config gclk_chan_conf;
+	system_gclk_chan_get_config_defaults(&gclk_chan_conf);
+	gclk_chan_conf.source_generator = EXTINT_CLOCK_SOURCE;
+	system_gclk_chan_set_config(EIC_GCLK_ID, &gclk_chan_conf);
+     11e:	2005      	movs	r0, #5
+     120:	430b      	orrs	r3, r1
+     122:	6193      	str	r3, [r2, #24]
+{
+	/* Sanity check arguments */
+	Assert(config);
+
+	/* Default configuration values */
+	config->source_generator = GCLK_GENERATOR_0;
+     124:	2300      	movs	r3, #0
+     126:	a901      	add	r1, sp, #4
+     128:	700b      	strb	r3, [r1, #0]
+     12a:	4b12      	ldr	r3, [pc, #72]	; (174 <_system_extint_init+0x60>)
+     12c:	4798      	blx	r3
+
+	/* Enable the clock anyway, since when needed it will be requested
+	 * by External Interrupt driver */
+	system_gclk_chan_enable(EIC_GCLK_ID);
+     12e:	4b12      	ldr	r3, [pc, #72]	; (178 <_system_extint_init+0x64>)
+     130:	2005      	movs	r0, #5
+     132:	4798      	blx	r3
+
+	/* Reset all EIC hardware modules. */
+	for (uint32_t i = 0; i < EIC_INST_NUM; i++) {
+		eics[i]->CTRL.reg |= EIC_CTRL_SWRST;
+     134:	2101      	movs	r1, #1
+     136:	4a11      	ldr	r2, [pc, #68]	; (17c <_system_extint_init+0x68>)
+     138:	7813      	ldrb	r3, [r2, #0]
+     13a:	430b      	orrs	r3, r1
+     13c:	7013      	strb	r3, [r2, #0]
+		if (eics[i]->STATUS.reg & EIC_STATUS_SYNCBUSY) {
+     13e:	7853      	ldrb	r3, [r2, #1]
+     140:	b25b      	sxtb	r3, r3
+     142:	2b00      	cmp	r3, #0
+     144:	dbfb      	blt.n	13e <_system_extint_init+0x2a>
+     146:	4b0e      	ldr	r3, [pc, #56]	; (180 <_system_extint_init+0x6c>)
+
+	/* Reset the software module */
+#if EXTINT_CALLBACK_MODE == true
+	/* Clear callback registration table */
+	for (uint8_t j = 0; j < EIC_NUMBER_OF_INTERRUPTS; j++) {
+		_extint_dev.callbacks[j] = NULL;
+     148:	2200      	movs	r2, #0
+     14a:	0019      	movs	r1, r3
+     14c:	3140      	adds	r1, #64	; 0x40
+     14e:	c304      	stmia	r3!, {r2}
+	for (uint8_t j = 0; j < EIC_NUMBER_OF_INTERRUPTS; j++) {
+     150:	4299      	cmp	r1, r3
+     152:	d1fc      	bne.n	14e <_system_extint_init+0x3a>
+ * \param[in] vector Interrupt vector to enable
+ */
+static inline void system_interrupt_enable(
+		const enum system_interrupt_vector vector)
+{
+	NVIC->ISER[0] = (uint32_t)(1 << ((uint32_t)vector & 0x0000001f));
+     154:	2210      	movs	r2, #16
+{
+	Eic *const eics[EIC_INST_NUM] = EIC_INSTS;
+
+	/* Enable all EIC hardware modules. */
+	for (uint32_t i = 0; i < EIC_INST_NUM; i++) {
+		eics[i]->CTRL.reg |= EIC_CTRL_ENABLE;
+     156:	2102      	movs	r1, #2
+     158:	4b0a      	ldr	r3, [pc, #40]	; (184 <_system_extint_init+0x70>)
+     15a:	601a      	str	r2, [r3, #0]
+     15c:	4a07      	ldr	r2, [pc, #28]	; (17c <_system_extint_init+0x68>)
+     15e:	7813      	ldrb	r3, [r2, #0]
+     160:	430b      	orrs	r3, r1
+     162:	7013      	strb	r3, [r2, #0]
+		if (eics[i]->STATUS.reg & EIC_STATUS_SYNCBUSY) {
+     164:	7853      	ldrb	r3, [r2, #1]
+     166:	b25b      	sxtb	r3, r3
+     168:	2b00      	cmp	r3, #0
+     16a:	dbfb      	blt.n	164 <_system_extint_init+0x50>
+}
+     16c:	b003      	add	sp, #12
+     16e:	bd00      	pop	{pc}
+     170:	40000400 	.word	0x40000400
+     174:	00000ded 	.word	0x00000ded
+     178:	00000d65 	.word	0x00000d65
+     17c:	40001800 	.word	0x40001800
+     180:	200008ec 	.word	0x200008ec
+     184:	e000e100 	.word	0xe000e100
+
+00000188 <USB_Handler>:
+		}
+	}
+	module_inst->device_registered_callback_mask = 0;
+	module_inst->device_enabled_callback_mask = 0;
+	for (j = 0; j < USB_EPT_NUM; j++) {
+		module_inst->device_endpoint_registered_callback_mask[j] = 0;
+     188:	b5f0      	push	{r4, r5, r6, r7, lr}
+     18a:	4657      	mov	r7, sl
+     18c:	4645      	mov	r5, r8
+     18e:	46de      	mov	lr, fp
+		module_inst->device_endpoint_enabled_callback_mask[j] = 0;
+     190:	464e      	mov	r6, r9
+     192:	b5e0      	push	{r5, r6, r7, lr}
+	for (j = 0; j < USB_EPT_NUM; j++) {
+     194:	4ccd      	ldr	r4, [pc, #820]	; (4cc <USB_Handler+0x344>)
+     196:	b083      	sub	sp, #12
+     198:	6827      	ldr	r7, [r4, #0]
+
+	/* Enable interrupts for this USB module */
+	system_interrupt_enable(SYSTEM_INTERRUPT_MODULE_USB);
+
+	return STATUS_OK;
+}
+     19a:	683d      	ldr	r5, [r7, #0]
+     19c:	782b      	ldrb	r3, [r5, #0]
+     19e:	09db      	lsrs	r3, r3, #7
+     1a0:	d000      	beq.n	1a4 <USB_Handler+0x1c>
+     1a2:	e06c      	b.n	27e <USB_Handler+0xf6>
+     1a4:	8c2e      	ldrh	r6, [r5, #32]
+     1a6:	b2b6      	uxth	r6, r6
+     1a8:	2e00      	cmp	r6, #0
+		module_inst->hw->DEVICE.CTRLB.bit.SPDCONF = USB_DEVICE_CTRLB_SPDCONF_LS_Val;
+     1aa:	d135      	bne.n	218 <USB_Handler+0x90>
+     1ac:	8bab      	ldrh	r3, [r5, #28]
+     1ae:	22aa      	movs	r2, #170	; 0xaa
+     1b0:	b29b      	uxth	r3, r3
+     1b2:	4698      	mov	r8, r3
+     1b4:	23ab      	movs	r3, #171	; 0xab
+     1b6:	0052      	lsls	r2, r2, #1
+     1b8:	005b      	lsls	r3, r3, #1
+		module_inst->hw->DEVICE.CTRLB.bit.SPDCONF = USB_DEVICE_CTRLB_SPDCONF_FS_Val;
+     1ba:	5afb      	ldrh	r3, [r7, r3]
+     1bc:	5abe      	ldrh	r6, [r7, r2]
+     1be:	3a54      	subs	r2, #84	; 0x54
+     1c0:	401e      	ands	r6, r3
+     1c2:	4643      	mov	r3, r8
+     1c4:	4692      	mov	sl, r2
+	if (pad_trim == 0x7) {
+     1c6:	4ac2      	ldr	r2, [pc, #776]	; (4d0 <USB_Handler+0x348>)
+     1c8:	401e      	ands	r6, r3
+	if (pad_transp == 0x1F) {
+     1ca:	4691      	mov	r9, r2
+     1cc:	0032      	movs	r2, r6
+	if (pad_transn == 0x1F) {
+     1ce:	2304      	movs	r3, #4
+     1d0:	4646      	mov	r6, r8
+     1d2:	2500      	movs	r5, #0
+     1d4:	4fbf      	ldr	r7, [pc, #764]	; (4d4 <USB_Handler+0x34c>)
+     1d6:	4690      	mov	r8, r2
+     1d8:	e001      	b.n	1de <USB_Handler+0x56>
+     1da:	006b      	lsls	r3, r5, #1
+     1dc:	5bdb      	ldrh	r3, [r3, r7]
+     1de:	4233      	tst	r3, r6
+     1e0:	d002      	beq.n	1e8 <USB_Handler+0x60>
+     1e2:	6822      	ldr	r2, [r4, #0]
+     1e4:	6812      	ldr	r2, [r2, #0]
+     1e6:	8393      	strh	r3, [r2, #28]
+     1e8:	4642      	mov	r2, r8
+     1ea:	4213      	tst	r3, r2
+     1ec:	d00a      	beq.n	204 <USB_Handler+0x7c>
+     1ee:	4649      	mov	r1, r9
+     1f0:	2d06      	cmp	r5, #6
+     1f2:	d100      	bne.n	1f6 <USB_Handler+0x6e>
+     1f4:	e2f2      	b.n	7dc <USB_Handler+0x654>
+     1f6:	002b      	movs	r3, r5
+     1f8:	6822      	ldr	r2, [r4, #0]
+     1fa:	332e      	adds	r3, #46	; 0x2e
+     1fc:	009b      	lsls	r3, r3, #2
+     1fe:	589b      	ldr	r3, [r3, r2]
+     200:	0010      	movs	r0, r2
+     202:	4798      	blx	r3
+     204:	3501      	adds	r5, #1
+     206:	2d07      	cmp	r5, #7
+		for (i = 0; i < USB_DEVICE_CALLBACK_N; i ++) {
+     208:	d1e7      	bne.n	1da <USB_Handler+0x52>
+}
+     20a:	b003      	add	sp, #12
+     20c:	bc3c      	pop	{r2, r3, r4, r5}
+     20e:	4690      	mov	r8, r2
+     210:	4699      	mov	r9, r3
+     212:	46a2      	mov	sl, r4
+     214:	46ab      	mov	fp, r5
+     216:	bdf0      	pop	{r4, r5, r6, r7, pc}
+			if (ep_inst & (1 << i)) {
+     218:	2201      	movs	r2, #1
+     21a:	003c      	movs	r4, r7
+     21c:	4694      	mov	ip, r2
+				if (flags & USB_DEVICE_EPINTFLAG_STALL_Msk) {
+     21e:	325f      	adds	r2, #95	; 0x5f
+     220:	4693      	mov	fp, r2
+				if (flags & USB_DEVICE_EPINTFLAG_RXSTP) {
+     222:	3a50      	subs	r2, #80	; 0x50
+	if (0 == ep_inst) {
+     224:	2300      	movs	r3, #0
+				if (flags & USB_DEVICE_EPINTFLAG_RXSTP) {
+     226:	4692      	mov	sl, r2
+				if (flags & USB_DEVICE_EPINTFLAG_TRFAIL_Msk) {
+     228:	46b9      	mov	r9, r7
+     22a:	46a8      	mov	r8, r5
+     22c:	3459      	adds	r4, #89	; 0x59
+     22e:	34ff      	adds	r4, #255	; 0xff
+			if (ep_inst & (1 << i)) {
+     230:	0032      	movs	r2, r6
+     232:	4661      	mov	r1, ip
+     234:	411a      	asrs	r2, r3
+     236:	b2dd      	uxtb	r5, r3
+     238:	4211      	tst	r1, r2
+     23a:	d01b      	beq.n	274 <USB_Handler+0xec>
+				flags = _usb_instances->hw->DEVICE.DeviceEndpoint[i].EPINTFLAG.reg;
+     23c:	001f      	movs	r7, r3
+     23e:	3708      	adds	r7, #8
+     240:	017a      	lsls	r2, r7, #5
+     242:	4442      	add	r2, r8
+     244:	1dd1      	adds	r1, r2, #7
+     246:	79d2      	ldrb	r2, [r2, #7]
+     248:	9100      	str	r1, [sp, #0]
+     24a:	7a21      	ldrb	r1, [r4, #8]
+     24c:	7820      	ldrb	r0, [r4, #0]
+     24e:	b2d2      	uxtb	r2, r2
+     250:	4011      	ands	r1, r2
+     252:	4001      	ands	r1, r0
+				if (flags & USB_DEVICE_EPINTFLAG_STALL_Msk) {
+     254:	4658      	mov	r0, fp
+     256:	4210      	tst	r0, r2
+     258:	d000      	beq.n	25c <USB_Handler+0xd4>
+     25a:	e1c0      	b.n	5de <USB_Handler+0x456>
+				if (flags & USB_DEVICE_EPINTFLAG_RXSTP) {
+     25c:	4650      	mov	r0, sl
+     25e:	4210      	tst	r0, r2
+     260:	d000      	beq.n	264 <USB_Handler+0xdc>
+     262:	e1dc      	b.n	61e <USB_Handler+0x496>
+				if (flags & USB_DEVICE_EPINTFLAG_TRCPT_Msk) {
+     264:	2003      	movs	r0, #3
+     266:	4210      	tst	r0, r2
+     268:	d000      	beq.n	26c <USB_Handler+0xe4>
+     26a:	e1f1      	b.n	650 <USB_Handler+0x4c8>
+				if (flags & USB_DEVICE_EPINTFLAG_TRFAIL_Msk) {
+     26c:	200c      	movs	r0, #12
+     26e:	4210      	tst	r0, r2
+     270:	d000      	beq.n	274 <USB_Handler+0xec>
+     272:	e211      	b.n	698 <USB_Handler+0x510>
+     274:	3301      	adds	r3, #1
+     276:	3401      	adds	r4, #1
+		for (uint8_t i = 0; i < USB_EPT_NUM; i++) {
+     278:	2b08      	cmp	r3, #8
+     27a:	d1d9      	bne.n	230 <USB_Handler+0xa8>
+     27c:	e7c5      	b.n	20a <USB_Handler+0x82>
+	pipe_int = ctz(_usb_instances->hw->HOST.PINTSMRY.reg);
+     27e:	8c2b      	ldrh	r3, [r5, #32]
+     280:	2b00      	cmp	r3, #0
+     282:	d000      	beq.n	286 <USB_Handler+0xfe>
+     284:	e084      	b.n	390 <USB_Handler+0x208>
+		if (flags & USB_HOST_INTFLAG_HSOF) {
+     286:	2304      	movs	r3, #4
+		flags = _usb_instances->hw->HOST.INTFLAG.reg;
+     288:	8bae      	ldrh	r6, [r5, #28]
+     28a:	b2b6      	uxth	r6, r6
+		if (flags & USB_HOST_INTFLAG_HSOF) {
+     28c:	4233      	tst	r3, r6
+     28e:	d01f      	beq.n	2d0 <USB_Handler+0x148>
+			_usb_instances->hw->HOST.INTFLAG.reg = USB_HOST_INTFLAG_HSOF;
+     290:	83ab      	strh	r3, [r5, #28]
+     292:	4b91      	ldr	r3, [pc, #580]	; (4d8 <USB_Handler+0x350>)
+				_usb_instances->hw->HOST.HostPipe[pipe_int].PSTATUSCLR.reg = USB_HOST_PSTATUS_PFREEZE;
+     294:	2210      	movs	r2, #16
+     296:	681b      	ldr	r3, [r3, #0]
+				if (!(host_pipe_job_busy_status & (1 << pipe_int))) {
+     298:	2501      	movs	r5, #1
+     29a:	469c      	mov	ip, r3
+				_usb_instances->hw->HOST.HostPipe[pipe_int].PSTATUSCLR.reg = USB_HOST_PSTATUS_PFREEZE;
+     29c:	4690      	mov	r8, r2
+			for (pipe_int = 1; pipe_int < USB_PIPE_NUM; pipe_int ++) {
+     29e:	2301      	movs	r3, #1
+				_usb_instances->hw->HOST.HostPipe[pipe_int].PSTATUSCLR.reg = USB_HOST_PSTATUS_PFREEZE;
+     2a0:	4660      	mov	r0, ip
+				if (!(host_pipe_job_busy_status & (1 << pipe_int))) {
+     2a2:	002a      	movs	r2, r5
+     2a4:	409a      	lsls	r2, r3
+     2a6:	4210      	tst	r0, r2
+     2a8:	d00a      	beq.n	2c0 <USB_Handler+0x138>
+				if (_usb_instances->hw->HOST.HostPipe[pipe_int].PCFG.bit.PTYPE != USB_HOST_PIPE_TYPE_BULK ||
+     2aa:	0019      	movs	r1, r3
+     2ac:	683a      	ldr	r2, [r7, #0]
+     2ae:	3108      	adds	r1, #8
+     2b0:	0149      	lsls	r1, r1, #5
+     2b2:	4694      	mov	ip, r2
+     2b4:	5c8a      	ldrb	r2, [r1, r2]
+     2b6:	0692      	lsls	r2, r2, #26
+     2b8:	0f52      	lsrs	r2, r2, #29
+     2ba:	2a03      	cmp	r2, #3
+     2bc:	d100      	bne.n	2c0 <USB_Handler+0x138>
+     2be:	e0f9      	b.n	4b4 <USB_Handler+0x32c>
+			for (pipe_int = 1; pipe_int < USB_PIPE_NUM; pipe_int ++) {
+     2c0:	3301      	adds	r3, #1
+     2c2:	2b08      	cmp	r3, #8
+     2c4:	d1ed      	bne.n	2a2 <USB_Handler+0x11a>
+			if(_usb_instances->host_enabled_callback_mask & (1 << USB_HOST_CALLBACK_SOF)) {
+     2c6:	339d      	adds	r3, #157	; 0x9d
+     2c8:	5cfb      	ldrb	r3, [r7, r3]
+     2ca:	07db      	lsls	r3, r3, #31
+     2cc:	d500      	bpl.n	2d0 <USB_Handler+0x148>
+     2ce:	e147      	b.n	560 <USB_Handler+0x3d8>
+		if (flags & USB_HOST_INTFLAG_RST) {
+     2d0:	2308      	movs	r3, #8
+     2d2:	4233      	tst	r3, r6
+     2d4:	d00a      	beq.n	2ec <USB_Handler+0x164>
+			host_pipe_job_busy_status = 0;
+     2d6:	2100      	movs	r1, #0
+     2d8:	4a7f      	ldr	r2, [pc, #508]	; (4d8 <USB_Handler+0x350>)
+			_usb_instances->hw->HOST.INTFLAG.reg = USB_HOST_INTFLAG_RST;
+     2da:	6820      	ldr	r0, [r4, #0]
+			host_pipe_job_busy_status = 0;
+     2dc:	6011      	str	r1, [r2, #0]
+			_usb_instances->hw->HOST.INTFLAG.reg = USB_HOST_INTFLAG_RST;
+     2de:	6802      	ldr	r2, [r0, #0]
+     2e0:	8393      	strh	r3, [r2, #28]
+			if(_usb_instances->host_enabled_callback_mask & (1 << USB_HOST_CALLBACK_RESET)) {
+     2e2:	339d      	adds	r3, #157	; 0x9d
+     2e4:	5cc3      	ldrb	r3, [r0, r3]
+     2e6:	079b      	lsls	r3, r3, #30
+     2e8:	d500      	bpl.n	2ec <USB_Handler+0x164>
+     2ea:	e136      	b.n	55a <USB_Handler+0x3d2>
+		if (flags & USB_HOST_INTFLAG_UPRSM) {
+     2ec:	2340      	movs	r3, #64	; 0x40
+     2ee:	4233      	tst	r3, r6
+     2f0:	d007      	beq.n	302 <USB_Handler+0x17a>
+			_usb_instances->hw->HOST.INTFLAG.reg = USB_HOST_INTFLAG_UPRSM;
+     2f2:	6820      	ldr	r0, [r4, #0]
+     2f4:	6802      	ldr	r2, [r0, #0]
+     2f6:	8393      	strh	r3, [r2, #28]
+			if(_usb_instances->host_enabled_callback_mask & (1 << USB_HOST_CALLBACK_UPRSM)) {
+     2f8:	3365      	adds	r3, #101	; 0x65
+     2fa:	5cc3      	ldrb	r3, [r0, r3]
+     2fc:	06db      	lsls	r3, r3, #27
+     2fe:	d500      	bpl.n	302 <USB_Handler+0x17a>
+     300:	e128      	b.n	554 <USB_Handler+0x3cc>
+		if (flags & USB_HOST_INTFLAG_DNRSM) {
+     302:	2320      	movs	r3, #32
+     304:	4233      	tst	r3, r6
+     306:	d007      	beq.n	318 <USB_Handler+0x190>
+			_usb_instances->hw->HOST.INTFLAG.reg = USB_HOST_INTFLAG_DNRSM;
+     308:	6820      	ldr	r0, [r4, #0]
+     30a:	6802      	ldr	r2, [r0, #0]
+     30c:	8393      	strh	r3, [r2, #28]
+			if(_usb_instances->host_enabled_callback_mask & (1 << USB_HOST_CALLBACK_DNRSM)) {
+     30e:	3385      	adds	r3, #133	; 0x85
+     310:	5cc3      	ldrb	r3, [r0, r3]
+     312:	071b      	lsls	r3, r3, #28
+     314:	d500      	bpl.n	318 <USB_Handler+0x190>
+     316:	e11a      	b.n	54e <USB_Handler+0x3c6>
+		if (flags & USB_HOST_INTFLAG_WAKEUP) {
+     318:	2310      	movs	r3, #16
+     31a:	4233      	tst	r3, r6
+     31c:	d007      	beq.n	32e <USB_Handler+0x1a6>
+			_usb_instances->hw->HOST.INTFLAG.reg = USB_HOST_INTFLAG_WAKEUP;
+     31e:	6820      	ldr	r0, [r4, #0]
+     320:	6802      	ldr	r2, [r0, #0]
+     322:	8393      	strh	r3, [r2, #28]
+			if(_usb_instances->host_enabled_callback_mask & (1 << USB_HOST_CALLBACK_WAKEUP)) {
+     324:	3395      	adds	r3, #149	; 0x95
+     326:	5cc3      	ldrb	r3, [r0, r3]
+     328:	075b      	lsls	r3, r3, #29
+     32a:	d500      	bpl.n	32e <USB_Handler+0x1a6>
+     32c:	e10c      	b.n	548 <USB_Handler+0x3c0>
+		if (flags & USB_HOST_INTFLAG_RAMACER) {
+     32e:	2380      	movs	r3, #128	; 0x80
+     330:	4233      	tst	r3, r6
+     332:	d00a      	beq.n	34a <USB_Handler+0x1c2>
+			host_pipe_job_busy_status = 0;
+     334:	2100      	movs	r1, #0
+     336:	4a68      	ldr	r2, [pc, #416]	; (4d8 <USB_Handler+0x350>)
+			_usb_instances->hw->HOST.INTFLAG.reg = USB_HOST_INTFLAG_RAMACER;
+     338:	6820      	ldr	r0, [r4, #0]
+			host_pipe_job_busy_status = 0;
+     33a:	6011      	str	r1, [r2, #0]
+			_usb_instances->hw->HOST.INTFLAG.reg = USB_HOST_INTFLAG_RAMACER;
+     33c:	6802      	ldr	r2, [r0, #0]
+     33e:	8393      	strh	r3, [r2, #28]
+			if(_usb_instances->host_enabled_callback_mask & (1 << USB_HOST_CALLBACK_RAMACER)) {
+     340:	3325      	adds	r3, #37	; 0x25
+     342:	5cc3      	ldrb	r3, [r0, r3]
+     344:	069b      	lsls	r3, r3, #26
+     346:	d500      	bpl.n	34a <USB_Handler+0x1c2>
+     348:	e0fb      	b.n	542 <USB_Handler+0x3ba>
+		if (flags & USB_HOST_INTFLAG_DCONN) {
+     34a:	2380      	movs	r3, #128	; 0x80
+     34c:	005b      	lsls	r3, r3, #1
+     34e:	421e      	tst	r6, r3
+     350:	d00a      	beq.n	368 <USB_Handler+0x1e0>
+			host_pipe_job_busy_status = 0;
+     352:	2100      	movs	r1, #0
+     354:	4a60      	ldr	r2, [pc, #384]	; (4d8 <USB_Handler+0x350>)
+			_usb_instances->hw->HOST.INTFLAG.reg = USB_HOST_INTFLAG_DCONN;
+     356:	6820      	ldr	r0, [r4, #0]
+			host_pipe_job_busy_status = 0;
+     358:	6011      	str	r1, [r2, #0]
+			_usb_instances->hw->HOST.INTFLAG.reg = USB_HOST_INTFLAG_DCONN;
+     35a:	6802      	ldr	r2, [r0, #0]
+     35c:	8393      	strh	r3, [r2, #28]
+			if(_usb_instances->host_enabled_callback_mask & (1 << USB_HOST_CALLBACK_CONNECT)) {
+     35e:	3b5b      	subs	r3, #91	; 0x5b
+     360:	5cc3      	ldrb	r3, [r0, r3]
+     362:	065b      	lsls	r3, r3, #25
+     364:	d500      	bpl.n	368 <USB_Handler+0x1e0>
+     366:	e0e9      	b.n	53c <USB_Handler+0x3b4>
+		if (flags & USB_HOST_INTFLAG_DDISC) {
+     368:	2380      	movs	r3, #128	; 0x80
+     36a:	009b      	lsls	r3, r3, #2
+     36c:	421e      	tst	r6, r3
+     36e:	d100      	bne.n	372 <USB_Handler+0x1ea>
+     370:	e74b      	b.n	20a <USB_Handler+0x82>
+			host_pipe_job_busy_status = 0;
+     372:	2100      	movs	r1, #0
+     374:	4a58      	ldr	r2, [pc, #352]	; (4d8 <USB_Handler+0x350>)
+			_usb_instances->hw->HOST.INTFLAG.reg = USB_HOST_INTFLAG_DDISC;
+     376:	6820      	ldr	r0, [r4, #0]
+			host_pipe_job_busy_status = 0;
+     378:	6011      	str	r1, [r2, #0]
+			_usb_instances->hw->HOST.INTFLAG.reg = USB_HOST_INTFLAG_DDISC;
+     37a:	6802      	ldr	r2, [r0, #0]
+     37c:	8393      	strh	r3, [r2, #28]
+			if(_usb_instances->host_enabled_callback_mask & (1 << USB_HOST_CALLBACK_DISCONNECT)) {
+     37e:	3b5c      	subs	r3, #92	; 0x5c
+     380:	3bff      	subs	r3, #255	; 0xff
+     382:	5cc3      	ldrb	r3, [r0, r3]
+     384:	2b7f      	cmp	r3, #127	; 0x7f
+     386:	d800      	bhi.n	38a <USB_Handler+0x202>
+     388:	e73f      	b.n	20a <USB_Handler+0x82>
+				(_usb_instances->host_callback[USB_HOST_CALLBACK_DISCONNECT])(_usb_instances);
+     38a:	6a03      	ldr	r3, [r0, #32]
+     38c:	4798      	blx	r3
+     38e:	e73c      	b.n	20a <USB_Handler+0x82>
+	pipe_int = ctz(_usb_instances->hw->HOST.PINTSMRY.reg);
+     390:	8c28      	ldrh	r0, [r5, #32]
+     392:	4b52      	ldr	r3, [pc, #328]	; (4dc <USB_Handler+0x354>)
+     394:	b280      	uxth	r0, r0
+     396:	4798      	blx	r3
+		flags = _usb_instances->hw->HOST.HostPipe[pipe_int].PINTFLAG.reg;
+     398:	2308      	movs	r3, #8
+     39a:	4698      	mov	r8, r3
+     39c:	4480      	add	r8, r0
+     39e:	4643      	mov	r3, r8
+		if (flags & USB_HOST_PINTFLAG_TRCPT_Msk) {
+     3a0:	2203      	movs	r2, #3
+		flags = _usb_instances->hw->HOST.HostPipe[pipe_int].PINTFLAG.reg;
+     3a2:	015b      	lsls	r3, r3, #5
+     3a4:	18ed      	adds	r5, r5, r3
+     3a6:	79ed      	ldrb	r5, [r5, #7]
+	pipe_int = ctz(_usb_instances->hw->HOST.PINTSMRY.reg);
+     3a8:	0006      	movs	r6, r0
+		flags = _usb_instances->hw->HOST.HostPipe[pipe_int].PINTFLAG.reg;
+     3aa:	b2ed      	uxtb	r5, r5
+		if (flags & USB_HOST_PINTFLAG_TRCPT_Msk) {
+     3ac:	422a      	tst	r2, r5
+     3ae:	d014      	beq.n	3da <USB_Handler+0x252>
+			host_pipe_job_busy_status &= ~(1 << pipe_int);
+     3b0:	4949      	ldr	r1, [pc, #292]	; (4d8 <USB_Handler+0x350>)
+     3b2:	468c      	mov	ip, r1
+     3b4:	2101      	movs	r1, #1
+     3b6:	4689      	mov	r9, r1
+     3b8:	4081      	lsls	r1, r0
+     3ba:	4660      	mov	r0, ip
+     3bc:	6800      	ldr	r0, [r0, #0]
+     3be:	4388      	bics	r0, r1
+     3c0:	0001      	movs	r1, r0
+     3c2:	4660      	mov	r0, ip
+     3c4:	6001      	str	r1, [r0, #0]
+			_usb_instances->hw->HOST.HostPipe[pipe_int].PINTFLAG.reg =
+     3c6:	6839      	ldr	r1, [r7, #0]
+     3c8:	18c9      	adds	r1, r1, r3
+     3ca:	71ca      	strb	r2, [r1, #7]
+			if(_usb_instances->host_pipe_enabled_callback_mask[pipe_int] &
+     3cc:	4649      	mov	r1, r9
+     3ce:	19ba      	adds	r2, r7, r6
+     3d0:	32ae      	adds	r2, #174	; 0xae
+     3d2:	7812      	ldrb	r2, [r2, #0]
+     3d4:	4211      	tst	r1, r2
+     3d6:	d000      	beq.n	3da <USB_Handler+0x252>
+     3d8:	e086      	b.n	4e8 <USB_Handler+0x360>
+		if (flags & USB_HOST_PINTFLAG_TRFAIL) {
+     3da:	2304      	movs	r3, #4
+     3dc:	422b      	tst	r3, r5
+     3de:	d020      	beq.n	422 <USB_Handler+0x29a>
+			if (_usb_instances->hw->HOST.HostPipe[pipe_int].PCFG.bit.PTYPE == USB_HOST_PIPE_TYPE_ISO &&
+     3e0:	6823      	ldr	r3, [r4, #0]
+     3e2:	681f      	ldr	r7, [r3, #0]
+     3e4:	469c      	mov	ip, r3
+     3e6:	4643      	mov	r3, r8
+     3e8:	015b      	lsls	r3, r3, #5
+     3ea:	4699      	mov	r9, r3
+     3ec:	5ddb      	ldrb	r3, [r3, r7]
+     3ee:	069b      	lsls	r3, r3, #26
+     3f0:	0f5b      	lsrs	r3, r3, #29
+     3f2:	9300      	str	r3, [sp, #0]
+     3f4:	2b02      	cmp	r3, #2
+     3f6:	d100      	bne.n	3fa <USB_Handler+0x272>
+     3f8:	e0d3      	b.n	5a2 <USB_Handler+0x41a>
+     3fa:	4839      	ldr	r0, [pc, #228]	; (4e0 <USB_Handler+0x358>)
+     3fc:	0172      	lsls	r2, r6, #5
+			else if (_usb_instances->hw->HOST.HostPipe[pipe_int].PCFG.bit.PTYPE == USB_HOST_PIPE_TYPE_BULK &&
+     3fe:	4643      	mov	r3, r8
+     400:	0159      	lsls	r1, r3, #5
+     402:	5dcb      	ldrb	r3, [r1, r7]
+				usb_descriptor_table.usb_pipe_table[pipe_int].HostDescBank[0].STATUS_BK.reg = 0;
+     404:	1882      	adds	r2, r0, r2
+			else if (_usb_instances->hw->HOST.HostPipe[pipe_int].PCFG.bit.PTYPE == USB_HOST_PIPE_TYPE_BULK &&
+     406:	069b      	lsls	r3, r3, #26
+     408:	0f5b      	lsrs	r3, r3, #29
+     40a:	2b03      	cmp	r3, #3
+     40c:	d100      	bne.n	410 <USB_Handler+0x288>
+     40e:	e0d3      	b.n	5b8 <USB_Handler+0x430>
+				usb_descriptor_table.usb_pipe_table[pipe_int].HostDescBank[0].STATUS_BK.reg = 0;
+     410:	2300      	movs	r3, #0
+     412:	7293      	strb	r3, [r2, #10]
+				_usb_instances->hw->HOST.HostPipe[pipe_int].PINTFLAG.reg =
+     414:	4663      	mov	r3, ip
+     416:	4642      	mov	r2, r8
+     418:	681b      	ldr	r3, [r3, #0]
+     41a:	0152      	lsls	r2, r2, #5
+     41c:	189b      	adds	r3, r3, r2
+     41e:	2204      	movs	r2, #4
+     420:	71da      	strb	r2, [r3, #7]
+		if (flags & USB_HOST_PINTFLAG_PERR) {
+     422:	2308      	movs	r3, #8
+     424:	422b      	tst	r3, r5
+     426:	d012      	beq.n	44e <USB_Handler+0x2c6>
+			host_pipe_job_busy_status &= ~(1 << pipe_int);
+     428:	2201      	movs	r2, #1
+     42a:	40b2      	lsls	r2, r6
+     42c:	492a      	ldr	r1, [pc, #168]	; (4d8 <USB_Handler+0x350>)
+     42e:	6808      	ldr	r0, [r1, #0]
+     430:	4390      	bics	r0, r2
+     432:	6008      	str	r0, [r1, #0]
+			_usb_instances->hw->HOST.HostPipe[pipe_int].PINTFLAG.reg =
+     434:	6820      	ldr	r0, [r4, #0]
+     436:	4642      	mov	r2, r8
+     438:	6801      	ldr	r1, [r0, #0]
+     43a:	0152      	lsls	r2, r2, #5
+     43c:	468c      	mov	ip, r1
+     43e:	4462      	add	r2, ip
+     440:	71d3      	strb	r3, [r2, #7]
+			if(_usb_instances->host_pipe_enabled_callback_mask[pipe_int] &
+     442:	1983      	adds	r3, r0, r6
+     444:	33ae      	adds	r3, #174	; 0xae
+     446:	781b      	ldrb	r3, [r3, #0]
+     448:	079b      	lsls	r3, r3, #30
+     44a:	d500      	bpl.n	44e <USB_Handler+0x2c6>
+     44c:	e09b      	b.n	586 <USB_Handler+0x3fe>
+		if (flags & USB_HOST_PINTFLAG_TXSTP) {
+     44e:	2310      	movs	r3, #16
+     450:	422b      	tst	r3, r5
+     452:	d011      	beq.n	478 <USB_Handler+0x2f0>
+			host_pipe_job_busy_status &= ~(1 << pipe_int);
+     454:	2201      	movs	r2, #1
+     456:	40b2      	lsls	r2, r6
+     458:	491f      	ldr	r1, [pc, #124]	; (4d8 <USB_Handler+0x350>)
+     45a:	6808      	ldr	r0, [r1, #0]
+     45c:	4390      	bics	r0, r2
+     45e:	6008      	str	r0, [r1, #0]
+			_usb_instances->hw->HOST.HostPipe[pipe_int].PINTFLAG.reg =
+     460:	6820      	ldr	r0, [r4, #0]
+     462:	4642      	mov	r2, r8
+     464:	6801      	ldr	r1, [r0, #0]
+     466:	0152      	lsls	r2, r2, #5
+     468:	468c      	mov	ip, r1
+     46a:	4462      	add	r2, ip
+     46c:	71d3      	strb	r3, [r2, #7]
+			if(_usb_instances->host_pipe_enabled_callback_mask[pipe_int] &
+     46e:	1983      	adds	r3, r0, r6
+     470:	33ae      	adds	r3, #174	; 0xae
+     472:	781b      	ldrb	r3, [r3, #0]
+     474:	075b      	lsls	r3, r3, #29
+     476:	d477      	bmi.n	568 <USB_Handler+0x3e0>
+		if (flags & USB_HOST_PINTFLAG_STALL) {
+     478:	2220      	movs	r2, #32
+     47a:	422a      	tst	r2, r5
+     47c:	d100      	bne.n	480 <USB_Handler+0x2f8>
+     47e:	e6c4      	b.n	20a <USB_Handler+0x82>
+			host_pipe_job_busy_status &= ~(1 << pipe_int);
+     480:	2301      	movs	r3, #1
+     482:	40b3      	lsls	r3, r6
+     484:	4914      	ldr	r1, [pc, #80]	; (4d8 <USB_Handler+0x350>)
+     486:	6808      	ldr	r0, [r1, #0]
+     488:	4398      	bics	r0, r3
+     48a:	6008      	str	r0, [r1, #0]
+			_usb_instances->hw->HOST.HostPipe[pipe_int].PINTFLAG.reg =
+     48c:	6820      	ldr	r0, [r4, #0]
+     48e:	4643      	mov	r3, r8
+     490:	6801      	ldr	r1, [r0, #0]
+     492:	015b      	lsls	r3, r3, #5
+     494:	468c      	mov	ip, r1
+     496:	4463      	add	r3, ip
+     498:	71da      	strb	r2, [r3, #7]
+			if(_usb_instances->host_pipe_enabled_callback_mask[pipe_int] &
+     49a:	1983      	adds	r3, r0, r6
+     49c:	33ae      	adds	r3, #174	; 0xae
+     49e:	781b      	ldrb	r3, [r3, #0]
+     4a0:	071b      	lsls	r3, r3, #28
+     4a2:	d400      	bmi.n	4a6 <USB_Handler+0x31e>
+     4a4:	e6b1      	b.n	20a <USB_Handler+0x82>
+				pipe_callback_para.pipe_num = pipe_int;
+     4a6:	490f      	ldr	r1, [pc, #60]	; (4e4 <USB_Handler+0x35c>)
+     4a8:	700e      	strb	r6, [r1, #0]
+						[USB_HOST_PIPE_CALLBACK_STALL])(_usb_instances, &pipe_callback_para);
+     4aa:	0136      	lsls	r6, r6, #4
+     4ac:	1986      	adds	r6, r0, r6
+     4ae:	6b33      	ldr	r3, [r6, #48]	; 0x30
+     4b0:	4798      	blx	r3
+     4b2:	e6aa      	b.n	20a <USB_Handler+0x82>
+					_usb_instances->hw->HOST.HostPipe[pipe_int].PCFG.bit.PTOKEN != USB_HOST_PIPE_TOKEN_IN) {
+     4b4:	4662      	mov	r2, ip
+     4b6:	5c8a      	ldrb	r2, [r1, r2]
+     4b8:	0792      	lsls	r2, r2, #30
+     4ba:	0f92      	lsrs	r2, r2, #30
+				if (_usb_instances->hw->HOST.HostPipe[pipe_int].PCFG.bit.PTYPE != USB_HOST_PIPE_TYPE_BULK ||
+     4bc:	2a01      	cmp	r2, #1
+     4be:	d000      	beq.n	4c2 <USB_Handler+0x33a>
+     4c0:	e6fe      	b.n	2c0 <USB_Handler+0x138>
+				_usb_instances->hw->HOST.HostPipe[pipe_int].PSTATUSCLR.reg = USB_HOST_PSTATUS_PFREEZE;
+     4c2:	4642      	mov	r2, r8
+     4c4:	4461      	add	r1, ip
+     4c6:	710a      	strb	r2, [r1, #4]
+     4c8:	e6fa      	b.n	2c0 <USB_Handler+0x138>
+     4ca:	46c0      	nop			; (mov r8, r8)
+     4cc:	20000860 	.word	0x20000860
+     4d0:	20000864 	.word	0x20000864
+     4d4:	00001a1c 	.word	0x00001a1c
+     4d8:	20000870 	.word	0x20000870
+     4dc:	00001021 	.word	0x00001021
+     4e0:	2000092c 	.word	0x2000092c
+     4e4:	20000874 	.word	0x20000874
+				pipe_callback_para.pipe_num = pipe_int;
+     4e8:	49c0      	ldr	r1, [pc, #768]	; (7ec <USB_Handler+0x664>)
+					pipe_callback_para.transfered_size = usb_descriptor_table.usb_pipe_table[pipe_int].HostDescBank[0].PCKSIZE.bit.BYTE_COUNT;
+     4ea:	48c1      	ldr	r0, [pc, #772]	; (7f0 <USB_Handler+0x668>)
+				pipe_callback_para.pipe_num = pipe_int;
+     4ec:	700e      	strb	r6, [r1, #0]
+				if (_usb_instances->hw->HOST.HostPipe[pipe_int].PCFG.bit.PTOKEN ==
+     4ee:	683a      	ldr	r2, [r7, #0]
+     4f0:	5c9b      	ldrb	r3, [r3, r2]
+					pipe_callback_para.transfered_size = usb_descriptor_table.usb_pipe_table[pipe_int].HostDescBank[0].PCKSIZE.bit.BYTE_COUNT;
+     4f2:	0172      	lsls	r2, r6, #5
+				if (_usb_instances->hw->HOST.HostPipe[pipe_int].PCFG.bit.PTOKEN ==
+     4f4:	079b      	lsls	r3, r3, #30
+     4f6:	0f9b      	lsrs	r3, r3, #30
+					pipe_callback_para.transfered_size = usb_descriptor_table.usb_pipe_table[pipe_int].HostDescBank[0].PCKSIZE.bit.BYTE_COUNT;
+     4f8:	1882      	adds	r2, r0, r2
+				if (_usb_instances->hw->HOST.HostPipe[pipe_int].PCFG.bit.PTOKEN ==
+     4fa:	2b01      	cmp	r3, #1
+     4fc:	d100      	bne.n	500 <USB_Handler+0x378>
+     4fe:	e0fe      	b.n	6fe <USB_Handler+0x576>
+					pipe_callback_para.transfered_size = usb_descriptor_table.usb_pipe_table[pipe_int].HostDescBank[0].PCKSIZE.bit.MULTI_PACKET_SIZE;
+     500:	6853      	ldr	r3, [r2, #4]
+     502:	011b      	lsls	r3, r3, #4
+     504:	0c9b      	lsrs	r3, r3, #18
+     506:	804b      	strh	r3, [r1, #2]
+     508:	b298      	uxth	r0, r3
+					pipe_callback_para.required_size = usb_descriptor_table.usb_pipe_table[pipe_int].HostDescBank[0].PCKSIZE.bit.BYTE_COUNT;
+     50a:	6853      	ldr	r3, [r2, #4]
+					pipe_callback_para.transfered_size = usb_descriptor_table.usb_pipe_table[pipe_int].HostDescBank[0].PCKSIZE.bit.MULTI_PACKET_SIZE;
+     50c:	4682      	mov	sl, r0
+					pipe_callback_para.required_size = usb_descriptor_table.usb_pipe_table[pipe_int].HostDescBank[0].PCKSIZE.bit.BYTE_COUNT;
+     50e:	049b      	lsls	r3, r3, #18
+     510:	0c9b      	lsrs	r3, r3, #18
+     512:	808b      	strh	r3, [r1, #4]
+					usb_descriptor_table.usb_pipe_table[pipe_int].HostDescBank[0].PCKSIZE.bit.MULTI_PACKET_SIZE = 0;
+     514:	6853      	ldr	r3, [r2, #4]
+     516:	4699      	mov	r9, r3
+     518:	4648      	mov	r0, r9
+     51a:	4bb6      	ldr	r3, [pc, #728]	; (7f4 <USB_Handler+0x66c>)
+     51c:	4018      	ands	r0, r3
+					if (0 == pipe_callback_para.transfered_size) {
+     51e:	4653      	mov	r3, sl
+					usb_descriptor_table.usb_pipe_table[pipe_int].HostDescBank[0].PCKSIZE.bit.MULTI_PACKET_SIZE = 0;
+     520:	6050      	str	r0, [r2, #4]
+					if (0 == pipe_callback_para.transfered_size) {
+     522:	2b00      	cmp	r3, #0
+     524:	d103      	bne.n	52e <USB_Handler+0x3a6>
+						pipe_callback_para.transfered_size = usb_descriptor_table.usb_pipe_table[pipe_int].HostDescBank[0].PCKSIZE.bit.BYTE_COUNT;
+     526:	6853      	ldr	r3, [r2, #4]
+     528:	049b      	lsls	r3, r3, #18
+     52a:	0c9b      	lsrs	r3, r3, #18
+     52c:	804b      	strh	r3, [r1, #2]
+						[USB_HOST_PIPE_CALLBACK_TRANSFER_COMPLETE])(_usb_instances, &pipe_callback_para);
+     52e:	1cb3      	adds	r3, r6, #2
+     530:	011b      	lsls	r3, r3, #4
+     532:	18fb      	adds	r3, r7, r3
+     534:	685b      	ldr	r3, [r3, #4]
+     536:	0038      	movs	r0, r7
+     538:	4798      	blx	r3
+     53a:	e74e      	b.n	3da <USB_Handler+0x252>
+				(_usb_instances->host_callback[USB_HOST_CALLBACK_CONNECT])(_usb_instances);
+     53c:	69c3      	ldr	r3, [r0, #28]
+     53e:	4798      	blx	r3
+     540:	e712      	b.n	368 <USB_Handler+0x1e0>
+				(_usb_instances->host_callback[USB_HOST_CALLBACK_RAMACER])(_usb_instances);
+     542:	6983      	ldr	r3, [r0, #24]
+     544:	4798      	blx	r3
+     546:	e700      	b.n	34a <USB_Handler+0x1c2>
+				(_usb_instances->host_callback[USB_HOST_CALLBACK_WAKEUP])(_usb_instances);
+     548:	68c3      	ldr	r3, [r0, #12]
+     54a:	4798      	blx	r3
+     54c:	e6ef      	b.n	32e <USB_Handler+0x1a6>
+				(_usb_instances->host_callback[USB_HOST_CALLBACK_DNRSM])(_usb_instances);
+     54e:	6903      	ldr	r3, [r0, #16]
+     550:	4798      	blx	r3
+     552:	e6e1      	b.n	318 <USB_Handler+0x190>
+				(_usb_instances->host_callback[USB_HOST_CALLBACK_UPRSM])(_usb_instances);
+     554:	6943      	ldr	r3, [r0, #20]
+     556:	4798      	blx	r3
+     558:	e6d3      	b.n	302 <USB_Handler+0x17a>
+				(_usb_instances->host_callback[USB_HOST_CALLBACK_RESET])(_usb_instances);
+     55a:	6883      	ldr	r3, [r0, #8]
+     55c:	4798      	blx	r3
+     55e:	e6c5      	b.n	2ec <USB_Handler+0x164>
+				(_usb_instances->host_callback[USB_HOST_CALLBACK_SOF])(_usb_instances);
+     560:	687b      	ldr	r3, [r7, #4]
+     562:	0038      	movs	r0, r7
+     564:	4798      	blx	r3
+     566:	e6b3      	b.n	2d0 <USB_Handler+0x148>
+				pipe_callback_para.pipe_num = pipe_int;
+     568:	4aa0      	ldr	r2, [pc, #640]	; (7ec <USB_Handler+0x664>)
+				pipe_callback_para.transfered_size = usb_descriptor_table.usb_pipe_table[pipe_int].HostDescBank[0].PCKSIZE.bit.MULTI_PACKET_SIZE;
+     56a:	4ba1      	ldr	r3, [pc, #644]	; (7f0 <USB_Handler+0x668>)
+     56c:	0171      	lsls	r1, r6, #5
+				pipe_callback_para.pipe_num = pipe_int;
+     56e:	7016      	strb	r6, [r2, #0]
+				pipe_callback_para.transfered_size = usb_descriptor_table.usb_pipe_table[pipe_int].HostDescBank[0].PCKSIZE.bit.MULTI_PACKET_SIZE;
+     570:	185b      	adds	r3, r3, r1
+     572:	685b      	ldr	r3, [r3, #4]
+						[USB_HOST_PIPE_CALLBACK_SETUP])(_usb_instances, NULL);
+     574:	2100      	movs	r1, #0
+				pipe_callback_para.transfered_size = usb_descriptor_table.usb_pipe_table[pipe_int].HostDescBank[0].PCKSIZE.bit.MULTI_PACKET_SIZE;
+     576:	011b      	lsls	r3, r3, #4
+     578:	0c9b      	lsrs	r3, r3, #18
+     57a:	8053      	strh	r3, [r2, #2]
+						[USB_HOST_PIPE_CALLBACK_SETUP])(_usb_instances, NULL);
+     57c:	0133      	lsls	r3, r6, #4
+     57e:	18c3      	adds	r3, r0, r3
+     580:	6adb      	ldr	r3, [r3, #44]	; 0x2c
+     582:	4798      	blx	r3
+     584:	e778      	b.n	478 <USB_Handler+0x2f0>
+						usb_descriptor_table.usb_pipe_table[pipe_int].HostDescBank[0].STATUS_PIPE.reg & 0x1F;
+     586:	4b9a      	ldr	r3, [pc, #616]	; (7f0 <USB_Handler+0x668>)
+     588:	0172      	lsls	r2, r6, #5
+     58a:	189b      	adds	r3, r3, r2
+     58c:	89da      	ldrh	r2, [r3, #14]
+     58e:	231f      	movs	r3, #31
+				pipe_callback_para.pipe_num = pipe_int;
+     590:	4996      	ldr	r1, [pc, #600]	; (7ec <USB_Handler+0x664>)
+						usb_descriptor_table.usb_pipe_table[pipe_int].HostDescBank[0].STATUS_PIPE.reg & 0x1F;
+     592:	4013      	ands	r3, r2
+				pipe_callback_para.pipe_error_status =
+     594:	704b      	strb	r3, [r1, #1]
+						[USB_HOST_PIPE_CALLBACK_ERROR])(_usb_instances, &pipe_callback_para);
+     596:	0133      	lsls	r3, r6, #4
+     598:	18c3      	adds	r3, r0, r3
+				pipe_callback_para.pipe_num = pipe_int;
+     59a:	700e      	strb	r6, [r1, #0]
+						[USB_HOST_PIPE_CALLBACK_ERROR])(_usb_instances, &pipe_callback_para);
+     59c:	6a9b      	ldr	r3, [r3, #40]	; 0x28
+     59e:	4798      	blx	r3
+     5a0:	e755      	b.n	44e <USB_Handler+0x2c6>
+					_usb_instances->hw->HOST.HostPipe[pipe_int].PCFG.bit.PTOKEN == USB_HOST_PIPE_TOKEN_IN &&
+     5a2:	464a      	mov	r2, r9
+     5a4:	5dd2      	ldrb	r2, [r2, r7]
+					usb_descriptor_table.usb_pipe_table[pipe_int].HostDescBank[0].STATUS_BK.bit.CRCERR) {
+     5a6:	4892      	ldr	r0, [pc, #584]	; (7f0 <USB_Handler+0x668>)
+					_usb_instances->hw->HOST.HostPipe[pipe_int].PCFG.bit.PTOKEN == USB_HOST_PIPE_TOKEN_IN &&
+     5a8:	0792      	lsls	r2, r2, #30
+     5aa:	0f92      	lsrs	r2, r2, #30
+     5ac:	4692      	mov	sl, r2
+			if (_usb_instances->hw->HOST.HostPipe[pipe_int].PCFG.bit.PTYPE == USB_HOST_PIPE_TYPE_ISO &&
+     5ae:	2a01      	cmp	r2, #1
+     5b0:	d100      	bne.n	5b4 <USB_Handler+0x42c>
+     5b2:	e0e8      	b.n	786 <USB_Handler+0x5fe>
+     5b4:	0172      	lsls	r2, r6, #5
+     5b6:	e722      	b.n	3fe <USB_Handler+0x276>
+					_usb_instances->hw->HOST.HostPipe[pipe_int].PCFG.bit.PTOKEN == USB_HOST_PIPE_TOKEN_IN) {
+     5b8:	5dcb      	ldrb	r3, [r1, r7]
+     5ba:	079b      	lsls	r3, r3, #30
+     5bc:	0f9b      	lsrs	r3, r3, #30
+			else if (_usb_instances->hw->HOST.HostPipe[pipe_int].PCFG.bit.PTYPE == USB_HOST_PIPE_TYPE_BULK &&
+     5be:	2b01      	cmp	r3, #1
+     5c0:	d000      	beq.n	5c4 <USB_Handler+0x43c>
+     5c2:	e725      	b.n	410 <USB_Handler+0x288>
+				usb_descriptor_table.usb_pipe_table[pipe_int].HostDescBank[0].STATUS_BK.reg = 0;
+     5c4:	2300      	movs	r3, #0
+     5c6:	7293      	strb	r3, [r2, #10]
+				_usb_instances->hw->HOST.HostPipe[pipe_int].PINTFLAG.reg =
+     5c8:	4663      	mov	r3, ip
+     5ca:	2204      	movs	r2, #4
+     5cc:	681b      	ldr	r3, [r3, #0]
+     5ce:	185b      	adds	r3, r3, r1
+     5d0:	71da      	strb	r2, [r3, #7]
+				_usb_instances->hw->HOST.HostPipe[pipe_int].PSTATUSSET.reg = USB_HOST_PSTATUS_PFREEZE;
+     5d2:	4663      	mov	r3, ip
+     5d4:	681b      	ldr	r3, [r3, #0]
+     5d6:	1859      	adds	r1, r3, r1
+     5d8:	2310      	movs	r3, #16
+     5da:	714b      	strb	r3, [r1, #5]
+     5dc:	e721      	b.n	422 <USB_Handler+0x29a>
+     5de:	002a      	movs	r2, r5
+     5e0:	4645      	mov	r5, r8
+     5e2:	4690      	mov	r8, r2
+     5e4:	015a      	lsls	r2, r3, #5
+     5e6:	18ad      	adds	r5, r5, r2
+					if (_usb_instances->hw->DEVICE.DeviceEndpoint[i].EPINTFLAG.reg & USB_DEVICE_EPINTFLAG_STALL1) {
+     5e8:	2208      	movs	r2, #8
+     5ea:	2040      	movs	r0, #64	; 0x40
+     5ec:	32ff      	adds	r2, #255	; 0xff
+     5ee:	5cac      	ldrb	r4, [r5, r2]
+     5f0:	464f      	mov	r7, r9
+     5f2:	4220      	tst	r0, r4
+     5f4:	d100      	bne.n	5f8 <USB_Handler+0x470>
+     5f6:	e08f      	b.n	718 <USB_Handler+0x590>
+						_usb_instances->hw->DEVICE.DeviceEndpoint[i].EPINTFLAG.reg = USB_DEVICE_EPINTFLAG_STALL1;
+     5f8:	54a8      	strb	r0, [r5, r2]
+						ep_callback_para.endpoint_address = USB_EP_DIR_IN | i;
+     5fa:	4640      	mov	r0, r8
+     5fc:	3a88      	subs	r2, #136	; 0x88
+     5fe:	3aff      	subs	r2, #255	; 0xff
+     600:	4302      	orrs	r2, r0
+     602:	487d      	ldr	r0, [pc, #500]	; (7f8 <USB_Handler+0x670>)
+     604:	7182      	strb	r2, [r0, #6]
+					if (flags_run & USB_DEVICE_EPINTFLAG_STALL_Msk) {
+     606:	2260      	movs	r2, #96	; 0x60
+     608:	420a      	tst	r2, r1
+     60a:	d100      	bne.n	60e <USB_Handler+0x486>
+     60c:	e5fd      	b.n	20a <USB_Handler+0x82>
+						(_usb_instances->device_endpoint_callback[i][USB_DEVICE_ENDPOINT_CALLBACK_STALL])(_usb_instances,&ep_callback_para);
+     60e:	011b      	lsls	r3, r3, #4
+     610:	18fb      	adds	r3, r7, r3
+     612:	33e0      	adds	r3, #224	; 0xe0
+     614:	681b      	ldr	r3, [r3, #0]
+     616:	4978      	ldr	r1, [pc, #480]	; (7f8 <USB_Handler+0x670>)
+     618:	0038      	movs	r0, r7
+     61a:	4798      	blx	r3
+     61c:	e5f5      	b.n	20a <USB_Handler+0x82>
+     61e:	464f      	mov	r7, r9
+					_usb_instances->hw->DEVICE.DeviceEndpoint[i].EPINTFLAG.reg = USB_DEVICE_EPINTFLAG_RXSTP;
+     620:	9a00      	ldr	r2, [sp, #0]
+     622:	7010      	strb	r0, [r2, #0]
+					if(_usb_instances->device_endpoint_enabled_callback_mask[i] & _usb_endpoint_irq_bits[USB_DEVICE_ENDPOINT_CALLBACK_RXSTP]) {
+     624:	18fa      	adds	r2, r7, r3
+     626:	3261      	adds	r2, #97	; 0x61
+     628:	32ff      	adds	r2, #255	; 0xff
+     62a:	7812      	ldrb	r2, [r2, #0]
+     62c:	4210      	tst	r0, r2
+     62e:	d100      	bne.n	632 <USB_Handler+0x4aa>
+     630:	e5eb      	b.n	20a <USB_Handler+0x82>
+						ep_callback_para.received_bytes = (uint16_t)(usb_descriptor_table.usb_endpoint_table[i].DeviceDescBank[0].PCKSIZE.bit.BYTE_COUNT);
+     632:	4a6f      	ldr	r2, [pc, #444]	; (7f0 <USB_Handler+0x668>)
+     634:	0159      	lsls	r1, r3, #5
+     636:	1852      	adds	r2, r2, r1
+     638:	6852      	ldr	r2, [r2, #4]
+						(_usb_instances->device_endpoint_callback[i][USB_DEVICE_ENDPOINT_CALLBACK_RXSTP])(_usb_instances,&ep_callback_para);
+     63a:	011b      	lsls	r3, r3, #4
+						ep_callback_para.received_bytes = (uint16_t)(usb_descriptor_table.usb_endpoint_table[i].DeviceDescBank[0].PCKSIZE.bit.BYTE_COUNT);
+     63c:	496e      	ldr	r1, [pc, #440]	; (7f8 <USB_Handler+0x670>)
+						(_usb_instances->device_endpoint_callback[i][USB_DEVICE_ENDPOINT_CALLBACK_RXSTP])(_usb_instances,&ep_callback_para);
+     63e:	18fb      	adds	r3, r7, r3
+						ep_callback_para.received_bytes = (uint16_t)(usb_descriptor_table.usb_endpoint_table[i].DeviceDescBank[0].PCKSIZE.bit.BYTE_COUNT);
+     640:	0492      	lsls	r2, r2, #18
+     642:	0c92      	lsrs	r2, r2, #18
+						(_usb_instances->device_endpoint_callback[i][USB_DEVICE_ENDPOINT_CALLBACK_RXSTP])(_usb_instances,&ep_callback_para);
+     644:	33dc      	adds	r3, #220	; 0xdc
+						ep_callback_para.received_bytes = (uint16_t)(usb_descriptor_table.usb_endpoint_table[i].DeviceDescBank[0].PCKSIZE.bit.BYTE_COUNT);
+     646:	800a      	strh	r2, [r1, #0]
+						(_usb_instances->device_endpoint_callback[i][USB_DEVICE_ENDPOINT_CALLBACK_RXSTP])(_usb_instances,&ep_callback_para);
+     648:	681b      	ldr	r3, [r3, #0]
+     64a:	4648      	mov	r0, r9
+     64c:	4798      	blx	r3
+     64e:	e5dc      	b.n	20a <USB_Handler+0x82>
+     650:	002a      	movs	r2, r5
+     652:	4645      	mov	r5, r8
+     654:	4690      	mov	r8, r2
+					if (_usb_instances->hw->DEVICE.DeviceEndpoint[i].EPINTFLAG.reg & USB_DEVICE_EPINTFLAG_TRCPT1) {
+     656:	2208      	movs	r2, #8
+     658:	2402      	movs	r4, #2
+     65a:	0158      	lsls	r0, r3, #5
+     65c:	182d      	adds	r5, r5, r0
+     65e:	32ff      	adds	r2, #255	; 0xff
+     660:	5cae      	ldrb	r6, [r5, r2]
+     662:	464f      	mov	r7, r9
+     664:	4234      	tst	r4, r6
+     666:	d061      	beq.n	72c <USB_Handler+0x5a4>
+						_usb_instances->hw->DEVICE.DeviceEndpoint[i].EPINTFLAG.reg = USB_DEVICE_EPINTFLAG_TRCPT1;
+     668:	54ac      	strb	r4, [r5, r2]
+						ep_callback_para.endpoint_address = USB_EP_DIR_IN | i;
+     66a:	4645      	mov	r5, r8
+     66c:	3a88      	subs	r2, #136	; 0x88
+     66e:	4c62      	ldr	r4, [pc, #392]	; (7f8 <USB_Handler+0x670>)
+     670:	3aff      	subs	r2, #255	; 0xff
+     672:	432a      	orrs	r2, r5
+     674:	71a2      	strb	r2, [r4, #6]
+						ep_callback_para.sent_bytes = (uint16_t)(usb_descriptor_table.usb_endpoint_table[i].DeviceDescBank[1].PCKSIZE.bit.BYTE_COUNT);
+     676:	4a5e      	ldr	r2, [pc, #376]	; (7f0 <USB_Handler+0x668>)
+     678:	1810      	adds	r0, r2, r0
+     67a:	6942      	ldr	r2, [r0, #20]
+     67c:	0492      	lsls	r2, r2, #18
+     67e:	0c92      	lsrs	r2, r2, #18
+     680:	8062      	strh	r2, [r4, #2]
+					if(flags_run & USB_DEVICE_EPINTFLAG_TRCPT_Msk) {
+     682:	078a      	lsls	r2, r1, #30
+     684:	d100      	bne.n	688 <USB_Handler+0x500>
+     686:	e5c0      	b.n	20a <USB_Handler+0x82>
+						(_usb_instances->device_endpoint_callback[i][USB_DEVICE_ENDPOINT_CALLBACK_TRCPT])(_usb_instances,&ep_callback_para);
+     688:	330d      	adds	r3, #13
+     68a:	011b      	lsls	r3, r3, #4
+     68c:	18fb      	adds	r3, r7, r3
+     68e:	685b      	ldr	r3, [r3, #4]
+     690:	4959      	ldr	r1, [pc, #356]	; (7f8 <USB_Handler+0x670>)
+     692:	0038      	movs	r0, r7
+     694:	4798      	blx	r3
+     696:	e5b8      	b.n	20a <USB_Handler+0x82>
+     698:	003a      	movs	r2, r7
+     69a:	0028      	movs	r0, r5
+     69c:	464f      	mov	r7, r9
+     69e:	4645      	mov	r5, r8
+     6a0:	4691      	mov	r9, r2
+					if (_usb_instances->hw->DEVICE.DeviceEndpoint[i].EPINTFLAG.reg & USB_DEVICE_EPINTFLAG_TRFAIL1) {
+     6a2:	2208      	movs	r2, #8
+     6a4:	2408      	movs	r4, #8
+     6a6:	4680      	mov	r8, r0
+     6a8:	0158      	lsls	r0, r3, #5
+     6aa:	182d      	adds	r5, r5, r0
+     6ac:	32ff      	adds	r2, #255	; 0xff
+     6ae:	5cae      	ldrb	r6, [r5, r2]
+     6b0:	4234      	tst	r4, r6
+     6b2:	d04e      	beq.n	752 <USB_Handler+0x5ca>
+						_usb_instances->hw->DEVICE.DeviceEndpoint[i].EPINTFLAG.reg = USB_DEVICE_EPINTFLAG_TRFAIL1;
+     6b4:	54ac      	strb	r4, [r5, r2]
+						if (usb_descriptor_table.usb_endpoint_table[i].DeviceDescBank[1].STATUS_BK.reg & USB_DEVICE_STATUS_BK_ERRORFLOW) {
+     6b6:	4a4e      	ldr	r2, [pc, #312]	; (7f0 <USB_Handler+0x668>)
+     6b8:	1810      	adds	r0, r2, r0
+     6ba:	2202      	movs	r2, #2
+     6bc:	7e84      	ldrb	r4, [r0, #26]
+     6be:	4222      	tst	r2, r4
+     6c0:	d002      	beq.n	6c8 <USB_Handler+0x540>
+							usb_descriptor_table.usb_endpoint_table[i].DeviceDescBank[1].STATUS_BK.reg &= ~USB_DEVICE_STATUS_BK_ERRORFLOW;
+     6c2:	7e84      	ldrb	r4, [r0, #26]
+     6c4:	4394      	bics	r4, r2
+     6c6:	7684      	strb	r4, [r0, #26]
+						ep_callback_para.endpoint_address = USB_EP_DIR_IN | i;
+     6c8:	2280      	movs	r2, #128	; 0x80
+     6ca:	4640      	mov	r0, r8
+     6cc:	4252      	negs	r2, r2
+     6ce:	4302      	orrs	r2, r0
+     6d0:	4849      	ldr	r0, [pc, #292]	; (7f8 <USB_Handler+0x670>)
+     6d2:	7182      	strb	r2, [r0, #6]
+						if (_usb_instances->hw->DEVICE.DeviceEndpoint[i].EPINTFLAG.reg & USB_DEVICE_EPINTFLAG_TRCPT1) {
+     6d4:	6838      	ldr	r0, [r7, #0]
+     6d6:	464a      	mov	r2, r9
+     6d8:	4684      	mov	ip, r0
+     6da:	0152      	lsls	r2, r2, #5
+     6dc:	4462      	add	r2, ip
+     6de:	79d2      	ldrb	r2, [r2, #7]
+     6e0:	0792      	lsls	r2, r2, #30
+     6e2:	d500      	bpl.n	6e6 <USB_Handler+0x55e>
+     6e4:	e591      	b.n	20a <USB_Handler+0x82>
+					if(flags_run & USB_DEVICE_EPINTFLAG_TRFAIL_Msk) {
+     6e6:	220c      	movs	r2, #12
+     6e8:	420a      	tst	r2, r1
+     6ea:	d100      	bne.n	6ee <USB_Handler+0x566>
+     6ec:	e58d      	b.n	20a <USB_Handler+0x82>
+						(_usb_instances->device_endpoint_callback[i][USB_DEVICE_ENDPOINT_CALLBACK_TRFAIL])(_usb_instances,&ep_callback_para);
+     6ee:	011b      	lsls	r3, r3, #4
+     6f0:	18fb      	adds	r3, r7, r3
+     6f2:	33d8      	adds	r3, #216	; 0xd8
+     6f4:	681b      	ldr	r3, [r3, #0]
+     6f6:	4940      	ldr	r1, [pc, #256]	; (7f8 <USB_Handler+0x670>)
+     6f8:	0038      	movs	r0, r7
+     6fa:	4798      	blx	r3
+     6fc:	e585      	b.n	20a <USB_Handler+0x82>
+					pipe_callback_para.transfered_size = usb_descriptor_table.usb_pipe_table[pipe_int].HostDescBank[0].PCKSIZE.bit.BYTE_COUNT;
+     6fe:	6853      	ldr	r3, [r2, #4]
+     700:	049b      	lsls	r3, r3, #18
+     702:	0c9b      	lsrs	r3, r3, #18
+     704:	804b      	strh	r3, [r1, #2]
+					pipe_callback_para.required_size = usb_descriptor_table.usb_pipe_table[pipe_int].HostDescBank[0].PCKSIZE.bit.MULTI_PACKET_SIZE;
+     706:	6853      	ldr	r3, [r2, #4]
+     708:	011b      	lsls	r3, r3, #4
+     70a:	0c9b      	lsrs	r3, r3, #18
+     70c:	808b      	strh	r3, [r1, #4]
+					usb_descriptor_table.usb_pipe_table[pipe_int].HostDescBank[0].PCKSIZE.bit.BYTE_COUNT = 0;
+     70e:	6853      	ldr	r3, [r2, #4]
+     710:	0b9b      	lsrs	r3, r3, #14
+     712:	039b      	lsls	r3, r3, #14
+     714:	6053      	str	r3, [r2, #4]
+     716:	e70a      	b.n	52e <USB_Handler+0x3a6>
+					} else if (_usb_instances->hw->DEVICE.DeviceEndpoint[i].EPINTFLAG.reg & USB_DEVICE_EPINTFLAG_STALL0) {
+     718:	2020      	movs	r0, #32
+     71a:	5cac      	ldrb	r4, [r5, r2]
+     71c:	4220      	tst	r0, r4
+     71e:	d100      	bne.n	722 <USB_Handler+0x59a>
+     720:	e771      	b.n	606 <USB_Handler+0x47e>
+						_usb_instances->hw->DEVICE.DeviceEndpoint[i].EPINTFLAG.reg = USB_DEVICE_EPINTFLAG_STALL0;
+     722:	54a8      	strb	r0, [r5, r2]
+						ep_callback_para.endpoint_address = USB_EP_DIR_OUT | i;
+     724:	4640      	mov	r0, r8
+     726:	4a34      	ldr	r2, [pc, #208]	; (7f8 <USB_Handler+0x670>)
+     728:	7190      	strb	r0, [r2, #6]
+     72a:	e76c      	b.n	606 <USB_Handler+0x47e>
+					} else if (_usb_instances->hw->DEVICE.DeviceEndpoint[i].EPINTFLAG.reg & USB_DEVICE_EPINTFLAG_TRCPT0) {
+     72c:	5cac      	ldrb	r4, [r5, r2]
+     72e:	07e4      	lsls	r4, r4, #31
+     730:	d5a7      	bpl.n	682 <USB_Handler+0x4fa>
+						_usb_instances->hw->DEVICE.DeviceEndpoint[i].EPINTFLAG.reg = USB_DEVICE_EPINTFLAG_TRCPT0;
+     732:	4664      	mov	r4, ip
+     734:	54ac      	strb	r4, [r5, r2]
+						ep_callback_para.endpoint_address = USB_EP_DIR_OUT | i;
+     736:	4642      	mov	r2, r8
+     738:	4c2f      	ldr	r4, [pc, #188]	; (7f8 <USB_Handler+0x670>)
+     73a:	71a2      	strb	r2, [r4, #6]
+						ep_callback_para.received_bytes = (uint16_t)(usb_descriptor_table.usb_endpoint_table[i].DeviceDescBank[0].PCKSIZE.bit.BYTE_COUNT);
+     73c:	4a2c      	ldr	r2, [pc, #176]	; (7f0 <USB_Handler+0x668>)
+     73e:	1810      	adds	r0, r2, r0
+     740:	6842      	ldr	r2, [r0, #4]
+     742:	0492      	lsls	r2, r2, #18
+     744:	0c92      	lsrs	r2, r2, #18
+     746:	8022      	strh	r2, [r4, #0]
+						ep_callback_para.out_buffer_size = (uint16_t)(usb_descriptor_table.usb_endpoint_table[i].DeviceDescBank[0].PCKSIZE.bit.MULTI_PACKET_SIZE);
+     748:	6842      	ldr	r2, [r0, #4]
+     74a:	0112      	lsls	r2, r2, #4
+     74c:	0c92      	lsrs	r2, r2, #18
+     74e:	80a2      	strh	r2, [r4, #4]
+     750:	e797      	b.n	682 <USB_Handler+0x4fa>
+					} else if(_usb_instances->hw->DEVICE.DeviceEndpoint[i].EPINTFLAG.reg & USB_DEVICE_EPINTFLAG_TRFAIL0) {
+     752:	2404      	movs	r4, #4
+     754:	5cae      	ldrb	r6, [r5, r2]
+     756:	4234      	tst	r4, r6
+     758:	d0c5      	beq.n	6e6 <USB_Handler+0x55e>
+						_usb_instances->hw->DEVICE.DeviceEndpoint[i].EPINTFLAG.reg = USB_DEVICE_EPINTFLAG_TRFAIL0;
+     75a:	54ac      	strb	r4, [r5, r2]
+						if (usb_descriptor_table.usb_endpoint_table[i].DeviceDescBank[0].STATUS_BK.reg & USB_DEVICE_STATUS_BK_ERRORFLOW) {
+     75c:	4a24      	ldr	r2, [pc, #144]	; (7f0 <USB_Handler+0x668>)
+     75e:	3c02      	subs	r4, #2
+     760:	1810      	adds	r0, r2, r0
+     762:	7a82      	ldrb	r2, [r0, #10]
+     764:	4214      	tst	r4, r2
+     766:	d002      	beq.n	76e <USB_Handler+0x5e6>
+							usb_descriptor_table.usb_endpoint_table[i].DeviceDescBank[0].STATUS_BK.reg &= ~USB_DEVICE_STATUS_BK_ERRORFLOW;
+     768:	7a82      	ldrb	r2, [r0, #10]
+     76a:	43a2      	bics	r2, r4
+     76c:	7282      	strb	r2, [r0, #10]
+						ep_callback_para.endpoint_address = USB_EP_DIR_OUT | i;
+     76e:	4640      	mov	r0, r8
+     770:	4a21      	ldr	r2, [pc, #132]	; (7f8 <USB_Handler+0x670>)
+     772:	7190      	strb	r0, [r2, #6]
+						if (_usb_instances->hw->DEVICE.DeviceEndpoint[i].EPINTFLAG.reg & USB_DEVICE_EPINTFLAG_TRCPT0) {
+     774:	6838      	ldr	r0, [r7, #0]
+     776:	464a      	mov	r2, r9
+     778:	4684      	mov	ip, r0
+     77a:	0152      	lsls	r2, r2, #5
+     77c:	4462      	add	r2, ip
+     77e:	79d2      	ldrb	r2, [r2, #7]
+     780:	07d2      	lsls	r2, r2, #31
+     782:	d5b0      	bpl.n	6e6 <USB_Handler+0x55e>
+     784:	e541      	b.n	20a <USB_Handler+0x82>
+					usb_descriptor_table.usb_pipe_table[pipe_int].HostDescBank[0].STATUS_BK.bit.CRCERR) {
+     786:	0172      	lsls	r2, r6, #5
+     788:	1881      	adds	r1, r0, r2
+     78a:	000b      	movs	r3, r1
+     78c:	2108      	movs	r1, #8
+     78e:	469b      	mov	fp, r3
+     790:	9301      	str	r3, [sp, #4]
+     792:	4459      	add	r1, fp
+     794:	7889      	ldrb	r1, [r1, #2]
+					_usb_instances->hw->HOST.HostPipe[pipe_int].PCFG.bit.PTOKEN == USB_HOST_PIPE_TOKEN_IN &&
+     796:	07c9      	lsls	r1, r1, #31
+     798:	d400      	bmi.n	79c <USB_Handler+0x614>
+     79a:	e630      	b.n	3fe <USB_Handler+0x276>
+				host_pipe_job_busy_status &= ~(1 << pipe_int);
+     79c:	4652      	mov	r2, sl
+     79e:	40b2      	lsls	r2, r6
+     7a0:	4816      	ldr	r0, [pc, #88]	; (7fc <USB_Handler+0x674>)
+     7a2:	6801      	ldr	r1, [r0, #0]
+     7a4:	4391      	bics	r1, r2
+				usb_descriptor_table.usb_pipe_table[pipe_int].HostDescBank[0].STATUS_BK.reg = 0;
+     7a6:	2200      	movs	r2, #0
+     7a8:	729a      	strb	r2, [r3, #10]
+				_usb_instances->hw->HOST.HostPipe[pipe_int].PINTFLAG.reg =
+     7aa:	4663      	mov	r3, ip
+				host_pipe_job_busy_status &= ~(1 << pipe_int);
+     7ac:	6001      	str	r1, [r0, #0]
+				_usb_instances->hw->HOST.HostPipe[pipe_int].PINTFLAG.reg =
+     7ae:	681b      	ldr	r3, [r3, #0]
+     7b0:	444b      	add	r3, r9
+     7b2:	001a      	movs	r2, r3
+     7b4:	2304      	movs	r3, #4
+     7b6:	71d3      	strb	r3, [r2, #7]
+				if(_usb_instances->host_pipe_enabled_callback_mask[pipe_int] &
+     7b8:	4663      	mov	r3, ip
+     7ba:	199a      	adds	r2, r3, r6
+     7bc:	32ae      	adds	r2, #174	; 0xae
+     7be:	7812      	ldrb	r2, [r2, #0]
+     7c0:	9b00      	ldr	r3, [sp, #0]
+     7c2:	4213      	tst	r3, r2
+     7c4:	d100      	bne.n	7c8 <USB_Handler+0x640>
+     7c6:	e62c      	b.n	422 <USB_Handler+0x29a>
+					pipe_callback_para.pipe_error_status = USB_STATUS_PIPE_CRC16ER;
+     7c8:	2310      	movs	r3, #16
+					pipe_callback_para.pipe_num = pipe_int;
+     7ca:	4908      	ldr	r1, [pc, #32]	; (7ec <USB_Handler+0x664>)
+							[USB_HOST_PIPE_CALLBACK_ERROR])(_usb_instances, &pipe_callback_para);
+     7cc:	4660      	mov	r0, ip
+					pipe_callback_para.pipe_error_status = USB_STATUS_PIPE_CRC16ER;
+     7ce:	704b      	strb	r3, [r1, #1]
+							[USB_HOST_PIPE_CALLBACK_ERROR])(_usb_instances, &pipe_callback_para);
+     7d0:	0133      	lsls	r3, r6, #4
+     7d2:	4463      	add	r3, ip
+					pipe_callback_para.pipe_num = pipe_int;
+     7d4:	700e      	strb	r6, [r1, #0]
+							[USB_HOST_PIPE_CALLBACK_ERROR])(_usb_instances, &pipe_callback_para);
+     7d6:	6a9b      	ldr	r3, [r3, #40]	; 0x28
+     7d8:	4798      	blx	r3
+     7da:	e622      	b.n	422 <USB_Handler+0x29a>
+							& USB_LPM_ATTRIBUT_REMOTEWAKE_MASK;
+     7dc:	4652      	mov	r2, sl
+							usb_descriptor_table.usb_endpoint_table[0].DeviceDescBank[0].EXTREG.bit.VARIABLE
+     7de:	4b04      	ldr	r3, [pc, #16]	; (7f0 <USB_Handler+0x668>)
+					device_callback_lpm_wakeup_enable =
+     7e0:	4907      	ldr	r1, [pc, #28]	; (800 <USB_Handler+0x678>)
+							usb_descriptor_table.usb_endpoint_table[0].DeviceDescBank[0].EXTREG.bit.VARIABLE
+     7e2:	891b      	ldrh	r3, [r3, #8]
+     7e4:	091b      	lsrs	r3, r3, #4
+							& USB_LPM_ATTRIBUT_REMOTEWAKE_MASK;
+     7e6:	4013      	ands	r3, r2
+     7e8:	600b      	str	r3, [r1, #0]
+     7ea:	e504      	b.n	1f6 <USB_Handler+0x6e>
+     7ec:	20000874 	.word	0x20000874
+     7f0:	2000092c 	.word	0x2000092c
+     7f4:	f0003fff 	.word	0xf0003fff
+     7f8:	20000868 	.word	0x20000868
+     7fc:	20000870 	.word	0x20000870
+     800:	20000864 	.word	0x20000864
+
+00000804 <SERCOM0_Handler>:
+	/* Get the vector number from the lookup table for the requested SERCOM */
+	return (enum system_interrupt_vector)sercom_int_vectors[instance_index];
+}
+
+/** Auto-generate a set of interrupt handlers for each SERCOM in the device */
+MREPEAT(SERCOM_INST_NUM, _SERCOM_INTERRUPT_HANDLER, ~)
+     804:	b510      	push	{r4, lr}
+     806:	4b02      	ldr	r3, [pc, #8]	; (810 <SERCOM0_Handler+0xc>)
+     808:	2000      	movs	r0, #0
+     80a:	681b      	ldr	r3, [r3, #0]
+     80c:	4798      	blx	r3
+     80e:	bd10      	pop	{r4, pc}
+     810:	2000087c 	.word	0x2000087c
+
+00000814 <SERCOM1_Handler>:
+     814:	b510      	push	{r4, lr}
+     816:	4b02      	ldr	r3, [pc, #8]	; (820 <SERCOM1_Handler+0xc>)
+     818:	2001      	movs	r0, #1
+     81a:	685b      	ldr	r3, [r3, #4]
+     81c:	4798      	blx	r3
+     81e:	bd10      	pop	{r4, pc}
+     820:	2000087c 	.word	0x2000087c
+
+00000824 <SERCOM2_Handler>:
+     824:	b510      	push	{r4, lr}
+     826:	4b02      	ldr	r3, [pc, #8]	; (830 <SERCOM2_Handler+0xc>)
+     828:	2002      	movs	r0, #2
+     82a:	689b      	ldr	r3, [r3, #8]
+     82c:	4798      	blx	r3
+     82e:	bd10      	pop	{r4, pc}
+     830:	2000087c 	.word	0x2000087c
+
+00000834 <SERCOM3_Handler>:
+     834:	b510      	push	{r4, lr}
+     836:	4b02      	ldr	r3, [pc, #8]	; (840 <SERCOM3_Handler+0xc>)
+     838:	2003      	movs	r0, #3
+     83a:	68db      	ldr	r3, [r3, #12]
+     83c:	4798      	blx	r3
+     83e:	bd10      	pop	{r4, pc}
+     840:	2000087c 	.word	0x2000087c
+
+00000844 <SERCOM4_Handler>:
+     844:	b510      	push	{r4, lr}
+     846:	4b02      	ldr	r3, [pc, #8]	; (850 <SERCOM4_Handler+0xc>)
+     848:	2004      	movs	r0, #4
+     84a:	691b      	ldr	r3, [r3, #16]
+     84c:	4798      	blx	r3
+     84e:	bd10      	pop	{r4, pc}
+     850:	2000087c 	.word	0x2000087c
+
+00000854 <SERCOM5_Handler>:
+     854:	b510      	push	{r4, lr}
+     856:	4b02      	ldr	r3, [pc, #8]	; (860 <SERCOM5_Handler+0xc>)
+     858:	2005      	movs	r0, #5
+     85a:	695b      	ldr	r3, [r3, #20]
+     85c:	4798      	blx	r3
+     85e:	bd10      	pop	{r4, pc}
+     860:	2000087c 	.word	0x2000087c
+
+00000864 <EIC_Handler>:
+	return _current_channel;
+}
+
+/** Handler for the EXTINT hardware module interrupt. */
+void EIC_Handler(void)
+{
+     864:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+	/* Find any triggered channels, run associated callback handlers */
+	for (_current_channel = 0; _current_channel < EIC_NUMBER_OF_INTERRUPTS ; _current_channel++) {
+     866:	2300      	movs	r3, #0
+ */
+static inline bool extint_chan_is_detected(
+		const uint8_t channel)
+{
+	Eic *const eic_module = _extint_get_eic_from_channel(channel);
+	uint32_t eic_mask   = (1UL << (channel % 32));
+     868:	2601      	movs	r6, #1
+     86a:	4c0b      	ldr	r4, [pc, #44]	; (898 <EIC_Handler+0x34>)
+
+	return (eic_module->INTFLAG.reg & eic_mask);
+     86c:	4d0b      	ldr	r5, [pc, #44]	; (89c <EIC_Handler+0x38>)
+		if (extint_chan_is_detected(_current_channel)) {
+			/* Clear flag */
+			extint_chan_clear_detected(_current_channel);
+			/* Find any associated callback entries in the callback table */
+			if (_extint_dev.callbacks[_current_channel] != NULL) {
+     86e:	4f0c      	ldr	r7, [pc, #48]	; (8a0 <EIC_Handler+0x3c>)
+	for (_current_channel = 0; _current_channel < EIC_NUMBER_OF_INTERRUPTS ; _current_channel++) {
+     870:	7023      	strb	r3, [r4, #0]
+	uint32_t eic_mask   = (1UL << (channel % 32));
+     872:	0032      	movs	r2, r6
+     874:	409a      	lsls	r2, r3
+	return (eic_module->INTFLAG.reg & eic_mask);
+     876:	6929      	ldr	r1, [r5, #16]
+		if (extint_chan_is_detected(_current_channel)) {
+     878:	4211      	tst	r1, r2
+     87a:	d005      	beq.n	888 <EIC_Handler+0x24>
+		const uint8_t channel)
+{
+	Eic *const eic_module = _extint_get_eic_from_channel(channel);
+	uint32_t eic_mask   = (1UL << (channel % 32));
+
+	eic_module->INTFLAG.reg = eic_mask;
+     87c:	612a      	str	r2, [r5, #16]
+			if (_extint_dev.callbacks[_current_channel] != NULL) {
+     87e:	009b      	lsls	r3, r3, #2
+     880:	59db      	ldr	r3, [r3, r7]
+     882:	2b00      	cmp	r3, #0
+     884:	d000      	beq.n	888 <EIC_Handler+0x24>
+				/* Run the registered callback */
+				_extint_dev.callbacks[_current_channel]();
+     886:	4798      	blx	r3
+	for (_current_channel = 0; _current_channel < EIC_NUMBER_OF_INTERRUPTS ; _current_channel++) {
+     888:	7823      	ldrb	r3, [r4, #0]
+     88a:	3301      	adds	r3, #1
+     88c:	b2db      	uxtb	r3, r3
+     88e:	7023      	strb	r3, [r4, #0]
+     890:	2b0f      	cmp	r3, #15
+     892:	d9ee      	bls.n	872 <EIC_Handler+0xe>
+			}
+		}
+	}
+}
+     894:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
+     896:	46c0      	nop			; (mov r8, r8)
+     898:	20000a2c 	.word	0x20000a2c
+     89c:	40001800 	.word	0x40001800
+     8a0:	200008ec 	.word	0x200008ec
+
+000008a4 <cpu_irq_enter_critical>:
+volatile bool g_interrupt_enabled = true;
+#endif
+
+void cpu_irq_enter_critical(void)
+{
+	if (cpu_irq_critical_section_counter == 0) {
+     8a4:	4b0b      	ldr	r3, [pc, #44]	; (8d4 <cpu_irq_enter_critical+0x30>)
+     8a6:	681a      	ldr	r2, [r3, #0]
+     8a8:	2a00      	cmp	r2, #0
+     8aa:	d105      	bne.n	8b8 <cpu_irq_enter_critical+0x14>
+ */
+__STATIC_FORCEINLINE uint32_t __get_PRIMASK(void)
+{
+  uint32_t result;
+
+  __ASM volatile ("MRS %0, primask" : "=r" (result) :: "memory");
+     8ac:	f3ef 8110 	mrs	r1, PRIMASK
+		if (cpu_irq_is_enabled()) {
+     8b0:	2900      	cmp	r1, #0
+     8b2:	d005      	beq.n	8c0 <cpu_irq_enter_critical+0x1c>
+			cpu_irq_disable();
+			cpu_irq_prev_interrupt_state = true;
+		} else {
+			/* Make sure the to save the prev state as false */
+			cpu_irq_prev_interrupt_state = false;
+     8b4:	4908      	ldr	r1, [pc, #32]	; (8d8 <cpu_irq_enter_critical+0x34>)
+     8b6:	700a      	strb	r2, [r1, #0]
+		}
+
+	}
+
+	cpu_irq_critical_section_counter++;
+     8b8:	681a      	ldr	r2, [r3, #0]
+     8ba:	3201      	adds	r2, #1
+     8bc:	601a      	str	r2, [r3, #0]
+}
+     8be:	4770      	bx	lr
+  __ASM volatile ("cpsid i" : : : "memory");
+     8c0:	b672      	cpsid	i
+  \details Ensures the apparent order of the explicit memory operations before
+           and after the instruction, without ensuring their completion.
+ */
+__STATIC_FORCEINLINE void __DMB(void)
+{
+  __ASM volatile ("dmb 0xF":::"memory");
+     8c2:	f3bf 8f5f 	dmb	sy
+			cpu_irq_disable();
+     8c6:	4a05      	ldr	r2, [pc, #20]	; (8dc <cpu_irq_enter_critical+0x38>)
+     8c8:	7011      	strb	r1, [r2, #0]
+			cpu_irq_prev_interrupt_state = true;
+     8ca:	4a03      	ldr	r2, [pc, #12]	; (8d8 <cpu_irq_enter_critical+0x34>)
+     8cc:	3101      	adds	r1, #1
+     8ce:	7011      	strb	r1, [r2, #0]
+     8d0:	e7f2      	b.n	8b8 <cpu_irq_enter_critical+0x14>
+     8d2:	46c0      	nop			; (mov r8, r8)
+     8d4:	20000894 	.word	0x20000894
+     8d8:	20000898 	.word	0x20000898
+     8dc:	20000000 	.word	0x20000000
+
+000008e0 <cpu_irq_leave_critical>:
+void cpu_irq_leave_critical(void)
+{
+	/* Check if the user is trying to leave a critical section when not in a critical section */
+	Assert(cpu_irq_critical_section_counter > 0);
+
+	cpu_irq_critical_section_counter--;
+     8e0:	4b08      	ldr	r3, [pc, #32]	; (904 <cpu_irq_leave_critical+0x24>)
+     8e2:	681a      	ldr	r2, [r3, #0]
+     8e4:	3a01      	subs	r2, #1
+     8e6:	601a      	str	r2, [r3, #0]
+
+	/* Only enable global interrupts when the counter reaches 0 and the state of the global interrupt flag
+	   was enabled when entering critical state */
+	if ((cpu_irq_critical_section_counter == 0) && (cpu_irq_prev_interrupt_state)) {
+     8e8:	681b      	ldr	r3, [r3, #0]
+     8ea:	2b00      	cmp	r3, #0
+     8ec:	d109      	bne.n	902 <cpu_irq_leave_critical+0x22>
+     8ee:	4b06      	ldr	r3, [pc, #24]	; (908 <cpu_irq_leave_critical+0x28>)
+     8f0:	781b      	ldrb	r3, [r3, #0]
+     8f2:	2b00      	cmp	r3, #0
+     8f4:	d005      	beq.n	902 <cpu_irq_leave_critical+0x22>
+		cpu_irq_enable();
+     8f6:	2201      	movs	r2, #1
+     8f8:	4b04      	ldr	r3, [pc, #16]	; (90c <cpu_irq_leave_critical+0x2c>)
+     8fa:	701a      	strb	r2, [r3, #0]
+     8fc:	f3bf 8f5f 	dmb	sy
+  __ASM volatile ("cpsie i" : : : "memory");
+     900:	b662      	cpsie	i
+	}
+}
+     902:	4770      	bx	lr
+     904:	20000894 	.word	0x20000894
+     908:	20000898 	.word	0x20000898
+     90c:	20000000 	.word	0x20000000
+
+00000910 <system_board_init>:
+void board_init(void);
+#  pragma weak board_init=system_board_init
+#endif
+
+void system_board_init(void)
+{
+     910:	b5f0      	push	{r4, r5, r6, r7, lr}
+	/* Sanity check arguments */
+	Assert(config);
+
+	/* Default configuration values */
+	config->direction  = PORT_PIN_DIR_INPUT;
+	config->input_pull = PORT_PIN_PULL_UP;
+     912:	2501      	movs	r5, #1
+	config->powersave  = false;
+     914:	2700      	movs	r7, #0
+     916:	b083      	sub	sp, #12
+	config->input_pull = PORT_PIN_PULL_UP;
+     918:	ac01      	add	r4, sp, #4
+	struct port_config pin_conf;
+	port_get_config_defaults(&pin_conf);
+
+	/* Configure LEDs as outputs, turn them off */
+	pin_conf.direction  = PORT_PIN_DIR_OUTPUT;
+	port_pin_set_config(LED_0_PIN, &pin_conf);
+     91a:	0021      	movs	r1, r4
+     91c:	4e08      	ldr	r6, [pc, #32]	; (940 <system_board_init+0x30>)
+     91e:	203e      	movs	r0, #62	; 0x3e
+     920:	7065      	strb	r5, [r4, #1]
+	config->powersave  = false;
+     922:	70a7      	strb	r7, [r4, #2]
+	pin_conf.direction  = PORT_PIN_DIR_OUTPUT;
+     924:	7025      	strb	r5, [r4, #0]
+	port_pin_set_config(LED_0_PIN, &pin_conf);
+     926:	47b0      	blx	r6
+	PortGroup *const port_base = port_get_group_from_gpio_pin(gpio_pin);
+	uint32_t pin_mask  = (1UL << (gpio_pin % 32));
+
+	/* Set the pin to high or low atomically based on the requested level */
+	if (level) {
+		port_base->OUTSET.reg = pin_mask;
+     928:	2280      	movs	r2, #128	; 0x80
+     92a:	4b06      	ldr	r3, [pc, #24]	; (944 <system_board_init+0x34>)
+     92c:	05d2      	lsls	r2, r2, #23
+     92e:	619a      	str	r2, [r3, #24]
+	port_pin_set_output_level(LED_0_PIN, LED_0_INACTIVE);
+
+	/* Set buttons as inputs */
+	pin_conf.direction  = PORT_PIN_DIR_INPUT;
+	pin_conf.input_pull = PORT_PIN_PULL_UP;
+	port_pin_set_config(BUTTON_0_PIN, &pin_conf);
+     930:	0021      	movs	r1, r4
+     932:	200f      	movs	r0, #15
+	pin_conf.direction  = PORT_PIN_DIR_INPUT;
+     934:	7027      	strb	r7, [r4, #0]
+	pin_conf.input_pull = PORT_PIN_PULL_UP;
+     936:	7065      	strb	r5, [r4, #1]
+	port_pin_set_config(BUTTON_0_PIN, &pin_conf);
+     938:	47b0      	blx	r6
+	port_pin_set_output_level(AT86RFX_RST_PIN, true);
+	port_pin_set_output_level(AT86RFX_SLP_PIN, true);
+	pin_conf.direction  = PORT_PIN_DIR_INPUT;
+	port_pin_set_config(AT86RFX_SPI_MISO, &pin_conf);
+#endif	
+}
+     93a:	b003      	add	sp, #12
+     93c:	bdf0      	pop	{r4, r5, r6, r7, pc}
+     93e:	46c0      	nop			; (mov r8, r8)
+     940:	00000949 	.word	0x00000949
+     944:	41004480 	.word	0x41004480
+
+00000948 <port_pin_set_config>:
+{
+	/* Sanity check arguments */
+	Assert(config);
+
+	/* Default configuration values */
+	config->mux_position = SYSTEM_PINMUX_GPIO;
+     948:	2280      	movs	r2, #128	; 0x80
+ *  \param[in] config    Configuration settings for the pin
+ */
+void port_pin_set_config(
+		const uint8_t gpio_pin,
+		const struct port_config *const config)
+{
+     94a:	b500      	push	{lr}
+     94c:	b083      	sub	sp, #12
+     94e:	ab01      	add	r3, sp, #4
+     950:	701a      	strb	r2, [r3, #0]
+
+	struct system_pinmux_config pinmux_config;
+	system_pinmux_get_config_defaults(&pinmux_config);
+
+	pinmux_config.mux_position = SYSTEM_PINMUX_GPIO;
+	pinmux_config.direction    = (enum system_pinmux_pin_dir)config->direction;
+     952:	780a      	ldrb	r2, [r1, #0]
+     954:	705a      	strb	r2, [r3, #1]
+	pinmux_config.input_pull   = (enum system_pinmux_pin_pull)config->input_pull;
+     956:	784a      	ldrb	r2, [r1, #1]
+     958:	709a      	strb	r2, [r3, #2]
+	pinmux_config.powersave    = config->powersave;
+     95a:	788a      	ldrb	r2, [r1, #2]
+
+	system_pinmux_pin_set_config(gpio_pin, &pinmux_config);
+     95c:	0019      	movs	r1, r3
+	pinmux_config.powersave    = config->powersave;
+     95e:	70da      	strb	r2, [r3, #3]
+	system_pinmux_pin_set_config(gpio_pin, &pinmux_config);
+     960:	4b01      	ldr	r3, [pc, #4]	; (968 <port_pin_set_config+0x20>)
+     962:	4798      	blx	r3
+}
+     964:	b003      	add	sp, #12
+     966:	bd00      	pop	{pc}
+     968:	00000eb9 	.word	0x00000eb9
+
+0000096c <system_clock_source_enable.part.0>:
+	case SYSTEM_CLOCK_SOURCE_XOSC32K:
+		SYSCTRL->XOSC32K.reg |= SYSCTRL_XOSC32K_ENABLE;
+		break;
+
+	case SYSTEM_CLOCK_SOURCE_DFLL:
+		_system_clock_inst.dfll.control |= SYSCTRL_DFLLCTRL_ENABLE;
+     96c:	2102      	movs	r1, #2
+     96e:	480d      	ldr	r0, [pc, #52]	; (9a4 <system_clock_source_enable.part.0+0x38>)
+	SYSCTRL->DFLLCTRL.reg = SYSCTRL_DFLLCTRL_ENABLE;
+     970:	4a0d      	ldr	r2, [pc, #52]	; (9a8 <system_clock_source_enable.part.0+0x3c>)
+		_system_clock_inst.dfll.control |= SYSCTRL_DFLLCTRL_ENABLE;
+     972:	6803      	ldr	r3, [r0, #0]
+     974:	430b      	orrs	r3, r1
+     976:	6003      	str	r3, [r0, #0]
+	SYSCTRL->DFLLCTRL.reg = SYSCTRL_DFLLCTRL_ENABLE;
+     978:	8491      	strh	r1, [r2, #36]	; 0x24
+	while (!(SYSCTRL->PCLKSR.reg & SYSCTRL_PCLKSR_DFLLRDY)) {
+     97a:	310e      	adds	r1, #14
+     97c:	68d3      	ldr	r3, [r2, #12]
+     97e:	4219      	tst	r1, r3
+     980:	d0fc      	beq.n	97c <system_clock_source_enable.part.0+0x10>
+	SYSCTRL->DFLLMUL.reg = _system_clock_inst.dfll.mul;
+     982:	6883      	ldr	r3, [r0, #8]
+	while (!(SYSCTRL->PCLKSR.reg & SYSCTRL_PCLKSR_DFLLRDY)) {
+     984:	2110      	movs	r1, #16
+	SYSCTRL->DFLLMUL.reg = _system_clock_inst.dfll.mul;
+     986:	62d3      	str	r3, [r2, #44]	; 0x2c
+	SYSCTRL->DFLLVAL.reg = _system_clock_inst.dfll.val;
+     988:	6843      	ldr	r3, [r0, #4]
+     98a:	6293      	str	r3, [r2, #40]	; 0x28
+	SYSCTRL->DFLLCTRL.reg = 0;
+     98c:	2300      	movs	r3, #0
+     98e:	8493      	strh	r3, [r2, #36]	; 0x24
+	while (!(SYSCTRL->PCLKSR.reg & SYSCTRL_PCLKSR_DFLLRDY)) {
+     990:	4a05      	ldr	r2, [pc, #20]	; (9a8 <system_clock_source_enable.part.0+0x3c>)
+     992:	68d3      	ldr	r3, [r2, #12]
+     994:	4219      	tst	r1, r3
+     996:	d0fc      	beq.n	992 <system_clock_source_enable.part.0+0x26>
+	SYSCTRL->DFLLCTRL.reg = _system_clock_inst.dfll.control;
+     998:	6803      	ldr	r3, [r0, #0]
+     99a:	b29b      	uxth	r3, r3
+		Assert(false);
+		return STATUS_ERR_INVALID_ARG;
+	}
+
+	return STATUS_OK;
+}
+     99c:	2000      	movs	r0, #0
+	SYSCTRL->DFLLCTRL.reg = _system_clock_inst.dfll.control;
+     99e:	8493      	strh	r3, [r2, #36]	; 0x24
+}
+     9a0:	4770      	bx	lr
+     9a2:	46c0      	nop			; (mov r8, r8)
+     9a4:	2000089c 	.word	0x2000089c
+     9a8:	40000800 	.word	0x40000800
+
+000009ac <system_clock_source_xosc32k_set_config>:
+{
+     9ac:	b5f0      	push	{r4, r5, r6, r7, lr}
+     9ae:	46de      	mov	lr, fp
+     9b0:	4657      	mov	r7, sl
+     9b2:	464e      	mov	r6, r9
+     9b4:	4645      	mov	r5, r8
+     9b6:	b5e0      	push	{r5, r6, r7, lr}
+     9b8:	0001      	movs	r1, r0
+	temp.bit.STARTUP = config->startup_time;
+     9ba:	7845      	ldrb	r5, [r0, #1]
+	if (config->external_clock == SYSTEM_CLOCK_EXTERNAL_CRYSTAL) {
+     9bc:	7800      	ldrb	r0, [r0, #0]
+	temp.bit.ONDEMAND = config->on_demand;
+     9be:	7b4e      	ldrb	r6, [r1, #13]
+	if (config->external_clock == SYSTEM_CLOCK_EXTERNAL_CRYSTAL) {
+     9c0:	4242      	negs	r2, r0
+     9c2:	4142      	adcs	r2, r0
+     9c4:	4691      	mov	r9, r2
+	temp.bit.EN1K = config->enable_1khz_output;
+     9c6:	78ca      	ldrb	r2, [r1, #3]
+	temp.bit.AAMPEN = config->auto_gain_control;
+     9c8:	7888      	ldrb	r0, [r1, #2]
+	temp.bit.EN1K = config->enable_1khz_output;
+     9ca:	4694      	mov	ip, r2
+	temp.bit.EN32K = config->enable_32khz_output;
+     9cc:	790a      	ldrb	r2, [r1, #4]
+	temp.bit.RUNSTDBY = config->run_in_standby;
+     9ce:	7b0f      	ldrb	r7, [r1, #12]
+	temp.bit.WRTLOCK  = config->write_once;
+     9d0:	7b8c      	ldrb	r4, [r1, #14]
+	temp.bit.EN32K = config->enable_32khz_output;
+     9d2:	4690      	mov	r8, r2
+	SYSCTRL_XOSC32K_Type temp = SYSCTRL->XOSC32K;
+     9d4:	4b1f      	ldr	r3, [pc, #124]	; (a54 <system_clock_source_xosc32k_set_config+0xa8>)
+	_system_clock_inst.xosc32k.frequency = config->frequency;
+     9d6:	688a      	ldr	r2, [r1, #8]
+     9d8:	491f      	ldr	r1, [pc, #124]	; (a58 <system_clock_source_xosc32k_set_config+0xac>)
+	SYSCTRL_XOSC32K_Type temp = SYSCTRL->XOSC32K;
+     9da:	469b      	mov	fp, r3
+     9dc:	8a9b      	ldrh	r3, [r3, #20]
+	_system_clock_inst.xosc32k.frequency = config->frequency;
+     9de:	614a      	str	r2, [r1, #20]
+	SYSCTRL->XOSC32K = temp;
+     9e0:	464a      	mov	r2, r9
+     9e2:	0092      	lsls	r2, r2, #2
+     9e4:	4691      	mov	r9, r2
+     9e6:	2204      	movs	r2, #4
+     9e8:	4393      	bics	r3, r2
+     9ea:	464a      	mov	r2, r9
+     9ec:	2101      	movs	r1, #1
+     9ee:	4313      	orrs	r3, r2
+     9f0:	4642      	mov	r2, r8
+     9f2:	400a      	ands	r2, r1
+     9f4:	00d2      	lsls	r2, r2, #3
+     9f6:	4690      	mov	r8, r2
+     9f8:	2208      	movs	r2, #8
+     9fa:	4393      	bics	r3, r2
+     9fc:	4642      	mov	r2, r8
+     9fe:	4313      	orrs	r3, r2
+     a00:	4662      	mov	r2, ip
+     a02:	400a      	ands	r2, r1
+     a04:	0112      	lsls	r2, r2, #4
+     a06:	4694      	mov	ip, r2
+     a08:	2210      	movs	r2, #16
+     a0a:	4393      	bics	r3, r2
+     a0c:	4662      	mov	r2, ip
+     a0e:	4313      	orrs	r3, r2
+     a10:	2220      	movs	r2, #32
+     a12:	4008      	ands	r0, r1
+     a14:	0140      	lsls	r0, r0, #5
+     a16:	4393      	bics	r3, r2
+     a18:	4303      	orrs	r3, r0
+     a1a:	2040      	movs	r0, #64	; 0x40
+     a1c:	465a      	mov	r2, fp
+     a1e:	400f      	ands	r7, r1
+     a20:	01bf      	lsls	r7, r7, #6
+     a22:	4383      	bics	r3, r0
+     a24:	433b      	orrs	r3, r7
+     a26:	3040      	adds	r0, #64	; 0x40
+     a28:	400e      	ands	r6, r1
+     a2a:	4383      	bics	r3, r0
+     a2c:	3879      	subs	r0, #121	; 0x79
+     a2e:	01f6      	lsls	r6, r6, #7
+     a30:	4005      	ands	r5, r0
+     a32:	480a      	ldr	r0, [pc, #40]	; (a5c <system_clock_source_xosc32k_set_config+0xb0>)
+     a34:	4333      	orrs	r3, r6
+     a36:	022d      	lsls	r5, r5, #8
+     a38:	4003      	ands	r3, r0
+     a3a:	4809      	ldr	r0, [pc, #36]	; (a60 <system_clock_source_xosc32k_set_config+0xb4>)
+     a3c:	432b      	orrs	r3, r5
+     a3e:	4021      	ands	r1, r4
+     a40:	0309      	lsls	r1, r1, #12
+     a42:	4003      	ands	r3, r0
+     a44:	430b      	orrs	r3, r1
+     a46:	8293      	strh	r3, [r2, #20]
+}
+     a48:	bc3c      	pop	{r2, r3, r4, r5}
+     a4a:	4690      	mov	r8, r2
+     a4c:	4699      	mov	r9, r3
+     a4e:	46a2      	mov	sl, r4
+     a50:	46ab      	mov	fp, r5
+     a52:	bdf0      	pop	{r4, r5, r6, r7, pc}
+     a54:	40000800 	.word	0x40000800
+     a58:	2000089c 	.word	0x2000089c
+     a5c:	fffff8ff 	.word	0xfffff8ff
+     a60:	ffffefff 	.word	0xffffefff
+
+00000a64 <system_clock_source_dfll_set_config>:
+{
+     a64:	b510      	push	{r4, lr}
+			SYSCTRL_DFLLVAL_COARSE(config->coarse_value) |
+     a66:	7a03      	ldrb	r3, [r0, #8]
+			SYSCTRL_DFLLVAL_FINE(config->fine_value);
+     a68:	8942      	ldrh	r2, [r0, #10]
+			SYSCTRL_DFLLVAL_COARSE(config->coarse_value) |
+     a6a:	069b      	lsls	r3, r3, #26
+			SYSCTRL_DFLLVAL_FINE(config->fine_value);
+     a6c:	0592      	lsls	r2, r2, #22
+     a6e:	0d92      	lsrs	r2, r2, #22
+			SYSCTRL_DFLLVAL_COARSE(config->coarse_value) |
+     a70:	0c1b      	lsrs	r3, r3, #16
+     a72:	4313      	orrs	r3, r2
+	_system_clock_inst.dfll.val =
+     a74:	4a17      	ldr	r2, [pc, #92]	; (ad4 <system_clock_source_dfll_set_config+0x70>)
+     a76:	6053      	str	r3, [r2, #4]
+			(uint32_t)config->wakeup_lock     |
+     a78:	79c1      	ldrb	r1, [r0, #7]
+     a7a:	7983      	ldrb	r3, [r0, #6]
+			(uint32_t)config->quick_lock      |
+     a7c:	8884      	ldrh	r4, [r0, #4]
+			(uint32_t)config->wakeup_lock     |
+     a7e:	430b      	orrs	r3, r1
+			(uint32_t)config->quick_lock      |
+     a80:	8841      	ldrh	r1, [r0, #2]
+     a82:	4321      	orrs	r1, r4
+     a84:	430b      	orrs	r3, r1
+			((uint32_t)config->on_demand << SYSCTRL_DFLLCTRL_ONDEMAND_Pos);
+     a86:	7841      	ldrb	r1, [r0, #1]
+     a88:	01c9      	lsls	r1, r1, #7
+			(uint32_t)config->chill_cycle     |
+     a8a:	430b      	orrs	r3, r1
+	_system_clock_inst.dfll.control =
+     a8c:	6013      	str	r3, [r2, #0]
+	if (config->loop_mode == SYSTEM_CLOCK_DFLL_LOOP_MODE_CLOSED) {
+     a8e:	7803      	ldrb	r3, [r0, #0]
+     a90:	2b04      	cmp	r3, #4
+     a92:	d010      	beq.n	ab6 <system_clock_source_dfll_set_config+0x52>
+	if (config->loop_mode == SYSTEM_CLOCK_DFLL_LOOP_MODE_USB_RECOVERY) {
+     a94:	2b20      	cmp	r3, #32
+     a96:	d10d      	bne.n	ab4 <system_clock_source_dfll_set_config+0x50>
+				SYSCTRL_DFLLMUL_CSTEP(config->coarse_max_step) |
+     a98:	7b03      	ldrb	r3, [r0, #12]
+				SYSCTRL_DFLLMUL_MUL(config->multiply_factor);
+     a9a:	8a01      	ldrh	r1, [r0, #16]
+				SYSCTRL_DFLLMUL_CSTEP(config->coarse_max_step) |
+     a9c:	069b      	lsls	r3, r3, #26
+				SYSCTRL_DFLLMUL_FSTEP(config->fine_max_step)   |
+     a9e:	430b      	orrs	r3, r1
+     aa0:	89c1      	ldrh	r1, [r0, #14]
+     aa2:	480d      	ldr	r0, [pc, #52]	; (ad8 <system_clock_source_dfll_set_config+0x74>)
+     aa4:	0409      	lsls	r1, r1, #16
+     aa6:	4001      	ands	r1, r0
+     aa8:	430b      	orrs	r3, r1
+		_system_clock_inst.dfll.mul =
+     aaa:	6093      	str	r3, [r2, #8]
+		_system_clock_inst.dfll.control |= config->loop_mode |
+     aac:	6811      	ldr	r1, [r2, #0]
+     aae:	4b0b      	ldr	r3, [pc, #44]	; (adc <system_clock_source_dfll_set_config+0x78>)
+     ab0:	430b      	orrs	r3, r1
+     ab2:	6013      	str	r3, [r2, #0]
+}
+     ab4:	bd10      	pop	{r4, pc}
+				SYSCTRL_DFLLMUL_CSTEP(config->coarse_max_step) |
+     ab6:	7b01      	ldrb	r1, [r0, #12]
+				SYSCTRL_DFLLMUL_MUL(config->multiply_factor);
+     ab8:	8a04      	ldrh	r4, [r0, #16]
+				SYSCTRL_DFLLMUL_CSTEP(config->coarse_max_step) |
+     aba:	0689      	lsls	r1, r1, #26
+				SYSCTRL_DFLLMUL_FSTEP(config->fine_max_step)   |
+     abc:	89c0      	ldrh	r0, [r0, #14]
+     abe:	4321      	orrs	r1, r4
+     ac0:	4c05      	ldr	r4, [pc, #20]	; (ad8 <system_clock_source_dfll_set_config+0x74>)
+     ac2:	0400      	lsls	r0, r0, #16
+     ac4:	4020      	ands	r0, r4
+     ac6:	4301      	orrs	r1, r0
+		_system_clock_inst.dfll.mul =
+     ac8:	6091      	str	r1, [r2, #8]
+		_system_clock_inst.dfll.control |= config->loop_mode;
+     aca:	6811      	ldr	r1, [r2, #0]
+     acc:	430b      	orrs	r3, r1
+     ace:	6013      	str	r3, [r2, #0]
+     ad0:	e7f0      	b.n	ab4 <system_clock_source_dfll_set_config+0x50>
+     ad2:	46c0      	nop			; (mov r8, r8)
+     ad4:	2000089c 	.word	0x2000089c
+     ad8:	03ff0000 	.word	0x03ff0000
+     adc:	00000424 	.word	0x00000424
+
+00000ae0 <system_clock_init>:
+ * \note OSC8M is always enabled and if user selects other clocks for GCLK generators,
+ * the OSC8M default enable can be disabled after system_clock_init. Make sure the
+ * clock switch successfully before disabling OSC8M.
+ */
+void system_clock_init(void)
+{
+     ae0:	b5f0      	push	{r4, r5, r6, r7, lr}
+     ae2:	46c6      	mov	lr, r8
+	/* Various bits in the INTFLAG register can be set to one at startup.
+	   This will ensure that these bits are cleared */
+	SYSCTRL->INTFLAG.reg = SYSCTRL_INTFLAG_BOD33RDY | SYSCTRL_INTFLAG_BOD33DET |
+     ae4:	22c2      	movs	r2, #194	; 0xc2
+static inline void system_flash_set_waitstates(uint8_t wait_states)
+{
+	Assert(NVMCTRL_CTRLB_RWS((uint32_t)wait_states) ==
+			((uint32_t)wait_states << NVMCTRL_CTRLB_RWS_Pos));
+
+	NVMCTRL->CTRLB.bit.RWS = wait_states;
+     ae6:	211e      	movs	r1, #30
+{
+     ae8:	b500      	push	{lr}
+	SYSCTRL->INTFLAG.reg = SYSCTRL_INTFLAG_BOD33RDY | SYSCTRL_INTFLAG_BOD33DET |
+     aea:	4b4a      	ldr	r3, [pc, #296]	; (c14 <system_clock_init+0x134>)
+     aec:	00d2      	lsls	r2, r2, #3
+     aee:	609a      	str	r2, [r3, #8]
+     af0:	4a49      	ldr	r2, [pc, #292]	; (c18 <system_clock_init+0x138>)
+	for (gclk_id = 0; gclk_id < GCLK_NUM; gclk_id++) {
+     af2:	2400      	movs	r4, #0
+     af4:	6853      	ldr	r3, [r2, #4]
+{
+     af6:	b08c      	sub	sp, #48	; 0x30
+     af8:	438b      	bics	r3, r1
+     afa:	391a      	subs	r1, #26
+     afc:	430b      	orrs	r3, r1
+     afe:	6053      	str	r3, [r2, #4]
+	gclk_conf.source_generator = GCLK_GENERATOR_2;
+     b00:	2302      	movs	r3, #2
+     b02:	ad07      	add	r5, sp, #28
+     b04:	4e45      	ldr	r6, [pc, #276]	; (c1c <system_clock_init+0x13c>)
+     b06:	702b      	strb	r3, [r5, #0]
+		system_gclk_chan_set_config(gclk_id, &gclk_conf);
+     b08:	b2e0      	uxtb	r0, r4
+     b0a:	0029      	movs	r1, r5
+	for (gclk_id = 0; gclk_id < GCLK_NUM; gclk_id++) {
+     b0c:	3401      	adds	r4, #1
+		system_gclk_chan_set_config(gclk_id, &gclk_conf);
+     b0e:	47b0      	blx	r6
+	for (gclk_id = 0; gclk_id < GCLK_NUM; gclk_id++) {
+     b10:	2c25      	cmp	r4, #37	; 0x25
+     b12:	d1f9      	bne.n	b08 <system_clock_init+0x28>
+	config->frequency           = 32768UL;
+     b14:	2280      	movs	r2, #128	; 0x80
+	config->external_clock      = SYSTEM_CLOCK_EXTERNAL_CRYSTAL;
+     b16:	a803      	add	r0, sp, #12
+	config->frequency           = 32768UL;
+     b18:	0212      	lsls	r2, r2, #8
+	config->external_clock      = SYSTEM_CLOCK_EXTERNAL_CRYSTAL;
+     b1a:	2300      	movs	r3, #0
+	config->frequency           = 32768UL;
+     b1c:	6082      	str	r2, [r0, #8]
+	config->enable_32khz_output = true;
+     b1e:	2201      	movs	r2, #1
+	config->external_clock      = SYSTEM_CLOCK_EXTERNAL_CRYSTAL;
+     b20:	7003      	strb	r3, [r0, #0]
+	config->auto_gain_control   = false;
+     b22:	7083      	strb	r3, [r0, #2]
+	config->enable_1khz_output  = false;
+     b24:	70c3      	strb	r3, [r0, #3]
+	config->enable_32khz_output = true;
+     b26:	7102      	strb	r2, [r0, #4]
+	config->run_in_standby      = false;
+     b28:	7303      	strb	r3, [r0, #12]
+	struct system_clock_source_xosc32k_config xosc32k_conf;
+	system_clock_source_xosc32k_get_config_defaults(&xosc32k_conf);
+
+	xosc32k_conf.frequency           = 32768UL;
+	xosc32k_conf.external_clock      = CONF_CLOCK_XOSC32K_EXTERNAL_CRYSTAL;
+	xosc32k_conf.startup_time        = CONF_CLOCK_XOSC32K_STARTUP_TIME;
+     b2a:	3205      	adds	r2, #5
+	config->write_once          = false;
+     b2c:	7383      	strb	r3, [r0, #14]
+	xosc32k_conf.auto_gain_control   = CONF_CLOCK_XOSC32K_AUTO_AMPLITUDE_CONTROL;
+	xosc32k_conf.enable_1khz_output  = CONF_CLOCK_XOSC32K_ENABLE_1KHZ_OUPUT;
+	xosc32k_conf.enable_32khz_output = CONF_CLOCK_XOSC32K_ENABLE_32KHZ_OUTPUT;
+	xosc32k_conf.on_demand           = false;
+     b2e:	7343      	strb	r3, [r0, #13]
+	xosc32k_conf.run_in_standby      = CONF_CLOCK_XOSC32K_RUN_IN_STANDBY;
+
+	system_clock_source_xosc32k_set_config(&xosc32k_conf);
+     b30:	4b3b      	ldr	r3, [pc, #236]	; (c20 <system_clock_init+0x140>)
+	xosc32k_conf.startup_time        = CONF_CLOCK_XOSC32K_STARTUP_TIME;
+     b32:	7042      	strb	r2, [r0, #1]
+	system_clock_source_xosc32k_set_config(&xosc32k_conf);
+     b34:	4798      	blx	r3
+		SYSCTRL->XOSC32K.reg |= SYSCTRL_XOSC32K_ENABLE;
+     b36:	2102      	movs	r1, #2
+     b38:	4a36      	ldr	r2, [pc, #216]	; (c14 <system_clock_init+0x134>)
+     b3a:	8a93      	ldrh	r3, [r2, #20]
+     b3c:	430b      	orrs	r3, r1
+     b3e:	8293      	strh	r3, [r2, #20]
+	return ((SYSCTRL->PCLKSR.reg & mask) == mask);
+     b40:	68d3      	ldr	r3, [r2, #12]
+	system_clock_source_enable(SYSTEM_CLOCK_SOURCE_XOSC32K);
+	while(!system_clock_source_is_ready(SYSTEM_CLOCK_SOURCE_XOSC32K));
+     b42:	4219      	tst	r1, r3
+     b44:	d0fc      	beq.n	b40 <system_clock_init+0x60>
+	if (CONF_CLOCK_XOSC32K_ON_DEMAND) {
+		SYSCTRL->XOSC32K.bit.ONDEMAND = 1;
+     b46:	2180      	movs	r1, #128	; 0x80
+     b48:	8a93      	ldrh	r3, [r2, #20]
+     b4a:	430b      	orrs	r3, r1
+     b4c:	8293      	strh	r3, [r2, #20]
+	config->quick_lock      = SYSTEM_CLOCK_DFLL_QUICK_LOCK_ENABLE;
+     b4e:	2200      	movs	r2, #0
+     b50:	2300      	movs	r3, #0
+     b52:	806a      	strh	r2, [r5, #2]
+	config->chill_cycle     = SYSTEM_CLOCK_DFLL_CHILL_CYCLE_ENABLE;
+     b54:	80aa      	strh	r2, [r5, #4]
+	config->fine_value      = 0xff / 4; /* Midpoint */
+     b56:	323f      	adds	r2, #63	; 0x3f
+	config->wakeup_lock     = SYSTEM_CLOCK_DFLL_WAKEUP_LOCK_KEEP;
+     b58:	71ab      	strb	r3, [r5, #6]
+	config->stable_tracking = SYSTEM_CLOCK_DFLL_STABLE_TRACKING_TRACK_AFTER_LOCK;
+     b5a:	71eb      	strb	r3, [r5, #7]
+	config->fine_value      = 0xff / 4; /* Midpoint */
+     b5c:	816a      	strh	r2, [r5, #10]
+#if CONF_CLOCK_DFLL_ENABLE == true
+	struct system_clock_source_dfll_config dfll_conf;
+	system_clock_source_dfll_get_config_defaults(&dfll_conf);
+
+	dfll_conf.loop_mode      = CONF_CLOCK_DFLL_LOOP_MODE;
+	dfll_conf.on_demand      = false;
+     b5e:	706b      	strb	r3, [r5, #1]
+	dfll_conf.loop_mode      = CONF_CLOCK_DFLL_LOOP_MODE;
+     b60:	3a3b      	subs	r2, #59	; 0x3b
+	/* Using DFLL48M COARSE CAL value from NVM Software Calibration Area Mapping
+	   in DFLL.COARSE helps to output a frequency close to 48 MHz.*/
+#define NVM_DFLL_COARSE_POS    58 /* DFLL48M Coarse calibration value bit position.*/
+#define NVM_DFLL_COARSE_SIZE   6  /* DFLL48M Coarse calibration value bit size.*/
+
+	uint32_t coarse =( *((uint32_t *)(NVMCTRL_OTP4)
+     b62:	4b30      	ldr	r3, [pc, #192]	; (c24 <system_clock_init+0x144>)
+	dfll_conf.loop_mode      = CONF_CLOCK_DFLL_LOOP_MODE;
+     b64:	702a      	strb	r2, [r5, #0]
+	uint32_t coarse =( *((uint32_t *)(NVMCTRL_OTP4)
+     b66:	681b      	ldr	r3, [r3, #0]
+     b68:	0e9b      	lsrs	r3, r3, #26
+			+ (NVM_DFLL_COARSE_POS / 32))
+		>> (NVM_DFLL_COARSE_POS % 32))
+		& ((1 << NVM_DFLL_COARSE_SIZE) - 1);
+	/* In some revision chip, the coarse calibration value is not correct. */
+	if (coarse == 0x3f) {
+     b6a:	2b3f      	cmp	r3, #63	; 0x3f
+     b6c:	d050      	beq.n	c10 <system_clock_init+0x130>
+		coarse = 0x1f;
+	}
+	dfll_conf.coarse_value = coarse;
+     b6e:	722b      	strb	r3, [r5, #8]
+#  else
+	dfll_conf.chill_cycle = SYSTEM_CLOCK_DFLL_CHILL_CYCLE_DISABLE;
+#  endif
+
+	if (CONF_CLOCK_DFLL_LOOP_MODE == SYSTEM_CLOCK_DFLL_LOOP_MODE_CLOSED) {
+		dfll_conf.multiply_factor = CONF_CLOCK_DFLL_MULTIPLY_FACTOR;
+     b70:	4b2d      	ldr	r3, [pc, #180]	; (c28 <system_clock_init+0x148>)
+		dfll_conf.chill_cycle = SYSTEM_CLOCK_DFLL_CHILL_CYCLE_DISABLE;
+
+		dfll_conf.multiply_factor = 48000;
+	}
+
+	system_clock_source_dfll_set_config(&dfll_conf);
+     b72:	0028      	movs	r0, r5
+		dfll_conf.multiply_factor = CONF_CLOCK_DFLL_MULTIPLY_FACTOR;
+     b74:	822b      	strh	r3, [r5, #16]
+	dfll_conf.coarse_max_step = CONF_CLOCK_DFLL_MAX_COARSE_STEP_SIZE;
+     b76:	2307      	movs	r3, #7
+     b78:	732b      	strb	r3, [r5, #12]
+	dfll_conf.fine_max_step   = CONF_CLOCK_DFLL_MAX_FINE_STEP_SIZE;
+     b7a:	3338      	adds	r3, #56	; 0x38
+     b7c:	81eb      	strh	r3, [r5, #14]
+	system_clock_source_dfll_set_config(&dfll_conf);
+     b7e:	4b2b      	ldr	r3, [pc, #172]	; (c2c <system_clock_init+0x14c>)
+     b80:	4798      	blx	r3
+	SYSCTRL->OSC8M = temp;
+     b82:	2240      	movs	r2, #64	; 0x40
+	SYSCTRL_OSC8M_Type temp = SYSCTRL->OSC8M;
+     b84:	4c23      	ldr	r4, [pc, #140]	; (c14 <system_clock_init+0x134>)
+     b86:	6a23      	ldr	r3, [r4, #32]
+	SYSCTRL->OSC8M = temp;
+     b88:	4393      	bics	r3, r2
+     b8a:	3240      	adds	r2, #64	; 0x40
+     b8c:	4313      	orrs	r3, r2
+     b8e:	4a28      	ldr	r2, [pc, #160]	; (c30 <system_clock_init+0x150>)
+     b90:	4013      	ands	r3, r2
+		SYSCTRL->OSC8M.reg |= SYSCTRL_OSC8M_ENABLE;
+     b92:	2202      	movs	r2, #2
+	SYSCTRL->OSC8M = temp;
+     b94:	6223      	str	r3, [r4, #32]
+		SYSCTRL->OSC8M.reg |= SYSCTRL_OSC8M_ENABLE;
+     b96:	6a23      	ldr	r3, [r4, #32]
+     b98:	4313      	orrs	r3, r2
+     b9a:	6223      	str	r3, [r4, #32]
+	system_clock_source_enable(SYSTEM_CLOCK_SOURCE_OSC8M);
+
+
+	/* GCLK */
+#if CONF_CLOCK_CONFIGURE_GCLK == true
+	system_gclk_init();
+     b9c:	4b25      	ldr	r3, [pc, #148]	; (c34 <system_clock_init+0x154>)
+     b9e:	4798      	blx	r3
+	config->division_factor    = 1;
+     ba0:	2301      	movs	r3, #1
+	config->high_when_disabled = false;
+     ba2:	466a      	mov	r2, sp
+	config->division_factor    = 1;
+     ba4:	4698      	mov	r8, r3
+     ba6:	9301      	str	r3, [sp, #4]
+	config->high_when_disabled = false;
+     ba8:	2300      	movs	r3, #0
+
+	/* Configure all GCLK generators except for the main generator, which
+	 * is configured later after all other clock systems are set up */
+	MREPEAT(GCLK_GEN_NUM, _CONF_CLOCK_GCLK_CONFIG_NONMAIN, ~);
+     baa:	4669      	mov	r1, sp
+     bac:	7053      	strb	r3, [r2, #1]
+	config->run_in_standby     = false;
+     bae:	7213      	strb	r3, [r2, #8]
+	config->output_enable      = false;
+     bb0:	7253      	strb	r3, [r2, #9]
+     bb2:	2001      	movs	r0, #1
+     bb4:	3305      	adds	r3, #5
+     bb6:	4f20      	ldr	r7, [pc, #128]	; (c38 <system_clock_init+0x158>)
+     bb8:	7013      	strb	r3, [r2, #0]
+     bba:	47b8      	blx	r7
+     bbc:	2001      	movs	r0, #1
+     bbe:	4d1f      	ldr	r5, [pc, #124]	; (c3c <system_clock_init+0x15c>)
+     bc0:	47a8      	blx	r5
+	/* Enable DFLL reference clock if in closed loop mode */
+	if (CONF_CLOCK_DFLL_LOOP_MODE == SYSTEM_CLOCK_DFLL_LOOP_MODE_CLOSED) {
+		struct system_gclk_chan_config dfll_gclk_chan_conf;
+
+		system_gclk_chan_get_config_defaults(&dfll_gclk_chan_conf);
+		dfll_gclk_chan_conf.source_generator = CONF_CLOCK_DFLL_SOURCE_GCLK_GENERATOR;
+     bc2:	4642      	mov	r2, r8
+     bc4:	466b      	mov	r3, sp
+		system_gclk_chan_set_config(SYSCTRL_GCLK_ID_DFLL48, &dfll_gclk_chan_conf);
+     bc6:	4669      	mov	r1, sp
+     bc8:	2000      	movs	r0, #0
+		dfll_gclk_chan_conf.source_generator = CONF_CLOCK_DFLL_SOURCE_GCLK_GENERATOR;
+     bca:	701a      	strb	r2, [r3, #0]
+		system_gclk_chan_set_config(SYSCTRL_GCLK_ID_DFLL48, &dfll_gclk_chan_conf);
+     bcc:	47b0      	blx	r6
+		system_gclk_chan_enable(SYSCTRL_GCLK_ID_DFLL48);
+     bce:	2000      	movs	r0, #0
+     bd0:	4b1b      	ldr	r3, [pc, #108]	; (c40 <system_clock_init+0x160>)
+     bd2:	4798      	blx	r3
+     bd4:	4b1b      	ldr	r3, [pc, #108]	; (c44 <system_clock_init+0x164>)
+     bd6:	4798      	blx	r3
+	return ((SYSCTRL->PCLKSR.reg & mask) == mask);
+     bd8:	21d0      	movs	r1, #208	; 0xd0
+     bda:	68e3      	ldr	r3, [r4, #12]
+     bdc:	400b      	ands	r3, r1
+
+
+	/* DFLL Enable (Open and Closed Loop) */
+#if CONF_CLOCK_DFLL_ENABLE == true
+	system_clock_source_enable(SYSTEM_CLOCK_SOURCE_DFLL);
+	while(!system_clock_source_is_ready(SYSTEM_CLOCK_SOURCE_DFLL));
+     bde:	2bd0      	cmp	r3, #208	; 0xd0
+     be0:	d1fb      	bne.n	bda <system_clock_init+0xfa>
+	PM->CPUSEL.reg = (uint32_t)divider;
+     be2:	2300      	movs	r3, #0
+     be4:	4a18      	ldr	r2, [pc, #96]	; (c48 <system_clock_init+0x168>)
+	system_apb_clock_set_divider(SYSTEM_CLOCK_APB_APBC, CONF_CLOCK_APBC_DIVIDER);
+
+	/* GCLK 0 */
+#if CONF_CLOCK_CONFIGURE_GCLK == true
+	/* Configure the main GCLK last as it might depend on other generators */
+	_CONF_CLOCK_GCLK_CONFIG(0, ~);
+     be6:	4669      	mov	r1, sp
+     be8:	7213      	strb	r3, [r2, #8]
+			PM->APBASEL.reg = (uint32_t)divider;
+     bea:	7253      	strb	r3, [r2, #9]
+			PM->APBBSEL.reg = (uint32_t)divider;
+     bec:	7293      	strb	r3, [r2, #10]
+			PM->APBCSEL.reg = (uint32_t)divider;
+     bee:	72d3      	strb	r3, [r2, #11]
+	config->division_factor    = 1;
+     bf0:	2201      	movs	r2, #1
+     bf2:	9201      	str	r2, [sp, #4]
+	config->high_when_disabled = false;
+     bf4:	466a      	mov	r2, sp
+     bf6:	2000      	movs	r0, #0
+     bf8:	7053      	strb	r3, [r2, #1]
+	config->run_in_standby     = false;
+     bfa:	7213      	strb	r3, [r2, #8]
+	config->output_enable      = false;
+     bfc:	7253      	strb	r3, [r2, #9]
+     bfe:	3307      	adds	r3, #7
+     c00:	7013      	strb	r3, [r2, #0]
+     c02:	47b8      	blx	r7
+     c04:	2000      	movs	r0, #0
+     c06:	47a8      	blx	r5
+#endif
+}
+     c08:	b00c      	add	sp, #48	; 0x30
+     c0a:	bc04      	pop	{r2}
+     c0c:	4690      	mov	r8, r2
+     c0e:	bdf0      	pop	{r4, r5, r6, r7, pc}
+	if (coarse == 0x3f) {
+     c10:	3b20      	subs	r3, #32
+     c12:	e7ac      	b.n	b6e <system_clock_init+0x8e>
+     c14:	40000800 	.word	0x40000800
+     c18:	41004000 	.word	0x41004000
+     c1c:	00000ded 	.word	0x00000ded
+     c20:	000009ad 	.word	0x000009ad
+     c24:	00806024 	.word	0x00806024
+     c28:	000005b9 	.word	0x000005b9
+     c2c:	00000a65 	.word	0x00000a65
+     c30:	fffffcff 	.word	0xfffffcff
+     c34:	00000c4d 	.word	0x00000c4d
+     c38:	00000c71 	.word	0x00000c71
+     c3c:	00000d25 	.word	0x00000d25
+     c40:	00000d65 	.word	0x00000d65
+     c44:	0000096d 	.word	0x0000096d
+     c48:	40000400 	.word	0x40000400
+
+00000c4c <system_gclk_init>:
+			PM->APBAMASK.reg |= mask;
+     c4c:	2108      	movs	r1, #8
+     c4e:	4a06      	ldr	r2, [pc, #24]	; (c68 <system_gclk_init+0x1c>)
+     c50:	6993      	ldr	r3, [r2, #24]
+     c52:	430b      	orrs	r3, r1
+     c54:	6193      	str	r3, [r2, #24]
+{
+	/* Turn on the digital interface clock */
+	system_apb_clock_set_mask(SYSTEM_CLOCK_APB_APBA, PM_APBAMASK_GCLK);
+
+	/* Software reset the module to ensure it is re-initialized correctly */
+	GCLK->CTRL.reg = GCLK_CTRL_SWRST;
+     c56:	2301      	movs	r3, #1
+     c58:	4a04      	ldr	r2, [pc, #16]	; (c6c <system_gclk_init+0x20>)
+	while (GCLK->CTRL.reg & GCLK_CTRL_SWRST) {
+     c5a:	3907      	subs	r1, #7
+	GCLK->CTRL.reg = GCLK_CTRL_SWRST;
+     c5c:	7013      	strb	r3, [r2, #0]
+	while (GCLK->CTRL.reg & GCLK_CTRL_SWRST) {
+     c5e:	7813      	ldrb	r3, [r2, #0]
+     c60:	4219      	tst	r1, r3
+     c62:	d1fc      	bne.n	c5e <system_gclk_init+0x12>
+		/* Wait for reset to complete */
+	}
+}
+     c64:	4770      	bx	lr
+     c66:	46c0      	nop			; (mov r8, r8)
+     c68:	40000400 	.word	0x40000400
+     c6c:	40000c00 	.word	0x40000c00
+
+00000c70 <system_gclk_gen_set_config>:
+ * \param[in] config     Configuration settings for the generator
+ */
+void system_gclk_gen_set_config(
+		const uint8_t generator,
+		struct system_gclk_gen_config *const config)
+{
+     c70:	b570      	push	{r4, r5, r6, lr}
+	/* Cache new register configurations to minimize sync requirements. */
+	uint32_t new_genctrl_config = (generator << GCLK_GENCTRL_ID_Pos);
+	uint32_t new_gendiv_config  = (generator << GCLK_GENDIV_ID_Pos);
+
+	/* Select the requested source clock for the generator */
+	new_genctrl_config |= config->source_clock << GCLK_GENCTRL_SRC_Pos;
+     c72:	780b      	ldrb	r3, [r1, #0]
+{
+     c74:	0006      	movs	r6, r0
+	new_genctrl_config |= config->source_clock << GCLK_GENCTRL_SRC_Pos;
+     c76:	021b      	lsls	r3, r3, #8
+     c78:	4303      	orrs	r3, r0
+     c7a:	001d      	movs	r5, r3
+
+	/* Configure the clock to be either high or low when disabled */
+	if (config->high_when_disabled) {
+     c7c:	784b      	ldrb	r3, [r1, #1]
+	uint32_t new_genctrl_config = (generator << GCLK_GENCTRL_ID_Pos);
+     c7e:	0004      	movs	r4, r0
+	if (config->high_when_disabled) {
+     c80:	2b00      	cmp	r3, #0
+     c82:	d002      	beq.n	c8a <system_gclk_gen_set_config+0x1a>
+		new_genctrl_config |= GCLK_GENCTRL_OOV;
+     c84:	2380      	movs	r3, #128	; 0x80
+     c86:	02db      	lsls	r3, r3, #11
+     c88:	431d      	orrs	r5, r3
+	}
+
+	/* Configure if the clock output to I/O pin should be enabled. */
+	if (config->output_enable) {
+     c8a:	7a4b      	ldrb	r3, [r1, #9]
+     c8c:	2b00      	cmp	r3, #0
+     c8e:	d002      	beq.n	c96 <system_gclk_gen_set_config+0x26>
+		new_genctrl_config |= GCLK_GENCTRL_OE;
+     c90:	2380      	movs	r3, #128	; 0x80
+     c92:	031b      	lsls	r3, r3, #12
+     c94:	431d      	orrs	r5, r3
+	}
+
+	/* Set division factor */
+	if (config->division_factor > 1) {
+     c96:	6848      	ldr	r0, [r1, #4]
+     c98:	2801      	cmp	r0, #1
+     c9a:	d90f      	bls.n	cbc <system_gclk_gen_set_config+0x4c>
+		/* Check if division is a power of two */
+		if (((config->division_factor & (config->division_factor - 1)) == 0)) {
+     c9c:	1e43      	subs	r3, r0, #1
+     c9e:	4218      	tst	r0, r3
+     ca0:	d12f      	bne.n	d02 <system_gclk_gen_set_config+0x92>
+			 * register */
+
+			uint32_t div2_count = 0;
+
+			uint32_t mask;
+			for (mask = (1UL << 1); mask < config->division_factor;
+     ca2:	2802      	cmp	r0, #2
+     ca4:	d033      	beq.n	d0e <system_gclk_gen_set_config+0x9e>
+     ca6:	2302      	movs	r3, #2
+     ca8:	2400      	movs	r4, #0
+						mask <<= 1) {
+				div2_count++;
+     caa:	3401      	adds	r4, #1
+						mask <<= 1) {
+     cac:	005b      	lsls	r3, r3, #1
+			for (mask = (1UL << 1); mask < config->division_factor;
+     cae:	4298      	cmp	r0, r3
+     cb0:	d8fb      	bhi.n	caa <system_gclk_gen_set_config+0x3a>
+     cb2:	0224      	lsls	r4, r4, #8
+			}
+
+			/* Set binary divider power of 2 division factor */
+			new_gendiv_config  |= div2_count << GCLK_GENDIV_DIV_Pos;
+			new_genctrl_config |= GCLK_GENCTRL_DIVSEL;
+     cb4:	2380      	movs	r3, #128	; 0x80
+     cb6:	035b      	lsls	r3, r3, #13
+			new_gendiv_config  |= div2_count << GCLK_GENDIV_DIV_Pos;
+     cb8:	4334      	orrs	r4, r6
+			new_genctrl_config |= GCLK_GENCTRL_DIVSEL;
+     cba:	431d      	orrs	r5, r3
+		}
+
+	}
+
+	/* Enable or disable the clock in standby mode */
+	if (config->run_in_standby) {
+     cbc:	7a0b      	ldrb	r3, [r1, #8]
+     cbe:	2b00      	cmp	r3, #0
+     cc0:	d002      	beq.n	cc8 <system_gclk_gen_set_config+0x58>
+		new_genctrl_config |= GCLK_GENCTRL_RUNSTDBY;
+     cc2:	2380      	movs	r3, #128	; 0x80
+     cc4:	039b      	lsls	r3, r3, #14
+     cc6:	431d      	orrs	r5, r3
+	if (GCLK->STATUS.reg & GCLK_STATUS_SYNCBUSY){
+     cc8:	4a12      	ldr	r2, [pc, #72]	; (d14 <system_gclk_gen_set_config+0xa4>)
+     cca:	7853      	ldrb	r3, [r2, #1]
+     ccc:	b25b      	sxtb	r3, r3
+     cce:	2b00      	cmp	r3, #0
+     cd0:	dbfb      	blt.n	cca <system_gclk_gen_set_config+0x5a>
+	cpu_irq_enter_critical();
+     cd2:	4b11      	ldr	r3, [pc, #68]	; (d18 <system_gclk_gen_set_config+0xa8>)
+     cd4:	4798      	blx	r3
+	};
+
+	system_interrupt_enter_critical_section();
+
+	/* Select the correct generator */
+	*((uint8_t*)&GCLK->GENDIV.reg) = generator;
+     cd6:	4b11      	ldr	r3, [pc, #68]	; (d1c <system_gclk_gen_set_config+0xac>)
+	if (GCLK->STATUS.reg & GCLK_STATUS_SYNCBUSY){
+     cd8:	4a0e      	ldr	r2, [pc, #56]	; (d14 <system_gclk_gen_set_config+0xa4>)
+	*((uint8_t*)&GCLK->GENDIV.reg) = generator;
+     cda:	701e      	strb	r6, [r3, #0]
+	if (GCLK->STATUS.reg & GCLK_STATUS_SYNCBUSY){
+     cdc:	7853      	ldrb	r3, [r2, #1]
+     cde:	b25b      	sxtb	r3, r3
+     ce0:	2b00      	cmp	r3, #0
+     ce2:	dbfb      	blt.n	cdc <system_gclk_gen_set_config+0x6c>
+     ce4:	490b      	ldr	r1, [pc, #44]	; (d14 <system_gclk_gen_set_config+0xa4>)
+
+	/* Write the new generator configuration */
+	while (system_gclk_is_syncing()) {
+		/* Wait for synchronization */
+	};
+	GCLK->GENDIV.reg  = new_gendiv_config;
+     ce6:	6094      	str	r4, [r2, #8]
+	if (GCLK->STATUS.reg & GCLK_STATUS_SYNCBUSY){
+     ce8:	784a      	ldrb	r2, [r1, #1]
+     cea:	b252      	sxtb	r2, r2
+     cec:	2a00      	cmp	r2, #0
+     cee:	dbfb      	blt.n	ce8 <system_gclk_gen_set_config+0x78>
+
+	while (system_gclk_is_syncing()) {
+		/* Wait for synchronization */
+	};
+	GCLK->GENCTRL.reg = new_genctrl_config | (GCLK->GENCTRL.reg & GCLK_GENCTRL_GENEN);
+     cf0:	2280      	movs	r2, #128	; 0x80
+     cf2:	684b      	ldr	r3, [r1, #4]
+     cf4:	0252      	lsls	r2, r2, #9
+     cf6:	4013      	ands	r3, r2
+     cf8:	432b      	orrs	r3, r5
+     cfa:	604b      	str	r3, [r1, #4]
+	cpu_irq_leave_critical();
+     cfc:	4b08      	ldr	r3, [pc, #32]	; (d20 <system_gclk_gen_set_config+0xb0>)
+     cfe:	4798      	blx	r3
+
+	system_interrupt_leave_critical_section();
+}
+     d00:	bd70      	pop	{r4, r5, r6, pc}
+			new_genctrl_config |= GCLK_GENCTRL_IDC;
+     d02:	2380      	movs	r3, #128	; 0x80
+					(config->division_factor) << GCLK_GENDIV_DIV_Pos;
+     d04:	0204      	lsls	r4, r0, #8
+			new_genctrl_config |= GCLK_GENCTRL_IDC;
+     d06:	029b      	lsls	r3, r3, #10
+			new_gendiv_config  |=
+     d08:	4334      	orrs	r4, r6
+			new_genctrl_config |= GCLK_GENCTRL_IDC;
+     d0a:	431d      	orrs	r5, r3
+     d0c:	e7d6      	b.n	cbc <system_gclk_gen_set_config+0x4c>
+			for (mask = (1UL << 1); mask < config->division_factor;
+     d0e:	2400      	movs	r4, #0
+     d10:	e7d0      	b.n	cb4 <system_gclk_gen_set_config+0x44>
+     d12:	46c0      	nop			; (mov r8, r8)
+     d14:	40000c00 	.word	0x40000c00
+     d18:	000008a5 	.word	0x000008a5
+     d1c:	40000c08 	.word	0x40000c08
+     d20:	000008e1 	.word	0x000008e1
+
+00000d24 <system_gclk_gen_enable>:
+ *
+ * \param[in] generator  Generic Clock Generator index to enable
+ */
+void system_gclk_gen_enable(
+		const uint8_t generator)
+{
+     d24:	b510      	push	{r4, lr}
+     d26:	0004      	movs	r4, r0
+	if (GCLK->STATUS.reg & GCLK_STATUS_SYNCBUSY){
+     d28:	4a0a      	ldr	r2, [pc, #40]	; (d54 <system_gclk_gen_enable+0x30>)
+     d2a:	7853      	ldrb	r3, [r2, #1]
+     d2c:	b25b      	sxtb	r3, r3
+     d2e:	2b00      	cmp	r3, #0
+     d30:	dbfb      	blt.n	d2a <system_gclk_gen_enable+0x6>
+	cpu_irq_enter_critical();
+     d32:	4b09      	ldr	r3, [pc, #36]	; (d58 <system_gclk_gen_enable+0x34>)
+     d34:	4798      	blx	r3
+	};
+
+	system_interrupt_enter_critical_section();
+
+	/* Select the requested generator */
+	*((uint8_t*)&GCLK->GENCTRL.reg) = generator;
+     d36:	4b09      	ldr	r3, [pc, #36]	; (d5c <system_gclk_gen_enable+0x38>)
+	if (GCLK->STATUS.reg & GCLK_STATUS_SYNCBUSY){
+     d38:	4a06      	ldr	r2, [pc, #24]	; (d54 <system_gclk_gen_enable+0x30>)
+	*((uint8_t*)&GCLK->GENCTRL.reg) = generator;
+     d3a:	701c      	strb	r4, [r3, #0]
+	if (GCLK->STATUS.reg & GCLK_STATUS_SYNCBUSY){
+     d3c:	7853      	ldrb	r3, [r2, #1]
+     d3e:	b25b      	sxtb	r3, r3
+     d40:	2b00      	cmp	r3, #0
+     d42:	dbfb      	blt.n	d3c <system_gclk_gen_enable+0x18>
+	while (system_gclk_is_syncing()) {
+		/* Wait for synchronization */
+	};
+
+	/* Enable generator */
+	GCLK->GENCTRL.reg |= GCLK_GENCTRL_GENEN;
+     d44:	2380      	movs	r3, #128	; 0x80
+     d46:	6851      	ldr	r1, [r2, #4]
+     d48:	025b      	lsls	r3, r3, #9
+     d4a:	430b      	orrs	r3, r1
+     d4c:	6053      	str	r3, [r2, #4]
+	cpu_irq_leave_critical();
+     d4e:	4b04      	ldr	r3, [pc, #16]	; (d60 <system_gclk_gen_enable+0x3c>)
+     d50:	4798      	blx	r3
+
+	system_interrupt_leave_critical_section();
+}
+     d52:	bd10      	pop	{r4, pc}
+     d54:	40000c00 	.word	0x40000c00
+     d58:	000008a5 	.word	0x000008a5
+     d5c:	40000c04 	.word	0x40000c04
+     d60:	000008e1 	.word	0x000008e1
+
+00000d64 <system_gclk_chan_enable>:
+ *
+ * \param[in] channel   Generic Clock channel to enable
+ */
+void system_gclk_chan_enable(
+		const uint8_t channel)
+{
+     d64:	b510      	push	{r4, lr}
+     d66:	0004      	movs	r4, r0
+	cpu_irq_enter_critical();
+     d68:	4b06      	ldr	r3, [pc, #24]	; (d84 <system_gclk_chan_enable+0x20>)
+     d6a:	4798      	blx	r3
+	system_interrupt_enter_critical_section();
+
+	/* Select the requested generator channel */
+	*((uint8_t*)&GCLK->CLKCTRL.reg) = channel;
+     d6c:	4b06      	ldr	r3, [pc, #24]	; (d88 <system_gclk_chan_enable+0x24>)
+
+	/* Enable the generic clock */
+	GCLK->CLKCTRL.reg |= GCLK_CLKCTRL_CLKEN;
+     d6e:	4a07      	ldr	r2, [pc, #28]	; (d8c <system_gclk_chan_enable+0x28>)
+	*((uint8_t*)&GCLK->CLKCTRL.reg) = channel;
+     d70:	701c      	strb	r4, [r3, #0]
+	GCLK->CLKCTRL.reg |= GCLK_CLKCTRL_CLKEN;
+     d72:	2380      	movs	r3, #128	; 0x80
+     d74:	8851      	ldrh	r1, [r2, #2]
+     d76:	01db      	lsls	r3, r3, #7
+     d78:	430b      	orrs	r3, r1
+     d7a:	8053      	strh	r3, [r2, #2]
+	cpu_irq_leave_critical();
+     d7c:	4b04      	ldr	r3, [pc, #16]	; (d90 <system_gclk_chan_enable+0x2c>)
+     d7e:	4798      	blx	r3
+
+	system_interrupt_leave_critical_section();
+}
+     d80:	bd10      	pop	{r4, pc}
+     d82:	46c0      	nop			; (mov r8, r8)
+     d84:	000008a5 	.word	0x000008a5
+     d88:	40000c02 	.word	0x40000c02
+     d8c:	40000c00 	.word	0x40000c00
+     d90:	000008e1 	.word	0x000008e1
+
+00000d94 <system_gclk_chan_disable>:
+ *
+ * \param[in] channel  Generic Clock channel to disable
+ */
+void system_gclk_chan_disable(
+		const uint8_t channel)
+{
+     d94:	b510      	push	{r4, lr}
+     d96:	0004      	movs	r4, r0
+	cpu_irq_enter_critical();
+     d98:	4b0e      	ldr	r3, [pc, #56]	; (dd4 <system_gclk_chan_disable+0x40>)
+     d9a:	4798      	blx	r3
+	system_interrupt_enter_critical_section();
+
+	/* Select the requested generator channel */
+	*((uint8_t*)&GCLK->CLKCTRL.reg) = channel;
+     d9c:	4b0e      	ldr	r3, [pc, #56]	; (dd8 <system_gclk_chan_disable+0x44>)
+
+	/* Sanity check WRTLOCK */
+	Assert(!GCLK->CLKCTRL.bit.WRTLOCK);
+
+	/* Switch to known-working source so that the channel can be disabled */
+	uint32_t prev_gen_id = GCLK->CLKCTRL.bit.GEN;
+     d9e:	4a0f      	ldr	r2, [pc, #60]	; (ddc <system_gclk_chan_disable+0x48>)
+	*((uint8_t*)&GCLK->CLKCTRL.reg) = channel;
+     da0:	701c      	strb	r4, [r3, #0]
+	uint32_t prev_gen_id = GCLK->CLKCTRL.bit.GEN;
+     da2:	8853      	ldrh	r3, [r2, #2]
+	GCLK->CLKCTRL.bit.GEN = 0;
+     da4:	490e      	ldr	r1, [pc, #56]	; (de0 <system_gclk_chan_disable+0x4c>)
+	uint32_t prev_gen_id = GCLK->CLKCTRL.bit.GEN;
+     da6:	051b      	lsls	r3, r3, #20
+     da8:	0f18      	lsrs	r0, r3, #28
+	GCLK->CLKCTRL.bit.GEN = 0;
+     daa:	8853      	ldrh	r3, [r2, #2]
+     dac:	400b      	ands	r3, r1
+     dae:	8053      	strh	r3, [r2, #2]
+
+	/* Disable the generic clock */
+	GCLK->CLKCTRL.reg &= ~GCLK_CLKCTRL_CLKEN;
+     db0:	8853      	ldrh	r3, [r2, #2]
+     db2:	490c      	ldr	r1, [pc, #48]	; (de4 <system_gclk_chan_disable+0x50>)
+     db4:	400b      	ands	r3, r1
+	while (GCLK->CLKCTRL.reg & GCLK_CLKCTRL_CLKEN) {
+     db6:	2180      	movs	r1, #128	; 0x80
+	GCLK->CLKCTRL.reg &= ~GCLK_CLKCTRL_CLKEN;
+     db8:	8053      	strh	r3, [r2, #2]
+	while (GCLK->CLKCTRL.reg & GCLK_CLKCTRL_CLKEN) {
+     dba:	01c9      	lsls	r1, r1, #7
+     dbc:	8853      	ldrh	r3, [r2, #2]
+     dbe:	420b      	tst	r3, r1
+     dc0:	d1fc      	bne.n	dbc <system_gclk_chan_disable+0x28>
+		/* Wait for clock to become disabled */
+	}
+
+	/* Restore previous configured clock generator */
+	GCLK->CLKCTRL.bit.GEN = prev_gen_id;
+     dc2:	8851      	ldrh	r1, [r2, #2]
+     dc4:	0203      	lsls	r3, r0, #8
+     dc6:	4806      	ldr	r0, [pc, #24]	; (de0 <system_gclk_chan_disable+0x4c>)
+     dc8:	4001      	ands	r1, r0
+     dca:	430b      	orrs	r3, r1
+     dcc:	8053      	strh	r3, [r2, #2]
+	cpu_irq_leave_critical();
+     dce:	4b06      	ldr	r3, [pc, #24]	; (de8 <system_gclk_chan_disable+0x54>)
+     dd0:	4798      	blx	r3
+
+	system_interrupt_leave_critical_section();
+}
+     dd2:	bd10      	pop	{r4, pc}
+     dd4:	000008a5 	.word	0x000008a5
+     dd8:	40000c02 	.word	0x40000c02
+     ddc:	40000c00 	.word	0x40000c00
+     de0:	fffff0ff 	.word	0xfffff0ff
+     de4:	ffffbfff 	.word	0xffffbfff
+     de8:	000008e1 	.word	0x000008e1
+
+00000dec <system_gclk_chan_set_config>:
+{
+     dec:	b510      	push	{r4, lr}
+	new_clkctrl_config |= config->source_generator << GCLK_CLKCTRL_GEN_Pos;
+     dee:	780c      	ldrb	r4, [r1, #0]
+	system_gclk_chan_disable(channel);
+     df0:	4b03      	ldr	r3, [pc, #12]	; (e00 <system_gclk_chan_set_config+0x14>)
+	new_clkctrl_config |= config->source_generator << GCLK_CLKCTRL_GEN_Pos;
+     df2:	0224      	lsls	r4, r4, #8
+     df4:	4304      	orrs	r4, r0
+	system_gclk_chan_disable(channel);
+     df6:	4798      	blx	r3
+	GCLK->CLKCTRL.reg = new_clkctrl_config;
+     df8:	4b02      	ldr	r3, [pc, #8]	; (e04 <system_gclk_chan_set_config+0x18>)
+     dfa:	b2a4      	uxth	r4, r4
+     dfc:	805c      	strh	r4, [r3, #2]
+}
+     dfe:	bd10      	pop	{r4, pc}
+     e00:	00000d95 	.word	0x00000d95
+     e04:	40000c00 	.word	0x40000c00
+
+00000e08 <_system_pinmux_config>:
+
+	/* Track the configuration bits into a temporary variable before writing */
+	uint32_t pin_cfg = 0;
+
+	/* Enabled powersave mode, don't create configuration */
+	if (!config->powersave) {
+     e08:	78d3      	ldrb	r3, [r2, #3]
+{
+     e0a:	b570      	push	{r4, r5, r6, lr}
+	if (!config->powersave) {
+     e0c:	2b00      	cmp	r3, #0
+     e0e:	d131      	bne.n	e74 <_system_pinmux_config+0x6c>
+		/* Enable the pin peripheral MUX flag if non-GPIO selected (pinmux will
+		 * be written later) and store the new MUX mask */
+		if (config->mux_position != SYSTEM_PINMUX_GPIO) {
+     e10:	7813      	ldrb	r3, [r2, #0]
+     e12:	2b80      	cmp	r3, #128	; 0x80
+     e14:	d047      	beq.n	ea6 <_system_pinmux_config+0x9e>
+			pin_cfg |= PORT_WRCONFIG_PMUXEN;
+			pin_cfg |= (config->mux_position << PORT_WRCONFIG_PMUX_Pos);
+     e16:	2480      	movs	r4, #128	; 0x80
+     e18:	061b      	lsls	r3, r3, #24
+     e1a:	0264      	lsls	r4, r4, #9
+     e1c:	4323      	orrs	r3, r4
+		}
+
+		/* Check if the user has requested that the input buffer be enabled */
+		if ((config->direction == SYSTEM_PINMUX_PIN_DIR_INPUT) ||
+     e1e:	7854      	ldrb	r4, [r2, #1]
+     e20:	2502      	movs	r5, #2
+     e22:	0026      	movs	r6, r4
+     e24:	43ae      	bics	r6, r5
+     e26:	d107      	bne.n	e38 <_system_pinmux_config+0x30>
+				(config->direction == SYSTEM_PINMUX_PIN_DIR_OUTPUT_WITH_READBACK)) {
+			/* Enable input buffer flag */
+			pin_cfg |= PORT_WRCONFIG_INEN;
+
+			/* Enable pull-up/pull-down control flag if requested */
+			if (config->input_pull != SYSTEM_PINMUX_PIN_PULL_NONE) {
+     e28:	7894      	ldrb	r4, [r2, #2]
+     e2a:	2c00      	cmp	r4, #0
+     e2c:	d137      	bne.n	e9e <_system_pinmux_config+0x96>
+			pin_cfg |= PORT_WRCONFIG_INEN;
+     e2e:	2480      	movs	r4, #128	; 0x80
+     e30:	02a4      	lsls	r4, r4, #10
+     e32:	4323      	orrs	r3, r4
+				pin_cfg |= PORT_WRCONFIG_PULLEN;
+			}
+
+			/* Clear the port DIR bits to disable the output buffer */
+			port->DIRCLR.reg = pin_mask;
+     e34:	6041      	str	r1, [r0, #4]
+     e36:	7854      	ldrb	r4, [r2, #1]
+		}
+
+		/* Check if the user has requested that the output buffer be enabled */
+		if ((config->direction == SYSTEM_PINMUX_PIN_DIR_OUTPUT) ||
+     e38:	3c01      	subs	r4, #1
+     e3a:	2c01      	cmp	r4, #1
+     e3c:	d935      	bls.n	eaa <_system_pinmux_config+0xa2>
+
+	/* Configure the lower 16-bits of the port to the desired configuration,
+	 * including the pin peripheral multiplexer just in case it is enabled */
+	port->WRCONFIG.reg
+		= (lower_pin_mask << PORT_WRCONFIG_PINMASK_Pos) |
+			pin_cfg | PORT_WRCONFIG_WRPMUX | PORT_WRCONFIG_WRPINCFG;
+     e3e:	24a0      	movs	r4, #160	; 0xa0
+	uint32_t lower_pin_mask = (pin_mask & 0xFFFF);
+     e40:	040d      	lsls	r5, r1, #16
+     e42:	0c2d      	lsrs	r5, r5, #16
+			pin_cfg | PORT_WRCONFIG_WRPMUX | PORT_WRCONFIG_WRPINCFG;
+     e44:	05e4      	lsls	r4, r4, #23
+     e46:	432c      	orrs	r4, r5
+     e48:	431c      	orrs	r4, r3
+		= (lower_pin_mask << PORT_WRCONFIG_PINMASK_Pos) |
+     e4a:	6284      	str	r4, [r0, #40]	; 0x28
+
+	/* Configure the upper 16-bits of the port to the desired configuration,
+	 * including the pin peripheral multiplexer just in case it is enabled */
+	port->WRCONFIG.reg
+		= (upper_pin_mask << PORT_WRCONFIG_PINMASK_Pos) |
+			pin_cfg | PORT_WRCONFIG_WRPMUX | PORT_WRCONFIG_WRPINCFG |
+     e4c:	24d0      	movs	r4, #208	; 0xd0
+	uint32_t upper_pin_mask = (pin_mask >> 16);
+     e4e:	0c0d      	lsrs	r5, r1, #16
+			pin_cfg | PORT_WRCONFIG_WRPMUX | PORT_WRCONFIG_WRPINCFG |
+     e50:	0624      	lsls	r4, r4, #24
+     e52:	432c      	orrs	r4, r5
+     e54:	431c      	orrs	r4, r3
+		= (upper_pin_mask << PORT_WRCONFIG_PINMASK_Pos) |
+     e56:	6284      	str	r4, [r0, #40]	; 0x28
+			PORT_WRCONFIG_HWSEL;
+
+	if(!config->powersave) {
+     e58:	78d4      	ldrb	r4, [r2, #3]
+     e5a:	2c00      	cmp	r4, #0
+     e5c:	d109      	bne.n	e72 <_system_pinmux_config+0x6a>
+		/* Set the pull-up state once the port pins are configured if one was
+		 * requested and it does not violate the valid set of port
+		 * configurations */
+		if (pin_cfg & PORT_WRCONFIG_PULLEN) {
+     e5e:	035b      	lsls	r3, r3, #13
+     e60:	d503      	bpl.n	e6a <_system_pinmux_config+0x62>
+			/* Set the OUT register bits to enable the pull-up if requested,
+			 * clear to enable pull-down */
+			if (config->input_pull == SYSTEM_PINMUX_PIN_PULL_UP) {
+     e62:	7893      	ldrb	r3, [r2, #2]
+     e64:	2b01      	cmp	r3, #1
+     e66:	d023      	beq.n	eb0 <_system_pinmux_config+0xa8>
+				port->OUTSET.reg = pin_mask;
+			} else {
+				port->OUTCLR.reg = pin_mask;
+     e68:	6141      	str	r1, [r0, #20]
+			}
+		}
+
+		/* Check if the user has requested that the output buffer be enabled */
+		if ((config->direction == SYSTEM_PINMUX_PIN_DIR_OUTPUT) ||
+     e6a:	7853      	ldrb	r3, [r2, #1]
+     e6c:	3b01      	subs	r3, #1
+     e6e:	2b01      	cmp	r3, #1
+     e70:	d913      	bls.n	e9a <_system_pinmux_config+0x92>
+				(config->direction == SYSTEM_PINMUX_PIN_DIR_OUTPUT_WITH_READBACK)) {
+			/* Set the port DIR bits to enable the output buffer */
+			port->DIRSET.reg = pin_mask;
+		}
+	}
+}
+     e72:	bd70      	pop	{r4, r5, r6, pc}
+			pin_cfg | PORT_WRCONFIG_WRPMUX | PORT_WRCONFIG_WRPINCFG;
+     e74:	23a0      	movs	r3, #160	; 0xa0
+	uint32_t lower_pin_mask = (pin_mask & 0xFFFF);
+     e76:	040c      	lsls	r4, r1, #16
+     e78:	0c24      	lsrs	r4, r4, #16
+			pin_cfg | PORT_WRCONFIG_WRPMUX | PORT_WRCONFIG_WRPINCFG;
+     e7a:	05db      	lsls	r3, r3, #23
+     e7c:	4323      	orrs	r3, r4
+		port->DIRCLR.reg = pin_mask;
+     e7e:	6041      	str	r1, [r0, #4]
+		= (lower_pin_mask << PORT_WRCONFIG_PINMASK_Pos) |
+     e80:	6283      	str	r3, [r0, #40]	; 0x28
+			pin_cfg | PORT_WRCONFIG_WRPMUX | PORT_WRCONFIG_WRPINCFG |
+     e82:	23d0      	movs	r3, #208	; 0xd0
+	uint32_t upper_pin_mask = (pin_mask >> 16);
+     e84:	0c0c      	lsrs	r4, r1, #16
+			pin_cfg | PORT_WRCONFIG_WRPMUX | PORT_WRCONFIG_WRPINCFG |
+     e86:	061b      	lsls	r3, r3, #24
+     e88:	4323      	orrs	r3, r4
+		= (upper_pin_mask << PORT_WRCONFIG_PINMASK_Pos) |
+     e8a:	6283      	str	r3, [r0, #40]	; 0x28
+	if(!config->powersave) {
+     e8c:	78d3      	ldrb	r3, [r2, #3]
+     e8e:	2b00      	cmp	r3, #0
+     e90:	d1ef      	bne.n	e72 <_system_pinmux_config+0x6a>
+		if ((config->direction == SYSTEM_PINMUX_PIN_DIR_OUTPUT) ||
+     e92:	7853      	ldrb	r3, [r2, #1]
+     e94:	3b01      	subs	r3, #1
+     e96:	2b01      	cmp	r3, #1
+     e98:	d8eb      	bhi.n	e72 <_system_pinmux_config+0x6a>
+			port->DIRSET.reg = pin_mask;
+     e9a:	6081      	str	r1, [r0, #8]
+}
+     e9c:	e7e9      	b.n	e72 <_system_pinmux_config+0x6a>
+				pin_cfg |= PORT_WRCONFIG_PULLEN;
+     e9e:	24c0      	movs	r4, #192	; 0xc0
+     ea0:	02e4      	lsls	r4, r4, #11
+     ea2:	4323      	orrs	r3, r4
+     ea4:	e7c6      	b.n	e34 <_system_pinmux_config+0x2c>
+	uint32_t pin_cfg = 0;
+     ea6:	2300      	movs	r3, #0
+     ea8:	e7b9      	b.n	e1e <_system_pinmux_config+0x16>
+			pin_cfg &= ~PORT_WRCONFIG_PULLEN;
+     eaa:	4c02      	ldr	r4, [pc, #8]	; (eb4 <_system_pinmux_config+0xac>)
+     eac:	4023      	ands	r3, r4
+     eae:	e7c6      	b.n	e3e <_system_pinmux_config+0x36>
+				port->OUTSET.reg = pin_mask;
+     eb0:	6181      	str	r1, [r0, #24]
+     eb2:	e7da      	b.n	e6a <_system_pinmux_config+0x62>
+     eb4:	fffbffff 	.word	0xfffbffff
+
+00000eb8 <system_pinmux_pin_set_config>:
+ * \param[in] config    Configuration settings for the pin
+ */
+void system_pinmux_pin_set_config(
+		const uint8_t gpio_pin,
+		const struct system_pinmux_config *const config)
+{
+     eb8:	000a      	movs	r2, r1
+     eba:	b510      	push	{r4, lr}
+	uint8_t group_index = (gpio_pin / 32);
+
+	/* Array of available ports */
+	Port *const ports[PORT_INST_NUM] = PORT_INSTS;
+
+	if (port_index < PORT_INST_NUM) {
+     ebc:	09c1      	lsrs	r1, r0, #7
+		return &(ports[port_index]->Group[group_index]);
+	} else {
+		Assert(false);
+		return NULL;
+     ebe:	2300      	movs	r3, #0
+	if (port_index < PORT_INST_NUM) {
+     ec0:	2900      	cmp	r1, #0
+     ec2:	d104      	bne.n	ece <system_pinmux_pin_set_config+0x16>
+		return &(ports[port_index]->Group[group_index]);
+     ec4:	4906      	ldr	r1, [pc, #24]	; (ee0 <system_pinmux_pin_set_config+0x28>)
+     ec6:	0943      	lsrs	r3, r0, #5
+     ec8:	468c      	mov	ip, r1
+     eca:	01db      	lsls	r3, r3, #7
+     ecc:	4463      	add	r3, ip
+	PortGroup *const port = system_pinmux_get_group_from_gpio_pin(gpio_pin);
+	uint32_t pin_mask = (1UL << (gpio_pin % 32));
+     ece:	241f      	movs	r4, #31
+     ed0:	2101      	movs	r1, #1
+     ed2:	4020      	ands	r0, r4
+     ed4:	4081      	lsls	r1, r0
+
+	_system_pinmux_config(port, pin_mask, config);
+     ed6:	0018      	movs	r0, r3
+     ed8:	4b02      	ldr	r3, [pc, #8]	; (ee4 <system_pinmux_pin_set_config+0x2c>)
+     eda:	4798      	blx	r3
+}
+     edc:	bd10      	pop	{r4, pc}
+     ede:	46c0      	nop			; (mov r8, r8)
+     ee0:	41004400 	.word	0x41004400
+     ee4:	00000e09 	.word	0x00000e09
+
+00000ee8 <_system_dummy_init>:
+ */
+void _system_dummy_init(void);
+void _system_dummy_init(void)
+{
+	return;
+}
+     ee8:	4770      	bx	lr
+     eea:	46c0      	nop			; (mov r8, r8)
+
+00000eec <system_init>:
+ *  - Board hardware initialization (via the Board module)
+ *  - Event system driver initialization (via the EVSYS module)
+ *  - External Interrupt driver initialization (via the EXTINT module)
+ */
+void system_init(void)
+{
+     eec:	b510      	push	{r4, lr}
+	/* Configure GCLK and clock sources according to conf_clocks.h */
+	system_clock_init();
+     eee:	4b05      	ldr	r3, [pc, #20]	; (f04 <system_init+0x18>)
+     ef0:	4798      	blx	r3
+
+	/* Initialize board hardware */
+	system_board_init();
+     ef2:	4b05      	ldr	r3, [pc, #20]	; (f08 <system_init+0x1c>)
+     ef4:	4798      	blx	r3
+
+	/* Initialize EVSYS hardware */
+	_system_events_init();
+     ef6:	4b05      	ldr	r3, [pc, #20]	; (f0c <system_init+0x20>)
+     ef8:	4798      	blx	r3
+
+	/* Initialize External hardware */
+	_system_extint_init();
+     efa:	4b05      	ldr	r3, [pc, #20]	; (f10 <system_init+0x24>)
+     efc:	4798      	blx	r3
+	
+	/* Initialize DIVAS hardware */
+	_system_divas_init();
+     efe:	4b05      	ldr	r3, [pc, #20]	; (f14 <system_init+0x28>)
+     f00:	4798      	blx	r3
+}
+     f02:	bd10      	pop	{r4, pc}
+     f04:	00000ae1 	.word	0x00000ae1
+     f08:	00000911 	.word	0x00000911
+     f0c:	00000ee9 	.word	0x00000ee9
+     f10:	00000115 	.word	0x00000115
+     f14:	00000ee9 	.word	0x00000ee9
+
+00000f18 <Dummy_Handler>:
+
+/**
+ * \brief Default interrupt handler for unused IRQs.
+ */
+void Dummy_Handler(void)
+{
+     f18:	e7fe      	b.n	f18 <Dummy_Handler>
+     f1a:	46c0      	nop			; (mov r8, r8)
+
+00000f1c <Reset_Handler>:
+        if (pSrc != pDest) {
+     f1c:	4828      	ldr	r0, [pc, #160]	; (fc0 <Reset_Handler+0xa4>)
+     f1e:	4929      	ldr	r1, [pc, #164]	; (fc4 <Reset_Handler+0xa8>)
+{
+     f20:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+        if (pSrc != pDest) {
+     f22:	4288      	cmp	r0, r1
+     f24:	d00d      	beq.n	f42 <Reset_Handler+0x26>
+                for (; pDest < &_erelocate;) {
+     f26:	4a28      	ldr	r2, [pc, #160]	; (fc8 <Reset_Handler+0xac>)
+     f28:	4291      	cmp	r1, r2
+     f2a:	d20a      	bcs.n	f42 <Reset_Handler+0x26>
+     f2c:	43cb      	mvns	r3, r1
+     f2e:	189b      	adds	r3, r3, r2
+     f30:	2200      	movs	r2, #0
+     f32:	089b      	lsrs	r3, r3, #2
+     f34:	3301      	adds	r3, #1
+     f36:	009b      	lsls	r3, r3, #2
+                        *pDest++ = *pSrc++;
+     f38:	5884      	ldr	r4, [r0, r2]
+     f3a:	508c      	str	r4, [r1, r2]
+     f3c:	3204      	adds	r2, #4
+                for (; pDest < &_erelocate;) {
+     f3e:	429a      	cmp	r2, r3
+     f40:	d1fa      	bne.n	f38 <Reset_Handler+0x1c>
+        for (pDest = &_szero; pDest < &_ezero;) {
+     f42:	4a22      	ldr	r2, [pc, #136]	; (fcc <Reset_Handler+0xb0>)
+     f44:	4922      	ldr	r1, [pc, #136]	; (fd0 <Reset_Handler+0xb4>)
+     f46:	428a      	cmp	r2, r1
+     f48:	d209      	bcs.n	f5e <Reset_Handler+0x42>
+     f4a:	43d3      	mvns	r3, r2
+     f4c:	185b      	adds	r3, r3, r1
+     f4e:	2103      	movs	r1, #3
+     f50:	438b      	bics	r3, r1
+                *pDest++ = 0;
+     f52:	2100      	movs	r1, #0
+     f54:	3304      	adds	r3, #4
+     f56:	18d3      	adds	r3, r2, r3
+     f58:	c202      	stmia	r2!, {r1}
+        for (pDest = &_szero; pDest < &_ezero;) {
+     f5a:	429a      	cmp	r2, r3
+     f5c:	d1fc      	bne.n	f58 <Reset_Handler+0x3c>
+        SCB->VTOR = ((uint32_t) pSrc & SCB_VTOR_TBLOFF_Msk);
+     f5e:	21ff      	movs	r1, #255	; 0xff
+     f60:	4b1c      	ldr	r3, [pc, #112]	; (fd4 <Reset_Handler+0xb8>)
+     f62:	4a1d      	ldr	r2, [pc, #116]	; (fd8 <Reset_Handler+0xbc>)
+     f64:	438b      	bics	r3, r1
+     f66:	6093      	str	r3, [r2, #8]
+        SBMATRIX->SFR[SBMATRIX_SLAVE_HMCRAMC0].reg = 2;
+     f68:	2390      	movs	r3, #144	; 0x90
+        USB->DEVICE.QOSCTRL.bit.CQOS = 2;
+     f6a:	2503      	movs	r5, #3
+     f6c:	2402      	movs	r4, #2
+        USB->DEVICE.QOSCTRL.bit.DQOS = 2;
+     f6e:	270c      	movs	r7, #12
+     f70:	2608      	movs	r6, #8
+        SBMATRIX->SFR[SBMATRIX_SLAVE_HMCRAMC0].reg = 2;
+     f72:	4a1a      	ldr	r2, [pc, #104]	; (fdc <Reset_Handler+0xc0>)
+     f74:	39fd      	subs	r1, #253	; 0xfd
+     f76:	005b      	lsls	r3, r3, #1
+     f78:	50d1      	str	r1, [r2, r3]
+        USB->DEVICE.QOSCTRL.bit.CQOS = 2;
+     f7a:	4a19      	ldr	r2, [pc, #100]	; (fe0 <Reset_Handler+0xc4>)
+     f7c:	78d3      	ldrb	r3, [r2, #3]
+     f7e:	43ab      	bics	r3, r5
+     f80:	4323      	orrs	r3, r4
+     f82:	70d3      	strb	r3, [r2, #3]
+        USB->DEVICE.QOSCTRL.bit.DQOS = 2;
+     f84:	78d3      	ldrb	r3, [r2, #3]
+     f86:	43bb      	bics	r3, r7
+     f88:	4333      	orrs	r3, r6
+     f8a:	70d3      	strb	r3, [r2, #3]
+        DMAC->QOSCTRL.bit.DQOS = 2;
+     f8c:	2230      	movs	r2, #48	; 0x30
+     f8e:	4b15      	ldr	r3, [pc, #84]	; (fe4 <Reset_Handler+0xc8>)
+     f90:	7b98      	ldrb	r0, [r3, #14]
+     f92:	4390      	bics	r0, r2
+     f94:	2220      	movs	r2, #32
+     f96:	4310      	orrs	r0, r2
+     f98:	7398      	strb	r0, [r3, #14]
+        DMAC->QOSCTRL.bit.FQOS = 2;
+     f9a:	7b99      	ldrb	r1, [r3, #14]
+     f9c:	43b9      	bics	r1, r7
+     f9e:	4331      	orrs	r1, r6
+     fa0:	7399      	strb	r1, [r3, #14]
+        NVMCTRL->CTRLB.bit.MANW = 1;
+     fa2:	2180      	movs	r1, #128	; 0x80
+        DMAC->QOSCTRL.bit.WRBQOS = 2;
+     fa4:	7b9a      	ldrb	r2, [r3, #14]
+     fa6:	43aa      	bics	r2, r5
+     fa8:	4322      	orrs	r2, r4
+     faa:	739a      	strb	r2, [r3, #14]
+        NVMCTRL->CTRLB.bit.MANW = 1;
+     fac:	4a0e      	ldr	r2, [pc, #56]	; (fe8 <Reset_Handler+0xcc>)
+     fae:	6853      	ldr	r3, [r2, #4]
+     fb0:	430b      	orrs	r3, r1
+     fb2:	6053      	str	r3, [r2, #4]
+        __libc_init_array();
+     fb4:	4b0d      	ldr	r3, [pc, #52]	; (fec <Reset_Handler+0xd0>)
+     fb6:	4798      	blx	r3
+        main();
+     fb8:	4b0d      	ldr	r3, [pc, #52]	; (ff0 <Reset_Handler+0xd4>)
+     fba:	4798      	blx	r3
+     fbc:	e7fe      	b.n	fbc <Reset_Handler+0xa0>
+     fbe:	46c0      	nop			; (mov r8, r8)
+     fc0:	00001a54 	.word	0x00001a54
+     fc4:	20000000 	.word	0x20000000
+     fc8:	20000844 	.word	0x20000844
+     fcc:	20000844 	.word	0x20000844
+     fd0:	20000a58 	.word	0x20000a58
+     fd4:	00000000 	.word	0x00000000
+     fd8:	e000ed00 	.word	0xe000ed00
+     fdc:	41007000 	.word	0x41007000
+     fe0:	41005000 	.word	0x41005000
+     fe4:	41004800 	.word	0x41004800
+     fe8:	41004000 	.word	0x41004000
+     fec:	00001061 	.word	0x00001061
+     ff0:	00001011 	.word	0x00001011
+
+00000ff4 <_sbrk>:
+extern caddr_t _sbrk(int incr)
+{
+	static unsigned char *heap = NULL;
+	unsigned char *prev_heap;
+
+	if (heap == NULL) {
+     ff4:	4a04      	ldr	r2, [pc, #16]	; (1008 <_sbrk+0x14>)
+     ff6:	6813      	ldr	r3, [r2, #0]
+     ff8:	2b00      	cmp	r3, #0
+     ffa:	d003      	beq.n	1004 <_sbrk+0x10>
+		heap = (unsigned char *)&_end;
+	}
+	prev_heap = heap;
+
+	heap += incr;
+     ffc:	1818      	adds	r0, r3, r0
+     ffe:	6010      	str	r0, [r2, #0]
+
+	return (caddr_t) prev_heap;
+}
+    1000:	0018      	movs	r0, r3
+    1002:	4770      	bx	lr
+    1004:	4b01      	ldr	r3, [pc, #4]	; (100c <_sbrk+0x18>)
+    1006:	e7f9      	b.n	ffc <_sbrk+0x8>
+    1008:	200008b4 	.word	0x200008b4
+    100c:	20002a58 	.word	0x20002a58
+
+00001010 <main>:
+ * Support and FAQ: visit <a href="https://www.microchip.com/support/">Microchip Support</a>
+ */
+#include <asf.h>
+
+int main (void)
+{
+    1010:	b510      	push	{r4, lr}
+	system_init();
+    1012:	4b02      	ldr	r3, [pc, #8]	; (101c <main+0xc>)
+    1014:	4798      	blx	r3
+}
+    1016:	2000      	movs	r0, #0
+    1018:	bd10      	pop	{r4, pc}
+    101a:	46c0      	nop			; (mov r8, r8)
+    101c:	00000eed 	.word	0x00000eed
+
+00001020 <__ctzsi2>:
+    1020:	4241      	negs	r1, r0
+    1022:	4008      	ands	r0, r1
+    1024:	211c      	movs	r1, #28
+    1026:	2301      	movs	r3, #1
+    1028:	041b      	lsls	r3, r3, #16
+    102a:	4298      	cmp	r0, r3
+    102c:	d301      	bcc.n	1032 <__ctzsi2+0x12>
+    102e:	0c00      	lsrs	r0, r0, #16
+    1030:	3910      	subs	r1, #16
+    1032:	0a1b      	lsrs	r3, r3, #8
+    1034:	4298      	cmp	r0, r3
+    1036:	d301      	bcc.n	103c <__ctzsi2+0x1c>
+    1038:	0a00      	lsrs	r0, r0, #8
+    103a:	3908      	subs	r1, #8
+    103c:	091b      	lsrs	r3, r3, #4
+    103e:	4298      	cmp	r0, r3
+    1040:	d301      	bcc.n	1046 <__ctzsi2+0x26>
+    1042:	0900      	lsrs	r0, r0, #4
+    1044:	3904      	subs	r1, #4
+    1046:	a202      	add	r2, pc, #8	; (adr r2, 1050 <__ctzsi2+0x30>)
+    1048:	5c10      	ldrb	r0, [r2, r0]
+    104a:	1a40      	subs	r0, r0, r1
+    104c:	4770      	bx	lr
+    104e:	46c0      	nop			; (mov r8, r8)
+    1050:	1d1d1c1b 	.word	0x1d1d1c1b
+    1054:	1e1e1e1e 	.word	0x1e1e1e1e
+    1058:	1f1f1f1f 	.word	0x1f1f1f1f
+    105c:	1f1f1f1f 	.word	0x1f1f1f1f
+
+00001060 <__libc_init_array>:
+    1060:	b570      	push	{r4, r5, r6, lr}
+    1062:	4e0d      	ldr	r6, [pc, #52]	; (1098 <__libc_init_array+0x38>)
+    1064:	4d0d      	ldr	r5, [pc, #52]	; (109c <__libc_init_array+0x3c>)
+    1066:	2400      	movs	r4, #0
+    1068:	1bad      	subs	r5, r5, r6
+    106a:	10ad      	asrs	r5, r5, #2
+    106c:	d005      	beq.n	107a <__libc_init_array+0x1a>
+    106e:	00a3      	lsls	r3, r4, #2
+    1070:	58f3      	ldr	r3, [r6, r3]
+    1072:	3401      	adds	r4, #1
+    1074:	4798      	blx	r3
+    1076:	42a5      	cmp	r5, r4
+    1078:	d1f9      	bne.n	106e <__libc_init_array+0xe>
+    107a:	f000 fcd9 	bl	1a30 <_init>
+    107e:	4e08      	ldr	r6, [pc, #32]	; (10a0 <__libc_init_array+0x40>)
+    1080:	4d08      	ldr	r5, [pc, #32]	; (10a4 <__libc_init_array+0x44>)
+    1082:	2400      	movs	r4, #0
+    1084:	1bad      	subs	r5, r5, r6
+    1086:	10ad      	asrs	r5, r5, #2
+    1088:	d005      	beq.n	1096 <__libc_init_array+0x36>
+    108a:	00a3      	lsls	r3, r4, #2
+    108c:	58f3      	ldr	r3, [r6, r3]
+    108e:	3401      	adds	r4, #1
+    1090:	4798      	blx	r3
+    1092:	42a5      	cmp	r5, r4
+    1094:	d1f9      	bne.n	108a <__libc_init_array+0x2a>
+    1096:	bd70      	pop	{r4, r5, r6, pc}
+    1098:	00001a3c 	.word	0x00001a3c
+    109c:	00001a3c 	.word	0x00001a3c
+    10a0:	00001a3c 	.word	0x00001a3c
+    10a4:	00001a44 	.word	0x00001a44
+
+000010a8 <register_fini>:
+    10a8:	4b03      	ldr	r3, [pc, #12]	; (10b8 <register_fini+0x10>)
+    10aa:	b510      	push	{r4, lr}
+    10ac:	2b00      	cmp	r3, #0
+    10ae:	d002      	beq.n	10b6 <register_fini+0xe>
+    10b0:	4802      	ldr	r0, [pc, #8]	; (10bc <register_fini+0x14>)
+    10b2:	f000 f805 	bl	10c0 <atexit>
+    10b6:	bd10      	pop	{r4, pc}
+    10b8:	00000000 	.word	0x00000000
+    10bc:	000010d1 	.word	0x000010d1
+
+000010c0 <atexit>:
+    10c0:	b510      	push	{r4, lr}
+    10c2:	0001      	movs	r1, r0
+    10c4:	2300      	movs	r3, #0
+    10c6:	2200      	movs	r2, #0
+    10c8:	2000      	movs	r0, #0
+    10ca:	f000 fc2d 	bl	1928 <__register_exitproc>
+    10ce:	bd10      	pop	{r4, pc}
+
+000010d0 <__libc_fini_array>:
+    10d0:	b570      	push	{r4, r5, r6, lr}
+    10d2:	4b09      	ldr	r3, [pc, #36]	; (10f8 <__libc_fini_array+0x28>)
+    10d4:	4c09      	ldr	r4, [pc, #36]	; (10fc <__libc_fini_array+0x2c>)
+    10d6:	1ae4      	subs	r4, r4, r3
+    10d8:	10a4      	asrs	r4, r4, #2
+    10da:	d009      	beq.n	10f0 <__libc_fini_array+0x20>
+    10dc:	4a08      	ldr	r2, [pc, #32]	; (1100 <__libc_fini_array+0x30>)
+    10de:	18a5      	adds	r5, r4, r2
+    10e0:	00ad      	lsls	r5, r5, #2
+    10e2:	18ed      	adds	r5, r5, r3
+    10e4:	682b      	ldr	r3, [r5, #0]
+    10e6:	3c01      	subs	r4, #1
+    10e8:	4798      	blx	r3
+    10ea:	3d04      	subs	r5, #4
+    10ec:	2c00      	cmp	r4, #0
+    10ee:	d1f9      	bne.n	10e4 <__libc_fini_array+0x14>
+    10f0:	f000 fca8 	bl	1a44 <_fini>
+    10f4:	bd70      	pop	{r4, r5, r6, pc}
+    10f6:	46c0      	nop			; (mov r8, r8)
+    10f8:	00001a50 	.word	0x00001a50
+    10fc:	00001a54 	.word	0x00001a54
+    1100:	3fffffff 	.word	0x3fffffff
+
+00001104 <_malloc_trim_r>:
+    1104:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+    1106:	000c      	movs	r4, r1
+    1108:	0006      	movs	r6, r0
+    110a:	f000 fbeb 	bl	18e4 <__malloc_lock>
+    110e:	4f20      	ldr	r7, [pc, #128]	; (1190 <_malloc_trim_r+0x8c>)
+    1110:	68bb      	ldr	r3, [r7, #8]
+    1112:	685d      	ldr	r5, [r3, #4]
+    1114:	2303      	movs	r3, #3
+    1116:	439d      	bics	r5, r3
+    1118:	4b1e      	ldr	r3, [pc, #120]	; (1194 <_malloc_trim_r+0x90>)
+    111a:	1b2c      	subs	r4, r5, r4
+    111c:	469c      	mov	ip, r3
+    111e:	4464      	add	r4, ip
+    1120:	0b24      	lsrs	r4, r4, #12
+    1122:	4b1d      	ldr	r3, [pc, #116]	; (1198 <_malloc_trim_r+0x94>)
+    1124:	3c01      	subs	r4, #1
+    1126:	0324      	lsls	r4, r4, #12
+    1128:	429c      	cmp	r4, r3
+    112a:	dd07      	ble.n	113c <_malloc_trim_r+0x38>
+    112c:	2100      	movs	r1, #0
+    112e:	0030      	movs	r0, r6
+    1130:	f000 fbe8 	bl	1904 <_sbrk_r>
+    1134:	68bb      	ldr	r3, [r7, #8]
+    1136:	195b      	adds	r3, r3, r5
+    1138:	4298      	cmp	r0, r3
+    113a:	d004      	beq.n	1146 <_malloc_trim_r+0x42>
+    113c:	0030      	movs	r0, r6
+    113e:	f000 fbd9 	bl	18f4 <__malloc_unlock>
+    1142:	2000      	movs	r0, #0
+    1144:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
+    1146:	4261      	negs	r1, r4
+    1148:	0030      	movs	r0, r6
+    114a:	f000 fbdb 	bl	1904 <_sbrk_r>
+    114e:	1c43      	adds	r3, r0, #1
+    1150:	d00d      	beq.n	116e <_malloc_trim_r+0x6a>
+    1152:	2201      	movs	r2, #1
+    1154:	68bb      	ldr	r3, [r7, #8]
+    1156:	1b2d      	subs	r5, r5, r4
+    1158:	4315      	orrs	r5, r2
+    115a:	605d      	str	r5, [r3, #4]
+    115c:	4b0f      	ldr	r3, [pc, #60]	; (119c <_malloc_trim_r+0x98>)
+    115e:	0030      	movs	r0, r6
+    1160:	681a      	ldr	r2, [r3, #0]
+    1162:	1b14      	subs	r4, r2, r4
+    1164:	601c      	str	r4, [r3, #0]
+    1166:	f000 fbc5 	bl	18f4 <__malloc_unlock>
+    116a:	2001      	movs	r0, #1
+    116c:	e7ea      	b.n	1144 <_malloc_trim_r+0x40>
+    116e:	2100      	movs	r1, #0
+    1170:	0030      	movs	r0, r6
+    1172:	f000 fbc7 	bl	1904 <_sbrk_r>
+    1176:	68ba      	ldr	r2, [r7, #8]
+    1178:	1a83      	subs	r3, r0, r2
+    117a:	2b0f      	cmp	r3, #15
+    117c:	ddde      	ble.n	113c <_malloc_trim_r+0x38>
+    117e:	4908      	ldr	r1, [pc, #32]	; (11a0 <_malloc_trim_r+0x9c>)
+    1180:	6809      	ldr	r1, [r1, #0]
+    1182:	1a40      	subs	r0, r0, r1
+    1184:	4905      	ldr	r1, [pc, #20]	; (119c <_malloc_trim_r+0x98>)
+    1186:	6008      	str	r0, [r1, #0]
+    1188:	2101      	movs	r1, #1
+    118a:	430b      	orrs	r3, r1
+    118c:	6053      	str	r3, [r2, #4]
+    118e:	e7d5      	b.n	113c <_malloc_trim_r+0x38>
+    1190:	20000434 	.word	0x20000434
+    1194:	00000fef 	.word	0x00000fef
+    1198:	00000fff 	.word	0x00000fff
+    119c:	200008b8 	.word	0x200008b8
+    11a0:	2000083c 	.word	0x2000083c
+
+000011a4 <_free_r>:
+    11a4:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+    11a6:	0004      	movs	r4, r0
+    11a8:	1e0d      	subs	r5, r1, #0
+    11aa:	d03c      	beq.n	1226 <_free_r+0x82>
+    11ac:	f000 fb9a 	bl	18e4 <__malloc_lock>
+    11b0:	0029      	movs	r1, r5
+    11b2:	3908      	subs	r1, #8
+    11b4:	6848      	ldr	r0, [r1, #4]
+    11b6:	2301      	movs	r3, #1
+    11b8:	0005      	movs	r5, r0
+    11ba:	2603      	movs	r6, #3
+    11bc:	439d      	bics	r5, r3
+    11be:	194a      	adds	r2, r1, r5
+    11c0:	469c      	mov	ip, r3
+    11c2:	4f61      	ldr	r7, [pc, #388]	; (1348 <_free_r+0x1a4>)
+    11c4:	6853      	ldr	r3, [r2, #4]
+    11c6:	43b3      	bics	r3, r6
+    11c8:	68be      	ldr	r6, [r7, #8]
+    11ca:	42b2      	cmp	r2, r6
+    11cc:	d056      	beq.n	127c <_free_r+0xd8>
+    11ce:	4666      	mov	r6, ip
+    11d0:	6053      	str	r3, [r2, #4]
+    11d2:	4206      	tst	r6, r0
+    11d4:	d10a      	bne.n	11ec <_free_r+0x48>
+    11d6:	003e      	movs	r6, r7
+    11d8:	6808      	ldr	r0, [r1, #0]
+    11da:	3608      	adds	r6, #8
+    11dc:	1a09      	subs	r1, r1, r0
+    11de:	182d      	adds	r5, r5, r0
+    11e0:	6888      	ldr	r0, [r1, #8]
+    11e2:	42b0      	cmp	r0, r6
+    11e4:	d065      	beq.n	12b2 <_free_r+0x10e>
+    11e6:	68ce      	ldr	r6, [r1, #12]
+    11e8:	60c6      	str	r6, [r0, #12]
+    11ea:	60b0      	str	r0, [r6, #8]
+    11ec:	2001      	movs	r0, #1
+    11ee:	18d6      	adds	r6, r2, r3
+    11f0:	6876      	ldr	r6, [r6, #4]
+    11f2:	4206      	tst	r6, r0
+    11f4:	d033      	beq.n	125e <_free_r+0xba>
+    11f6:	4b55      	ldr	r3, [pc, #340]	; (134c <_free_r+0x1a8>)
+    11f8:	4328      	orrs	r0, r5
+    11fa:	6048      	str	r0, [r1, #4]
+    11fc:	514d      	str	r5, [r1, r5]
+    11fe:	429d      	cmp	r5, r3
+    1200:	d812      	bhi.n	1228 <_free_r+0x84>
+    1202:	08ed      	lsrs	r5, r5, #3
+    1204:	3bff      	subs	r3, #255	; 0xff
+    1206:	10aa      	asrs	r2, r5, #2
+    1208:	3bff      	subs	r3, #255	; 0xff
+    120a:	4093      	lsls	r3, r2
+    120c:	687a      	ldr	r2, [r7, #4]
+    120e:	00ed      	lsls	r5, r5, #3
+    1210:	4313      	orrs	r3, r2
+    1212:	607b      	str	r3, [r7, #4]
+    1214:	19ef      	adds	r7, r5, r7
+    1216:	68bb      	ldr	r3, [r7, #8]
+    1218:	60cf      	str	r7, [r1, #12]
+    121a:	608b      	str	r3, [r1, #8]
+    121c:	60b9      	str	r1, [r7, #8]
+    121e:	60d9      	str	r1, [r3, #12]
+    1220:	0020      	movs	r0, r4
+    1222:	f000 fb67 	bl	18f4 <__malloc_unlock>
+    1226:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
+    1228:	0a68      	lsrs	r0, r5, #9
+    122a:	2804      	cmp	r0, #4
+    122c:	d850      	bhi.n	12d0 <_free_r+0x12c>
+    122e:	09a8      	lsrs	r0, r5, #6
+    1230:	0002      	movs	r2, r0
+    1232:	3039      	adds	r0, #57	; 0x39
+    1234:	3238      	adds	r2, #56	; 0x38
+    1236:	00c0      	lsls	r0, r0, #3
+    1238:	1838      	adds	r0, r7, r0
+    123a:	3808      	subs	r0, #8
+    123c:	6883      	ldr	r3, [r0, #8]
+    123e:	2603      	movs	r6, #3
+    1240:	4298      	cmp	r0, r3
+    1242:	d04c      	beq.n	12de <_free_r+0x13a>
+    1244:	685a      	ldr	r2, [r3, #4]
+    1246:	43b2      	bics	r2, r6
+    1248:	4295      	cmp	r5, r2
+    124a:	d230      	bcs.n	12ae <_free_r+0x10a>
+    124c:	689b      	ldr	r3, [r3, #8]
+    124e:	4298      	cmp	r0, r3
+    1250:	d1f8      	bne.n	1244 <_free_r+0xa0>
+    1252:	68c3      	ldr	r3, [r0, #12]
+    1254:	60cb      	str	r3, [r1, #12]
+    1256:	6088      	str	r0, [r1, #8]
+    1258:	6099      	str	r1, [r3, #8]
+    125a:	60c1      	str	r1, [r0, #12]
+    125c:	e7e0      	b.n	1220 <_free_r+0x7c>
+    125e:	18ed      	adds	r5, r5, r3
+    1260:	4e3b      	ldr	r6, [pc, #236]	; (1350 <_free_r+0x1ac>)
+    1262:	6893      	ldr	r3, [r2, #8]
+    1264:	42b3      	cmp	r3, r6
+    1266:	d042      	beq.n	12ee <_free_r+0x14a>
+    1268:	68d2      	ldr	r2, [r2, #12]
+    126a:	4328      	orrs	r0, r5
+    126c:	60da      	str	r2, [r3, #12]
+    126e:	6093      	str	r3, [r2, #8]
+    1270:	4b36      	ldr	r3, [pc, #216]	; (134c <_free_r+0x1a8>)
+    1272:	6048      	str	r0, [r1, #4]
+    1274:	514d      	str	r5, [r1, r5]
+    1276:	429d      	cmp	r5, r3
+    1278:	d8d6      	bhi.n	1228 <_free_r+0x84>
+    127a:	e7c2      	b.n	1202 <_free_r+0x5e>
+    127c:	4662      	mov	r2, ip
+    127e:	18eb      	adds	r3, r5, r3
+    1280:	4202      	tst	r2, r0
+    1282:	d106      	bne.n	1292 <_free_r+0xee>
+    1284:	680a      	ldr	r2, [r1, #0]
+    1286:	1a89      	subs	r1, r1, r2
+    1288:	6888      	ldr	r0, [r1, #8]
+    128a:	189b      	adds	r3, r3, r2
+    128c:	68ca      	ldr	r2, [r1, #12]
+    128e:	60c2      	str	r2, [r0, #12]
+    1290:	6090      	str	r0, [r2, #8]
+    1292:	2201      	movs	r2, #1
+    1294:	431a      	orrs	r2, r3
+    1296:	604a      	str	r2, [r1, #4]
+    1298:	4a2e      	ldr	r2, [pc, #184]	; (1354 <_free_r+0x1b0>)
+    129a:	60b9      	str	r1, [r7, #8]
+    129c:	6812      	ldr	r2, [r2, #0]
+    129e:	4293      	cmp	r3, r2
+    12a0:	d3be      	bcc.n	1220 <_free_r+0x7c>
+    12a2:	4b2d      	ldr	r3, [pc, #180]	; (1358 <_free_r+0x1b4>)
+    12a4:	0020      	movs	r0, r4
+    12a6:	6819      	ldr	r1, [r3, #0]
+    12a8:	f7ff ff2c 	bl	1104 <_malloc_trim_r>
+    12ac:	e7b8      	b.n	1220 <_free_r+0x7c>
+    12ae:	0018      	movs	r0, r3
+    12b0:	e7cf      	b.n	1252 <_free_r+0xae>
+    12b2:	4666      	mov	r6, ip
+    12b4:	18d0      	adds	r0, r2, r3
+    12b6:	6840      	ldr	r0, [r0, #4]
+    12b8:	4230      	tst	r0, r6
+    12ba:	d13f      	bne.n	133c <_free_r+0x198>
+    12bc:	6890      	ldr	r0, [r2, #8]
+    12be:	195d      	adds	r5, r3, r5
+    12c0:	68d3      	ldr	r3, [r2, #12]
+    12c2:	60c3      	str	r3, [r0, #12]
+    12c4:	6098      	str	r0, [r3, #8]
+    12c6:	4663      	mov	r3, ip
+    12c8:	432b      	orrs	r3, r5
+    12ca:	604b      	str	r3, [r1, #4]
+    12cc:	514d      	str	r5, [r1, r5]
+    12ce:	e7a7      	b.n	1220 <_free_r+0x7c>
+    12d0:	2814      	cmp	r0, #20
+    12d2:	d814      	bhi.n	12fe <_free_r+0x15a>
+    12d4:	0002      	movs	r2, r0
+    12d6:	305c      	adds	r0, #92	; 0x5c
+    12d8:	325b      	adds	r2, #91	; 0x5b
+    12da:	00c0      	lsls	r0, r0, #3
+    12dc:	e7ac      	b.n	1238 <_free_r+0x94>
+    12de:	2301      	movs	r3, #1
+    12e0:	1092      	asrs	r2, r2, #2
+    12e2:	4093      	lsls	r3, r2
+    12e4:	687a      	ldr	r2, [r7, #4]
+    12e6:	4313      	orrs	r3, r2
+    12e8:	607b      	str	r3, [r7, #4]
+    12ea:	0003      	movs	r3, r0
+    12ec:	e7b2      	b.n	1254 <_free_r+0xb0>
+    12ee:	4328      	orrs	r0, r5
+    12f0:	60d9      	str	r1, [r3, #12]
+    12f2:	6099      	str	r1, [r3, #8]
+    12f4:	60cb      	str	r3, [r1, #12]
+    12f6:	608b      	str	r3, [r1, #8]
+    12f8:	6048      	str	r0, [r1, #4]
+    12fa:	514d      	str	r5, [r1, r5]
+    12fc:	e790      	b.n	1220 <_free_r+0x7c>
+    12fe:	2854      	cmp	r0, #84	; 0x54
+    1300:	d805      	bhi.n	130e <_free_r+0x16a>
+    1302:	0b28      	lsrs	r0, r5, #12
+    1304:	0002      	movs	r2, r0
+    1306:	306f      	adds	r0, #111	; 0x6f
+    1308:	326e      	adds	r2, #110	; 0x6e
+    130a:	00c0      	lsls	r0, r0, #3
+    130c:	e794      	b.n	1238 <_free_r+0x94>
+    130e:	22aa      	movs	r2, #170	; 0xaa
+    1310:	0052      	lsls	r2, r2, #1
+    1312:	4290      	cmp	r0, r2
+    1314:	d805      	bhi.n	1322 <_free_r+0x17e>
+    1316:	0be8      	lsrs	r0, r5, #15
+    1318:	0002      	movs	r2, r0
+    131a:	3078      	adds	r0, #120	; 0x78
+    131c:	3277      	adds	r2, #119	; 0x77
+    131e:	00c0      	lsls	r0, r0, #3
+    1320:	e78a      	b.n	1238 <_free_r+0x94>
+    1322:	4a0e      	ldr	r2, [pc, #56]	; (135c <_free_r+0x1b8>)
+    1324:	4290      	cmp	r0, r2
+    1326:	d805      	bhi.n	1334 <_free_r+0x190>
+    1328:	0ca8      	lsrs	r0, r5, #18
+    132a:	0002      	movs	r2, r0
+    132c:	307d      	adds	r0, #125	; 0x7d
+    132e:	327c      	adds	r2, #124	; 0x7c
+    1330:	00c0      	lsls	r0, r0, #3
+    1332:	e781      	b.n	1238 <_free_r+0x94>
+    1334:	20fe      	movs	r0, #254	; 0xfe
+    1336:	227e      	movs	r2, #126	; 0x7e
+    1338:	0080      	lsls	r0, r0, #2
+    133a:	e77d      	b.n	1238 <_free_r+0x94>
+    133c:	4663      	mov	r3, ip
+    133e:	432b      	orrs	r3, r5
+    1340:	604b      	str	r3, [r1, #4]
+    1342:	6015      	str	r5, [r2, #0]
+    1344:	e76c      	b.n	1220 <_free_r+0x7c>
+    1346:	46c0      	nop			; (mov r8, r8)
+    1348:	20000434 	.word	0x20000434
+    134c:	000001ff 	.word	0x000001ff
+    1350:	2000043c 	.word	0x2000043c
+    1354:	20000840 	.word	0x20000840
+    1358:	200008e8 	.word	0x200008e8
+    135c:	00000554 	.word	0x00000554
+
+00001360 <__retarget_lock_acquire_recursive>:
+    1360:	4770      	bx	lr
+    1362:	46c0      	nop			; (mov r8, r8)
+
+00001364 <__retarget_lock_release_recursive>:
+    1364:	4770      	bx	lr
+    1366:	46c0      	nop			; (mov r8, r8)
+
+00001368 <malloc>:
+    1368:	b510      	push	{r4, lr}
+    136a:	4b03      	ldr	r3, [pc, #12]	; (1378 <malloc+0x10>)
+    136c:	0001      	movs	r1, r0
+    136e:	6818      	ldr	r0, [r3, #0]
+    1370:	f000 f804 	bl	137c <_malloc_r>
+    1374:	bd10      	pop	{r4, pc}
+    1376:	46c0      	nop			; (mov r8, r8)
+    1378:	20000004 	.word	0x20000004
+
+0000137c <_malloc_r>:
+    137c:	b5f0      	push	{r4, r5, r6, r7, lr}
+    137e:	4657      	mov	r7, sl
+    1380:	4645      	mov	r5, r8
+    1382:	46de      	mov	lr, fp
+    1384:	464e      	mov	r6, r9
+    1386:	b5e0      	push	{r5, r6, r7, lr}
+    1388:	000d      	movs	r5, r1
+    138a:	350b      	adds	r5, #11
+    138c:	b083      	sub	sp, #12
+    138e:	0007      	movs	r7, r0
+    1390:	2d16      	cmp	r5, #22
+    1392:	d800      	bhi.n	1396 <_malloc_r+0x1a>
+    1394:	e09f      	b.n	14d6 <_malloc_r+0x15a>
+    1396:	2307      	movs	r3, #7
+    1398:	439d      	bics	r5, r3
+    139a:	d500      	bpl.n	139e <_malloc_r+0x22>
+    139c:	e0c4      	b.n	1528 <_malloc_r+0x1ac>
+    139e:	42a9      	cmp	r1, r5
+    13a0:	d900      	bls.n	13a4 <_malloc_r+0x28>
+    13a2:	e0c1      	b.n	1528 <_malloc_r+0x1ac>
+    13a4:	f000 fa9e 	bl	18e4 <__malloc_lock>
+    13a8:	23f8      	movs	r3, #248	; 0xf8
+    13aa:	33ff      	adds	r3, #255	; 0xff
+    13ac:	429d      	cmp	r5, r3
+    13ae:	d800      	bhi.n	13b2 <_malloc_r+0x36>
+    13b0:	e28f      	b.n	18d2 <_malloc_r+0x556>
+    13b2:	0a68      	lsrs	r0, r5, #9
+    13b4:	d100      	bne.n	13b8 <_malloc_r+0x3c>
+    13b6:	e0bb      	b.n	1530 <_malloc_r+0x1b4>
+    13b8:	2804      	cmp	r0, #4
+    13ba:	d900      	bls.n	13be <_malloc_r+0x42>
+    13bc:	e162      	b.n	1684 <_malloc_r+0x308>
+    13be:	2338      	movs	r3, #56	; 0x38
+    13c0:	4698      	mov	r8, r3
+    13c2:	09a8      	lsrs	r0, r5, #6
+    13c4:	4480      	add	r8, r0
+    13c6:	3039      	adds	r0, #57	; 0x39
+    13c8:	00c1      	lsls	r1, r0, #3
+    13ca:	4ed2      	ldr	r6, [pc, #840]	; (1714 <_malloc_r+0x398>)
+    13cc:	1871      	adds	r1, r6, r1
+    13ce:	3908      	subs	r1, #8
+    13d0:	68cc      	ldr	r4, [r1, #12]
+    13d2:	42a1      	cmp	r1, r4
+    13d4:	d019      	beq.n	140a <_malloc_r+0x8e>
+    13d6:	2303      	movs	r3, #3
+    13d8:	6862      	ldr	r2, [r4, #4]
+    13da:	439a      	bics	r2, r3
+    13dc:	0013      	movs	r3, r2
+    13de:	1b52      	subs	r2, r2, r5
+    13e0:	2a0f      	cmp	r2, #15
+    13e2:	dd00      	ble.n	13e6 <_malloc_r+0x6a>
+    13e4:	e0aa      	b.n	153c <_malloc_r+0x1c0>
+    13e6:	2a00      	cmp	r2, #0
+    13e8:	db00      	blt.n	13ec <_malloc_r+0x70>
+    13ea:	e088      	b.n	14fe <_malloc_r+0x182>
+    13ec:	2303      	movs	r3, #3
+    13ee:	469c      	mov	ip, r3
+    13f0:	e008      	b.n	1404 <_malloc_r+0x88>
+    13f2:	4662      	mov	r2, ip
+    13f4:	6863      	ldr	r3, [r4, #4]
+    13f6:	4393      	bics	r3, r2
+    13f8:	1b5a      	subs	r2, r3, r5
+    13fa:	2a0f      	cmp	r2, #15
+    13fc:	dd00      	ble.n	1400 <_malloc_r+0x84>
+    13fe:	e09d      	b.n	153c <_malloc_r+0x1c0>
+    1400:	2a00      	cmp	r2, #0
+    1402:	da7c      	bge.n	14fe <_malloc_r+0x182>
+    1404:	68e4      	ldr	r4, [r4, #12]
+    1406:	42a1      	cmp	r1, r4
+    1408:	d1f3      	bne.n	13f2 <_malloc_r+0x76>
+    140a:	0032      	movs	r2, r6
+    140c:	6934      	ldr	r4, [r6, #16]
+    140e:	3208      	adds	r2, #8
+    1410:	4294      	cmp	r4, r2
+    1412:	d100      	bne.n	1416 <_malloc_r+0x9a>
+    1414:	e190      	b.n	1738 <_malloc_r+0x3bc>
+    1416:	2303      	movs	r3, #3
+    1418:	6861      	ldr	r1, [r4, #4]
+    141a:	4399      	bics	r1, r3
+    141c:	4689      	mov	r9, r1
+    141e:	1b49      	subs	r1, r1, r5
+    1420:	290f      	cmp	r1, #15
+    1422:	dd00      	ble.n	1426 <_malloc_r+0xaa>
+    1424:	e162      	b.n	16ec <_malloc_r+0x370>
+    1426:	6172      	str	r2, [r6, #20]
+    1428:	6132      	str	r2, [r6, #16]
+    142a:	2900      	cmp	r1, #0
+    142c:	db00      	blt.n	1430 <_malloc_r+0xb4>
+    142e:	e087      	b.n	1540 <_malloc_r+0x1c4>
+    1430:	4ab9      	ldr	r2, [pc, #740]	; (1718 <_malloc_r+0x39c>)
+    1432:	464b      	mov	r3, r9
+    1434:	4591      	cmp	r9, r2
+    1436:	d900      	bls.n	143a <_malloc_r+0xbe>
+    1438:	e130      	b.n	169c <_malloc_r+0x320>
+    143a:	08db      	lsrs	r3, r3, #3
+    143c:	3aff      	subs	r2, #255	; 0xff
+    143e:	1099      	asrs	r1, r3, #2
+    1440:	3aff      	subs	r2, #255	; 0xff
+    1442:	408a      	lsls	r2, r1
+    1444:	00db      	lsls	r3, r3, #3
+    1446:	6871      	ldr	r1, [r6, #4]
+    1448:	199b      	adds	r3, r3, r6
+    144a:	430a      	orrs	r2, r1
+    144c:	6899      	ldr	r1, [r3, #8]
+    144e:	6072      	str	r2, [r6, #4]
+    1450:	60e3      	str	r3, [r4, #12]
+    1452:	60a1      	str	r1, [r4, #8]
+    1454:	609c      	str	r4, [r3, #8]
+    1456:	0013      	movs	r3, r2
+    1458:	60cc      	str	r4, [r1, #12]
+    145a:	2101      	movs	r1, #1
+    145c:	1082      	asrs	r2, r0, #2
+    145e:	4091      	lsls	r1, r2
+    1460:	4299      	cmp	r1, r3
+    1462:	d86f      	bhi.n	1544 <_malloc_r+0x1c8>
+    1464:	420b      	tst	r3, r1
+    1466:	d105      	bne.n	1474 <_malloc_r+0xf8>
+    1468:	2203      	movs	r2, #3
+    146a:	4390      	bics	r0, r2
+    146c:	0049      	lsls	r1, r1, #1
+    146e:	3004      	adds	r0, #4
+    1470:	420b      	tst	r3, r1
+    1472:	d0fb      	beq.n	146c <_malloc_r+0xf0>
+    1474:	2303      	movs	r3, #3
+    1476:	4698      	mov	r8, r3
+    1478:	00c3      	lsls	r3, r0, #3
+    147a:	4699      	mov	r9, r3
+    147c:	44b1      	add	r9, r6
+    147e:	46cc      	mov	ip, r9
+    1480:	4682      	mov	sl, r0
+    1482:	4663      	mov	r3, ip
+    1484:	68dc      	ldr	r4, [r3, #12]
+    1486:	45a4      	cmp	ip, r4
+    1488:	d107      	bne.n	149a <_malloc_r+0x11e>
+    148a:	e157      	b.n	173c <_malloc_r+0x3c0>
+    148c:	2a00      	cmp	r2, #0
+    148e:	db00      	blt.n	1492 <_malloc_r+0x116>
+    1490:	e166      	b.n	1760 <_malloc_r+0x3e4>
+    1492:	68e4      	ldr	r4, [r4, #12]
+    1494:	45a4      	cmp	ip, r4
+    1496:	d100      	bne.n	149a <_malloc_r+0x11e>
+    1498:	e150      	b.n	173c <_malloc_r+0x3c0>
+    149a:	4642      	mov	r2, r8
+    149c:	6863      	ldr	r3, [r4, #4]
+    149e:	4393      	bics	r3, r2
+    14a0:	1b5a      	subs	r2, r3, r5
+    14a2:	2a0f      	cmp	r2, #15
+    14a4:	ddf2      	ble.n	148c <_malloc_r+0x110>
+    14a6:	2001      	movs	r0, #1
+    14a8:	4680      	mov	r8, r0
+    14aa:	1961      	adds	r1, r4, r5
+    14ac:	4305      	orrs	r5, r0
+    14ae:	6065      	str	r5, [r4, #4]
+    14b0:	68a0      	ldr	r0, [r4, #8]
+    14b2:	68e5      	ldr	r5, [r4, #12]
+    14b4:	3608      	adds	r6, #8
+    14b6:	60c5      	str	r5, [r0, #12]
+    14b8:	60a8      	str	r0, [r5, #8]
+    14ba:	4640      	mov	r0, r8
+    14bc:	60f1      	str	r1, [r6, #12]
+    14be:	60b1      	str	r1, [r6, #8]
+    14c0:	4310      	orrs	r0, r2
+    14c2:	6048      	str	r0, [r1, #4]
+    14c4:	60ce      	str	r6, [r1, #12]
+    14c6:	608e      	str	r6, [r1, #8]
+    14c8:	0038      	movs	r0, r7
+    14ca:	50e2      	str	r2, [r4, r3]
+    14cc:	f000 fa12 	bl	18f4 <__malloc_unlock>
+    14d0:	0020      	movs	r0, r4
+    14d2:	3008      	adds	r0, #8
+    14d4:	e021      	b.n	151a <_malloc_r+0x19e>
+    14d6:	2910      	cmp	r1, #16
+    14d8:	d826      	bhi.n	1528 <_malloc_r+0x1ac>
+    14da:	0038      	movs	r0, r7
+    14dc:	f000 fa02 	bl	18e4 <__malloc_lock>
+    14e0:	2510      	movs	r5, #16
+    14e2:	2318      	movs	r3, #24
+    14e4:	2002      	movs	r0, #2
+    14e6:	4e8b      	ldr	r6, [pc, #556]	; (1714 <_malloc_r+0x398>)
+    14e8:	18f3      	adds	r3, r6, r3
+    14ea:	001a      	movs	r2, r3
+    14ec:	685c      	ldr	r4, [r3, #4]
+    14ee:	3a08      	subs	r2, #8
+    14f0:	4294      	cmp	r4, r2
+    14f2:	d100      	bne.n	14f6 <_malloc_r+0x17a>
+    14f4:	e12e      	b.n	1754 <_malloc_r+0x3d8>
+    14f6:	2303      	movs	r3, #3
+    14f8:	6862      	ldr	r2, [r4, #4]
+    14fa:	439a      	bics	r2, r3
+    14fc:	0013      	movs	r3, r2
+    14fe:	68e2      	ldr	r2, [r4, #12]
+    1500:	68a1      	ldr	r1, [r4, #8]
+    1502:	60ca      	str	r2, [r1, #12]
+    1504:	6091      	str	r1, [r2, #8]
+    1506:	2201      	movs	r2, #1
+    1508:	18e3      	adds	r3, r4, r3
+    150a:	6859      	ldr	r1, [r3, #4]
+    150c:	0038      	movs	r0, r7
+    150e:	430a      	orrs	r2, r1
+    1510:	605a      	str	r2, [r3, #4]
+    1512:	f000 f9ef 	bl	18f4 <__malloc_unlock>
+    1516:	0020      	movs	r0, r4
+    1518:	3008      	adds	r0, #8
+    151a:	b003      	add	sp, #12
+    151c:	bc3c      	pop	{r2, r3, r4, r5}
+    151e:	4690      	mov	r8, r2
+    1520:	4699      	mov	r9, r3
+    1522:	46a2      	mov	sl, r4
+    1524:	46ab      	mov	fp, r5
+    1526:	bdf0      	pop	{r4, r5, r6, r7, pc}
+    1528:	230c      	movs	r3, #12
+    152a:	2000      	movs	r0, #0
+    152c:	603b      	str	r3, [r7, #0]
+    152e:	e7f4      	b.n	151a <_malloc_r+0x19e>
+    1530:	2180      	movs	r1, #128	; 0x80
+    1532:	233f      	movs	r3, #63	; 0x3f
+    1534:	2040      	movs	r0, #64	; 0x40
+    1536:	0089      	lsls	r1, r1, #2
+    1538:	4698      	mov	r8, r3
+    153a:	e746      	b.n	13ca <_malloc_r+0x4e>
+    153c:	4640      	mov	r0, r8
+    153e:	e764      	b.n	140a <_malloc_r+0x8e>
+    1540:	464b      	mov	r3, r9
+    1542:	e7e0      	b.n	1506 <_malloc_r+0x18a>
+    1544:	2303      	movs	r3, #3
+    1546:	68b4      	ldr	r4, [r6, #8]
+    1548:	6862      	ldr	r2, [r4, #4]
+    154a:	439a      	bics	r2, r3
+    154c:	4690      	mov	r8, r2
+    154e:	42aa      	cmp	r2, r5
+    1550:	d303      	bcc.n	155a <_malloc_r+0x1de>
+    1552:	1b53      	subs	r3, r2, r5
+    1554:	2b0f      	cmp	r3, #15
+    1556:	dd00      	ble.n	155a <_malloc_r+0x1de>
+    1558:	e086      	b.n	1668 <_malloc_r+0x2ec>
+    155a:	0023      	movs	r3, r4
+    155c:	4443      	add	r3, r8
+    155e:	4a6f      	ldr	r2, [pc, #444]	; (171c <_malloc_r+0x3a0>)
+    1560:	9301      	str	r3, [sp, #4]
+    1562:	4b6f      	ldr	r3, [pc, #444]	; (1720 <_malloc_r+0x3a4>)
+    1564:	4693      	mov	fp, r2
+    1566:	681b      	ldr	r3, [r3, #0]
+    1568:	6812      	ldr	r2, [r2, #0]
+    156a:	18eb      	adds	r3, r5, r3
+    156c:	3201      	adds	r2, #1
+    156e:	d100      	bne.n	1572 <_malloc_r+0x1f6>
+    1570:	e168      	b.n	1844 <_malloc_r+0x4c8>
+    1572:	4a6c      	ldr	r2, [pc, #432]	; (1724 <_malloc_r+0x3a8>)
+    1574:	4694      	mov	ip, r2
+    1576:	4463      	add	r3, ip
+    1578:	0b1b      	lsrs	r3, r3, #12
+    157a:	031b      	lsls	r3, r3, #12
+    157c:	9300      	str	r3, [sp, #0]
+    157e:	9900      	ldr	r1, [sp, #0]
+    1580:	0038      	movs	r0, r7
+    1582:	f000 f9bf 	bl	1904 <_sbrk_r>
+    1586:	0003      	movs	r3, r0
+    1588:	4681      	mov	r9, r0
+    158a:	3301      	adds	r3, #1
+    158c:	d061      	beq.n	1652 <_malloc_r+0x2d6>
+    158e:	9b01      	ldr	r3, [sp, #4]
+    1590:	4283      	cmp	r3, r0
+    1592:	d900      	bls.n	1596 <_malloc_r+0x21a>
+    1594:	e0ff      	b.n	1796 <_malloc_r+0x41a>
+    1596:	4b64      	ldr	r3, [pc, #400]	; (1728 <_malloc_r+0x3ac>)
+    1598:	9a00      	ldr	r2, [sp, #0]
+    159a:	469a      	mov	sl, r3
+    159c:	681b      	ldr	r3, [r3, #0]
+    159e:	469c      	mov	ip, r3
+    15a0:	4653      	mov	r3, sl
+    15a2:	4462      	add	r2, ip
+    15a4:	601a      	str	r2, [r3, #0]
+    15a6:	9b01      	ldr	r3, [sp, #4]
+    15a8:	0011      	movs	r1, r2
+    15aa:	4283      	cmp	r3, r0
+    15ac:	d100      	bne.n	15b0 <_malloc_r+0x234>
+    15ae:	e155      	b.n	185c <_malloc_r+0x4e0>
+    15b0:	465b      	mov	r3, fp
+    15b2:	681b      	ldr	r3, [r3, #0]
+    15b4:	3301      	adds	r3, #1
+    15b6:	d100      	bne.n	15ba <_malloc_r+0x23e>
+    15b8:	e16c      	b.n	1894 <_malloc_r+0x518>
+    15ba:	464b      	mov	r3, r9
+    15bc:	9a01      	ldr	r2, [sp, #4]
+    15be:	1a9b      	subs	r3, r3, r2
+    15c0:	1859      	adds	r1, r3, r1
+    15c2:	4653      	mov	r3, sl
+    15c4:	6019      	str	r1, [r3, #0]
+    15c6:	2307      	movs	r3, #7
+    15c8:	464a      	mov	r2, r9
+    15ca:	4013      	ands	r3, r2
+    15cc:	d100      	bne.n	15d0 <_malloc_r+0x254>
+    15ce:	e124      	b.n	181a <_malloc_r+0x49e>
+    15d0:	2108      	movs	r1, #8
+    15d2:	4689      	mov	r9, r1
+    15d4:	4955      	ldr	r1, [pc, #340]	; (172c <_malloc_r+0x3b0>)
+    15d6:	1ad2      	subs	r2, r2, r3
+    15d8:	4491      	add	r9, r2
+    15da:	1acb      	subs	r3, r1, r3
+    15dc:	9a00      	ldr	r2, [sp, #0]
+    15de:	0038      	movs	r0, r7
+    15e0:	444a      	add	r2, r9
+    15e2:	0511      	lsls	r1, r2, #20
+    15e4:	0d09      	lsrs	r1, r1, #20
+    15e6:	1a5b      	subs	r3, r3, r1
+    15e8:	0019      	movs	r1, r3
+    15ea:	469b      	mov	fp, r3
+    15ec:	f000 f98a 	bl	1904 <_sbrk_r>
+    15f0:	1c43      	adds	r3, r0, #1
+    15f2:	d100      	bne.n	15f6 <_malloc_r+0x27a>
+    15f4:	e142      	b.n	187c <_malloc_r+0x500>
+    15f6:	464b      	mov	r3, r9
+    15f8:	1ac0      	subs	r0, r0, r3
+    15fa:	2301      	movs	r3, #1
+    15fc:	4458      	add	r0, fp
+    15fe:	4318      	orrs	r0, r3
+    1600:	4653      	mov	r3, sl
+    1602:	681b      	ldr	r3, [r3, #0]
+    1604:	445b      	add	r3, fp
+    1606:	0019      	movs	r1, r3
+    1608:	4653      	mov	r3, sl
+    160a:	6019      	str	r1, [r3, #0]
+    160c:	464b      	mov	r3, r9
+    160e:	60b3      	str	r3, [r6, #8]
+    1610:	6058      	str	r0, [r3, #4]
+    1612:	42b4      	cmp	r4, r6
+    1614:	d013      	beq.n	163e <_malloc_r+0x2c2>
+    1616:	4643      	mov	r3, r8
+    1618:	2b0f      	cmp	r3, #15
+    161a:	d800      	bhi.n	161e <_malloc_r+0x2a2>
+    161c:	e0e8      	b.n	17f0 <_malloc_r+0x474>
+    161e:	4643      	mov	r3, r8
+    1620:	2207      	movs	r2, #7
+    1622:	6860      	ldr	r0, [r4, #4]
+    1624:	3b0c      	subs	r3, #12
+    1626:	4393      	bics	r3, r2
+    1628:	3a06      	subs	r2, #6
+    162a:	4002      	ands	r2, r0
+    162c:	2005      	movs	r0, #5
+    162e:	431a      	orrs	r2, r3
+    1630:	6062      	str	r2, [r4, #4]
+    1632:	18e2      	adds	r2, r4, r3
+    1634:	6050      	str	r0, [r2, #4]
+    1636:	6090      	str	r0, [r2, #8]
+    1638:	2b0f      	cmp	r3, #15
+    163a:	d900      	bls.n	163e <_malloc_r+0x2c2>
+    163c:	e122      	b.n	1884 <_malloc_r+0x508>
+    163e:	4b3c      	ldr	r3, [pc, #240]	; (1730 <_malloc_r+0x3b4>)
+    1640:	681a      	ldr	r2, [r3, #0]
+    1642:	4291      	cmp	r1, r2
+    1644:	d900      	bls.n	1648 <_malloc_r+0x2cc>
+    1646:	6019      	str	r1, [r3, #0]
+    1648:	4b3a      	ldr	r3, [pc, #232]	; (1734 <_malloc_r+0x3b8>)
+    164a:	681a      	ldr	r2, [r3, #0]
+    164c:	4291      	cmp	r1, r2
+    164e:	d900      	bls.n	1652 <_malloc_r+0x2d6>
+    1650:	6019      	str	r1, [r3, #0]
+    1652:	2303      	movs	r3, #3
+    1654:	68b4      	ldr	r4, [r6, #8]
+    1656:	6862      	ldr	r2, [r4, #4]
+    1658:	439a      	bics	r2, r3
+    165a:	1b53      	subs	r3, r2, r5
+    165c:	4295      	cmp	r5, r2
+    165e:	d900      	bls.n	1662 <_malloc_r+0x2e6>
+    1660:	e0c9      	b.n	17f6 <_malloc_r+0x47a>
+    1662:	2b0f      	cmp	r3, #15
+    1664:	dc00      	bgt.n	1668 <_malloc_r+0x2ec>
+    1666:	e0c6      	b.n	17f6 <_malloc_r+0x47a>
+    1668:	2201      	movs	r2, #1
+    166a:	0029      	movs	r1, r5
+    166c:	4313      	orrs	r3, r2
+    166e:	4311      	orrs	r1, r2
+    1670:	1965      	adds	r5, r4, r5
+    1672:	6061      	str	r1, [r4, #4]
+    1674:	0038      	movs	r0, r7
+    1676:	60b5      	str	r5, [r6, #8]
+    1678:	606b      	str	r3, [r5, #4]
+    167a:	f000 f93b 	bl	18f4 <__malloc_unlock>
+    167e:	0020      	movs	r0, r4
+    1680:	3008      	adds	r0, #8
+    1682:	e74a      	b.n	151a <_malloc_r+0x19e>
+    1684:	2814      	cmp	r0, #20
+    1686:	d97a      	bls.n	177e <_malloc_r+0x402>
+    1688:	2854      	cmp	r0, #84	; 0x54
+    168a:	d900      	bls.n	168e <_malloc_r+0x312>
+    168c:	e0ba      	b.n	1804 <_malloc_r+0x488>
+    168e:	236e      	movs	r3, #110	; 0x6e
+    1690:	4698      	mov	r8, r3
+    1692:	0b28      	lsrs	r0, r5, #12
+    1694:	4480      	add	r8, r0
+    1696:	306f      	adds	r0, #111	; 0x6f
+    1698:	00c1      	lsls	r1, r0, #3
+    169a:	e696      	b.n	13ca <_malloc_r+0x4e>
+    169c:	0a5a      	lsrs	r2, r3, #9
+    169e:	2a04      	cmp	r2, #4
+    16a0:	d973      	bls.n	178a <_malloc_r+0x40e>
+    16a2:	2a14      	cmp	r2, #20
+    16a4:	d900      	bls.n	16a8 <_malloc_r+0x32c>
+    16a6:	e0d0      	b.n	184a <_malloc_r+0x4ce>
+    16a8:	0011      	movs	r1, r2
+    16aa:	325c      	adds	r2, #92	; 0x5c
+    16ac:	315b      	adds	r1, #91	; 0x5b
+    16ae:	00d2      	lsls	r2, r2, #3
+    16b0:	2308      	movs	r3, #8
+    16b2:	425b      	negs	r3, r3
+    16b4:	469c      	mov	ip, r3
+    16b6:	18b2      	adds	r2, r6, r2
+    16b8:	4494      	add	ip, r2
+    16ba:	4663      	mov	r3, ip
+    16bc:	689a      	ldr	r2, [r3, #8]
+    16be:	2303      	movs	r3, #3
+    16c0:	4698      	mov	r8, r3
+    16c2:	4594      	cmp	ip, r2
+    16c4:	d100      	bne.n	16c8 <_malloc_r+0x34c>
+    16c6:	e0ab      	b.n	1820 <_malloc_r+0x4a4>
+    16c8:	4643      	mov	r3, r8
+    16ca:	6851      	ldr	r1, [r2, #4]
+    16cc:	4399      	bics	r1, r3
+    16ce:	4589      	cmp	r9, r1
+    16d0:	d300      	bcc.n	16d4 <_malloc_r+0x358>
+    16d2:	e095      	b.n	1800 <_malloc_r+0x484>
+    16d4:	6892      	ldr	r2, [r2, #8]
+    16d6:	4594      	cmp	ip, r2
+    16d8:	d1f6      	bne.n	16c8 <_malloc_r+0x34c>
+    16da:	4663      	mov	r3, ip
+    16dc:	68da      	ldr	r2, [r3, #12]
+    16de:	6873      	ldr	r3, [r6, #4]
+    16e0:	4661      	mov	r1, ip
+    16e2:	60e2      	str	r2, [r4, #12]
+    16e4:	60a1      	str	r1, [r4, #8]
+    16e6:	6094      	str	r4, [r2, #8]
+    16e8:	60cc      	str	r4, [r1, #12]
+    16ea:	e6b6      	b.n	145a <_malloc_r+0xde>
+    16ec:	2301      	movs	r3, #1
+    16ee:	1960      	adds	r0, r4, r5
+    16f0:	431d      	orrs	r5, r3
+    16f2:	6065      	str	r5, [r4, #4]
+    16f4:	6170      	str	r0, [r6, #20]
+    16f6:	6130      	str	r0, [r6, #16]
+    16f8:	60c2      	str	r2, [r0, #12]
+    16fa:	6082      	str	r2, [r0, #8]
+    16fc:	001a      	movs	r2, r3
+    16fe:	464b      	mov	r3, r9
+    1700:	430a      	orrs	r2, r1
+    1702:	6042      	str	r2, [r0, #4]
+    1704:	0038      	movs	r0, r7
+    1706:	50e1      	str	r1, [r4, r3]
+    1708:	f000 f8f4 	bl	18f4 <__malloc_unlock>
+    170c:	0020      	movs	r0, r4
+    170e:	3008      	adds	r0, #8
+    1710:	e703      	b.n	151a <_malloc_r+0x19e>
+    1712:	46c0      	nop			; (mov r8, r8)
+    1714:	20000434 	.word	0x20000434
+    1718:	000001ff 	.word	0x000001ff
+    171c:	2000083c 	.word	0x2000083c
+    1720:	200008e8 	.word	0x200008e8
+    1724:	0000100f 	.word	0x0000100f
+    1728:	200008b8 	.word	0x200008b8
+    172c:	00001008 	.word	0x00001008
+    1730:	200008e0 	.word	0x200008e0
+    1734:	200008e4 	.word	0x200008e4
+    1738:	6873      	ldr	r3, [r6, #4]
+    173a:	e68e      	b.n	145a <_malloc_r+0xde>
+    173c:	2308      	movs	r3, #8
+    173e:	469b      	mov	fp, r3
+    1740:	3b07      	subs	r3, #7
+    1742:	44dc      	add	ip, fp
+    1744:	469b      	mov	fp, r3
+    1746:	44da      	add	sl, fp
+    1748:	4643      	mov	r3, r8
+    174a:	4652      	mov	r2, sl
+    174c:	4213      	tst	r3, r2
+    174e:	d000      	beq.n	1752 <_malloc_r+0x3d6>
+    1750:	e697      	b.n	1482 <_malloc_r+0x106>
+    1752:	e037      	b.n	17c4 <_malloc_r+0x448>
+    1754:	68dc      	ldr	r4, [r3, #12]
+    1756:	3002      	adds	r0, #2
+    1758:	42a3      	cmp	r3, r4
+    175a:	d100      	bne.n	175e <_malloc_r+0x3e2>
+    175c:	e655      	b.n	140a <_malloc_r+0x8e>
+    175e:	e6ca      	b.n	14f6 <_malloc_r+0x17a>
+    1760:	2201      	movs	r2, #1
+    1762:	18e3      	adds	r3, r4, r3
+    1764:	6859      	ldr	r1, [r3, #4]
+    1766:	0038      	movs	r0, r7
+    1768:	430a      	orrs	r2, r1
+    176a:	605a      	str	r2, [r3, #4]
+    176c:	68e3      	ldr	r3, [r4, #12]
+    176e:	68a2      	ldr	r2, [r4, #8]
+    1770:	60d3      	str	r3, [r2, #12]
+    1772:	609a      	str	r2, [r3, #8]
+    1774:	f000 f8be 	bl	18f4 <__malloc_unlock>
+    1778:	0020      	movs	r0, r4
+    177a:	3008      	adds	r0, #8
+    177c:	e6cd      	b.n	151a <_malloc_r+0x19e>
+    177e:	235b      	movs	r3, #91	; 0x5b
+    1780:	4698      	mov	r8, r3
+    1782:	4480      	add	r8, r0
+    1784:	305c      	adds	r0, #92	; 0x5c
+    1786:	00c1      	lsls	r1, r0, #3
+    1788:	e61f      	b.n	13ca <_malloc_r+0x4e>
+    178a:	099a      	lsrs	r2, r3, #6
+    178c:	0011      	movs	r1, r2
+    178e:	3239      	adds	r2, #57	; 0x39
+    1790:	3138      	adds	r1, #56	; 0x38
+    1792:	00d2      	lsls	r2, r2, #3
+    1794:	e78c      	b.n	16b0 <_malloc_r+0x334>
+    1796:	42b4      	cmp	r4, r6
+    1798:	d000      	beq.n	179c <_malloc_r+0x420>
+    179a:	e75a      	b.n	1652 <_malloc_r+0x2d6>
+    179c:	4b4f      	ldr	r3, [pc, #316]	; (18dc <_malloc_r+0x560>)
+    179e:	9a00      	ldr	r2, [sp, #0]
+    17a0:	469a      	mov	sl, r3
+    17a2:	681b      	ldr	r3, [r3, #0]
+    17a4:	469c      	mov	ip, r3
+    17a6:	4653      	mov	r3, sl
+    17a8:	4462      	add	r2, ip
+    17aa:	0011      	movs	r1, r2
+    17ac:	601a      	str	r2, [r3, #0]
+    17ae:	e6ff      	b.n	15b0 <_malloc_r+0x234>
+    17b0:	2308      	movs	r3, #8
+    17b2:	425b      	negs	r3, r3
+    17b4:	469c      	mov	ip, r3
+    17b6:	44e1      	add	r9, ip
+    17b8:	464b      	mov	r3, r9
+    17ba:	689b      	ldr	r3, [r3, #8]
+    17bc:	3801      	subs	r0, #1
+    17be:	4599      	cmp	r9, r3
+    17c0:	d000      	beq.n	17c4 <_malloc_r+0x448>
+    17c2:	e084      	b.n	18ce <_malloc_r+0x552>
+    17c4:	4643      	mov	r3, r8
+    17c6:	4203      	tst	r3, r0
+    17c8:	d1f2      	bne.n	17b0 <_malloc_r+0x434>
+    17ca:	6873      	ldr	r3, [r6, #4]
+    17cc:	438b      	bics	r3, r1
+    17ce:	6073      	str	r3, [r6, #4]
+    17d0:	0049      	lsls	r1, r1, #1
+    17d2:	4299      	cmp	r1, r3
+    17d4:	d900      	bls.n	17d8 <_malloc_r+0x45c>
+    17d6:	e6b5      	b.n	1544 <_malloc_r+0x1c8>
+    17d8:	2900      	cmp	r1, #0
+    17da:	d100      	bne.n	17de <_malloc_r+0x462>
+    17dc:	e6b2      	b.n	1544 <_malloc_r+0x1c8>
+    17de:	4650      	mov	r0, sl
+    17e0:	420b      	tst	r3, r1
+    17e2:	d000      	beq.n	17e6 <_malloc_r+0x46a>
+    17e4:	e648      	b.n	1478 <_malloc_r+0xfc>
+    17e6:	0049      	lsls	r1, r1, #1
+    17e8:	3004      	adds	r0, #4
+    17ea:	420b      	tst	r3, r1
+    17ec:	d0fb      	beq.n	17e6 <_malloc_r+0x46a>
+    17ee:	e643      	b.n	1478 <_malloc_r+0xfc>
+    17f0:	2301      	movs	r3, #1
+    17f2:	464a      	mov	r2, r9
+    17f4:	6053      	str	r3, [r2, #4]
+    17f6:	0038      	movs	r0, r7
+    17f8:	f000 f87c 	bl	18f4 <__malloc_unlock>
+    17fc:	2000      	movs	r0, #0
+    17fe:	e68c      	b.n	151a <_malloc_r+0x19e>
+    1800:	4694      	mov	ip, r2
+    1802:	e76a      	b.n	16da <_malloc_r+0x35e>
+    1804:	23aa      	movs	r3, #170	; 0xaa
+    1806:	005b      	lsls	r3, r3, #1
+    1808:	4298      	cmp	r0, r3
+    180a:	d811      	bhi.n	1830 <_malloc_r+0x4b4>
+    180c:	3bdd      	subs	r3, #221	; 0xdd
+    180e:	4698      	mov	r8, r3
+    1810:	0be8      	lsrs	r0, r5, #15
+    1812:	4480      	add	r8, r0
+    1814:	3078      	adds	r0, #120	; 0x78
+    1816:	00c1      	lsls	r1, r0, #3
+    1818:	e5d7      	b.n	13ca <_malloc_r+0x4e>
+    181a:	2380      	movs	r3, #128	; 0x80
+    181c:	015b      	lsls	r3, r3, #5
+    181e:	e6dd      	b.n	15dc <_malloc_r+0x260>
+    1820:	1089      	asrs	r1, r1, #2
+    1822:	3b02      	subs	r3, #2
+    1824:	408b      	lsls	r3, r1
+    1826:	6872      	ldr	r2, [r6, #4]
+    1828:	4313      	orrs	r3, r2
+    182a:	6073      	str	r3, [r6, #4]
+    182c:	4662      	mov	r2, ip
+    182e:	e757      	b.n	16e0 <_malloc_r+0x364>
+    1830:	4b2b      	ldr	r3, [pc, #172]	; (18e0 <_malloc_r+0x564>)
+    1832:	4298      	cmp	r0, r3
+    1834:	d81c      	bhi.n	1870 <_malloc_r+0x4f4>
+    1836:	237c      	movs	r3, #124	; 0x7c
+    1838:	4698      	mov	r8, r3
+    183a:	0ca8      	lsrs	r0, r5, #18
+    183c:	4480      	add	r8, r0
+    183e:	307d      	adds	r0, #125	; 0x7d
+    1840:	00c1      	lsls	r1, r0, #3
+    1842:	e5c2      	b.n	13ca <_malloc_r+0x4e>
+    1844:	3310      	adds	r3, #16
+    1846:	9300      	str	r3, [sp, #0]
+    1848:	e699      	b.n	157e <_malloc_r+0x202>
+    184a:	2a54      	cmp	r2, #84	; 0x54
+    184c:	d826      	bhi.n	189c <_malloc_r+0x520>
+    184e:	464b      	mov	r3, r9
+    1850:	0b1a      	lsrs	r2, r3, #12
+    1852:	0011      	movs	r1, r2
+    1854:	326f      	adds	r2, #111	; 0x6f
+    1856:	316e      	adds	r1, #110	; 0x6e
+    1858:	00d2      	lsls	r2, r2, #3
+    185a:	e729      	b.n	16b0 <_malloc_r+0x334>
+    185c:	051b      	lsls	r3, r3, #20
+    185e:	d000      	beq.n	1862 <_malloc_r+0x4e6>
+    1860:	e6a6      	b.n	15b0 <_malloc_r+0x234>
+    1862:	2001      	movs	r0, #1
+    1864:	9b00      	ldr	r3, [sp, #0]
+    1866:	68b2      	ldr	r2, [r6, #8]
+    1868:	4443      	add	r3, r8
+    186a:	4303      	orrs	r3, r0
+    186c:	6053      	str	r3, [r2, #4]
+    186e:	e6e6      	b.n	163e <_malloc_r+0x2c2>
+    1870:	21fe      	movs	r1, #254	; 0xfe
+    1872:	237e      	movs	r3, #126	; 0x7e
+    1874:	207f      	movs	r0, #127	; 0x7f
+    1876:	0089      	lsls	r1, r1, #2
+    1878:	4698      	mov	r8, r3
+    187a:	e5a6      	b.n	13ca <_malloc_r+0x4e>
+    187c:	2300      	movs	r3, #0
+    187e:	2001      	movs	r0, #1
+    1880:	469b      	mov	fp, r3
+    1882:	e6bd      	b.n	1600 <_malloc_r+0x284>
+    1884:	0021      	movs	r1, r4
+    1886:	0038      	movs	r0, r7
+    1888:	3108      	adds	r1, #8
+    188a:	f7ff fc8b 	bl	11a4 <_free_r>
+    188e:	4653      	mov	r3, sl
+    1890:	6819      	ldr	r1, [r3, #0]
+    1892:	e6d4      	b.n	163e <_malloc_r+0x2c2>
+    1894:	465b      	mov	r3, fp
+    1896:	464a      	mov	r2, r9
+    1898:	601a      	str	r2, [r3, #0]
+    189a:	e694      	b.n	15c6 <_malloc_r+0x24a>
+    189c:	21aa      	movs	r1, #170	; 0xaa
+    189e:	0049      	lsls	r1, r1, #1
+    18a0:	428a      	cmp	r2, r1
+    18a2:	d806      	bhi.n	18b2 <_malloc_r+0x536>
+    18a4:	464b      	mov	r3, r9
+    18a6:	0bda      	lsrs	r2, r3, #15
+    18a8:	0011      	movs	r1, r2
+    18aa:	3278      	adds	r2, #120	; 0x78
+    18ac:	3177      	adds	r1, #119	; 0x77
+    18ae:	00d2      	lsls	r2, r2, #3
+    18b0:	e6fe      	b.n	16b0 <_malloc_r+0x334>
+    18b2:	490b      	ldr	r1, [pc, #44]	; (18e0 <_malloc_r+0x564>)
+    18b4:	428a      	cmp	r2, r1
+    18b6:	d806      	bhi.n	18c6 <_malloc_r+0x54a>
+    18b8:	464b      	mov	r3, r9
+    18ba:	0c9a      	lsrs	r2, r3, #18
+    18bc:	0011      	movs	r1, r2
+    18be:	327d      	adds	r2, #125	; 0x7d
+    18c0:	317c      	adds	r1, #124	; 0x7c
+    18c2:	00d2      	lsls	r2, r2, #3
+    18c4:	e6f4      	b.n	16b0 <_malloc_r+0x334>
+    18c6:	22fe      	movs	r2, #254	; 0xfe
+    18c8:	217e      	movs	r1, #126	; 0x7e
+    18ca:	0092      	lsls	r2, r2, #2
+    18cc:	e6f0      	b.n	16b0 <_malloc_r+0x334>
+    18ce:	6873      	ldr	r3, [r6, #4]
+    18d0:	e77e      	b.n	17d0 <_malloc_r+0x454>
+    18d2:	002b      	movs	r3, r5
+    18d4:	08e8      	lsrs	r0, r5, #3
+    18d6:	3308      	adds	r3, #8
+    18d8:	e605      	b.n	14e6 <_malloc_r+0x16a>
+    18da:	46c0      	nop			; (mov r8, r8)
+    18dc:	200008b8 	.word	0x200008b8
+    18e0:	00000554 	.word	0x00000554
+
+000018e4 <__malloc_lock>:
+    18e4:	b510      	push	{r4, lr}
+    18e6:	4802      	ldr	r0, [pc, #8]	; (18f0 <__malloc_lock+0xc>)
+    18e8:	f7ff fd3a 	bl	1360 <__retarget_lock_acquire_recursive>
+    18ec:	bd10      	pop	{r4, pc}
+    18ee:	46c0      	nop			; (mov r8, r8)
+    18f0:	20000a40 	.word	0x20000a40
+
+000018f4 <__malloc_unlock>:
+    18f4:	b510      	push	{r4, lr}
+    18f6:	4802      	ldr	r0, [pc, #8]	; (1900 <__malloc_unlock+0xc>)
+    18f8:	f7ff fd34 	bl	1364 <__retarget_lock_release_recursive>
+    18fc:	bd10      	pop	{r4, pc}
+    18fe:	46c0      	nop			; (mov r8, r8)
+    1900:	20000a40 	.word	0x20000a40
+
+00001904 <_sbrk_r>:
+    1904:	2300      	movs	r3, #0
+    1906:	b570      	push	{r4, r5, r6, lr}
+    1908:	4c06      	ldr	r4, [pc, #24]	; (1924 <_sbrk_r+0x20>)
+    190a:	0005      	movs	r5, r0
+    190c:	0008      	movs	r0, r1
+    190e:	6023      	str	r3, [r4, #0]
+    1910:	f7ff fb70 	bl	ff4 <_sbrk>
+    1914:	1c43      	adds	r3, r0, #1
+    1916:	d000      	beq.n	191a <_sbrk_r+0x16>
+    1918:	bd70      	pop	{r4, r5, r6, pc}
+    191a:	6823      	ldr	r3, [r4, #0]
+    191c:	2b00      	cmp	r3, #0
+    191e:	d0fb      	beq.n	1918 <_sbrk_r+0x14>
+    1920:	602b      	str	r3, [r5, #0]
+    1922:	e7f9      	b.n	1918 <_sbrk_r+0x14>
+    1924:	20000a54 	.word	0x20000a54
+
+00001928 <__register_exitproc>:
+    1928:	b5f0      	push	{r4, r5, r6, r7, lr}
+    192a:	464e      	mov	r6, r9
+    192c:	4645      	mov	r5, r8
+    192e:	46de      	mov	lr, fp
+    1930:	4657      	mov	r7, sl
+    1932:	b5e0      	push	{r5, r6, r7, lr}
+    1934:	4d36      	ldr	r5, [pc, #216]	; (1a10 <__register_exitproc+0xe8>)
+    1936:	b083      	sub	sp, #12
+    1938:	0006      	movs	r6, r0
+    193a:	6828      	ldr	r0, [r5, #0]
+    193c:	4698      	mov	r8, r3
+    193e:	000f      	movs	r7, r1
+    1940:	4691      	mov	r9, r2
+    1942:	f7ff fd0d 	bl	1360 <__retarget_lock_acquire_recursive>
+    1946:	4b33      	ldr	r3, [pc, #204]	; (1a14 <__register_exitproc+0xec>)
+    1948:	681c      	ldr	r4, [r3, #0]
+    194a:	23a4      	movs	r3, #164	; 0xa4
+    194c:	005b      	lsls	r3, r3, #1
+    194e:	58e0      	ldr	r0, [r4, r3]
+    1950:	2800      	cmp	r0, #0
+    1952:	d052      	beq.n	19fa <__register_exitproc+0xd2>
+    1954:	6843      	ldr	r3, [r0, #4]
+    1956:	2b1f      	cmp	r3, #31
+    1958:	dc13      	bgt.n	1982 <__register_exitproc+0x5a>
+    195a:	1c5a      	adds	r2, r3, #1
+    195c:	9201      	str	r2, [sp, #4]
+    195e:	2e00      	cmp	r6, #0
+    1960:	d128      	bne.n	19b4 <__register_exitproc+0x8c>
+    1962:	9a01      	ldr	r2, [sp, #4]
+    1964:	3302      	adds	r3, #2
+    1966:	009b      	lsls	r3, r3, #2
+    1968:	6042      	str	r2, [r0, #4]
+    196a:	501f      	str	r7, [r3, r0]
+    196c:	6828      	ldr	r0, [r5, #0]
+    196e:	f7ff fcf9 	bl	1364 <__retarget_lock_release_recursive>
+    1972:	2000      	movs	r0, #0
+    1974:	b003      	add	sp, #12
+    1976:	bc3c      	pop	{r2, r3, r4, r5}
+    1978:	4690      	mov	r8, r2
+    197a:	4699      	mov	r9, r3
+    197c:	46a2      	mov	sl, r4
+    197e:	46ab      	mov	fp, r5
+    1980:	bdf0      	pop	{r4, r5, r6, r7, pc}
+    1982:	4b25      	ldr	r3, [pc, #148]	; (1a18 <__register_exitproc+0xf0>)
+    1984:	2b00      	cmp	r3, #0
+    1986:	d03d      	beq.n	1a04 <__register_exitproc+0xdc>
+    1988:	20c8      	movs	r0, #200	; 0xc8
+    198a:	0040      	lsls	r0, r0, #1
+    198c:	f7ff fcec 	bl	1368 <malloc>
+    1990:	2800      	cmp	r0, #0
+    1992:	d037      	beq.n	1a04 <__register_exitproc+0xdc>
+    1994:	22a4      	movs	r2, #164	; 0xa4
+    1996:	2300      	movs	r3, #0
+    1998:	0052      	lsls	r2, r2, #1
+    199a:	58a1      	ldr	r1, [r4, r2]
+    199c:	6043      	str	r3, [r0, #4]
+    199e:	6001      	str	r1, [r0, #0]
+    19a0:	50a0      	str	r0, [r4, r2]
+    19a2:	3240      	adds	r2, #64	; 0x40
+    19a4:	5083      	str	r3, [r0, r2]
+    19a6:	3204      	adds	r2, #4
+    19a8:	5083      	str	r3, [r0, r2]
+    19aa:	3301      	adds	r3, #1
+    19ac:	9301      	str	r3, [sp, #4]
+    19ae:	2300      	movs	r3, #0
+    19b0:	2e00      	cmp	r6, #0
+    19b2:	d0d6      	beq.n	1962 <__register_exitproc+0x3a>
+    19b4:	009a      	lsls	r2, r3, #2
+    19b6:	4692      	mov	sl, r2
+    19b8:	4482      	add	sl, r0
+    19ba:	464a      	mov	r2, r9
+    19bc:	2188      	movs	r1, #136	; 0x88
+    19be:	4654      	mov	r4, sl
+    19c0:	5062      	str	r2, [r4, r1]
+    19c2:	22c4      	movs	r2, #196	; 0xc4
+    19c4:	0052      	lsls	r2, r2, #1
+    19c6:	4691      	mov	r9, r2
+    19c8:	4481      	add	r9, r0
+    19ca:	464a      	mov	r2, r9
+    19cc:	3987      	subs	r1, #135	; 0x87
+    19ce:	4099      	lsls	r1, r3
+    19d0:	6812      	ldr	r2, [r2, #0]
+    19d2:	468b      	mov	fp, r1
+    19d4:	430a      	orrs	r2, r1
+    19d6:	4694      	mov	ip, r2
+    19d8:	464a      	mov	r2, r9
+    19da:	4661      	mov	r1, ip
+    19dc:	6011      	str	r1, [r2, #0]
+    19de:	2284      	movs	r2, #132	; 0x84
+    19e0:	4641      	mov	r1, r8
+    19e2:	0052      	lsls	r2, r2, #1
+    19e4:	50a1      	str	r1, [r4, r2]
+    19e6:	2e02      	cmp	r6, #2
+    19e8:	d1bb      	bne.n	1962 <__register_exitproc+0x3a>
+    19ea:	0002      	movs	r2, r0
+    19ec:	465c      	mov	r4, fp
+    19ee:	328d      	adds	r2, #141	; 0x8d
+    19f0:	32ff      	adds	r2, #255	; 0xff
+    19f2:	6811      	ldr	r1, [r2, #0]
+    19f4:	430c      	orrs	r4, r1
+    19f6:	6014      	str	r4, [r2, #0]
+    19f8:	e7b3      	b.n	1962 <__register_exitproc+0x3a>
+    19fa:	0020      	movs	r0, r4
+    19fc:	304d      	adds	r0, #77	; 0x4d
+    19fe:	30ff      	adds	r0, #255	; 0xff
+    1a00:	50e0      	str	r0, [r4, r3]
+    1a02:	e7a7      	b.n	1954 <__register_exitproc+0x2c>
+    1a04:	6828      	ldr	r0, [r5, #0]
+    1a06:	f7ff fcad 	bl	1364 <__retarget_lock_release_recursive>
+    1a0a:	2001      	movs	r0, #1
+    1a0c:	4240      	negs	r0, r0
+    1a0e:	e7b1      	b.n	1974 <__register_exitproc+0x4c>
+    1a10:	20000430 	.word	0x20000430
+    1a14:	00001a2c 	.word	0x00001a2c
+    1a18:	00001369 	.word	0x00001369
+
+00001a1c <_usb_device_irq_bits>:
+    1a1c:	00080004 00800070 01000001 00000200     ....p...........
+
+00001a2c <_global_impure_ptr>:
+    1a2c:	20000008                                ... 
+
+00001a30 <_init>:
+    1a30:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+    1a32:	46c0      	nop			; (mov r8, r8)
+    1a34:	bcf8      	pop	{r3, r4, r5, r6, r7}
+    1a36:	bc08      	pop	{r3}
+    1a38:	469e      	mov	lr, r3
+    1a3a:	4770      	bx	lr
+
+00001a3c <__init_array_start>:
+    1a3c:	000010a9 	.word	0x000010a9
+
+00001a40 <__frame_dummy_init_array_entry>:
+    1a40:	000000dd                                ....
+
+00001a44 <_fini>:
+    1a44:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+    1a46:	46c0      	nop			; (mov r8, r8)
+    1a48:	bcf8      	pop	{r3, r4, r5, r6, r7}
+    1a4a:	bc08      	pop	{r3}
+    1a4c:	469e      	mov	lr, r3
+    1a4e:	4770      	bx	lr
+
+00001a50 <__fini_array_start>:
+    1a50:	000000b5 	.word	0x000000b5

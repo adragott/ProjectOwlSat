@@ -7,3 +7,12 @@
 
 #include "os_sys_time.h"
 
+void os_sys_time_init(void)
+{
+
+}
+
+uint32_t os_millis(void)
+{
+
+}
