@@ -97,6 +97,11 @@ void os_usart_service_start(void)
 
 void debug_rx_cb(struct usart_module* const mod)
 {
-	os_print("%c", debug_rx_val);
+	os_print(&debug_mod, "%c", debug_rx_val);
 	usart_read_job(&debug_mod, &debug_rx_val);
+}
+
+void gps_rx_cb(struct usart_module* const mod)
+{
+	
 }

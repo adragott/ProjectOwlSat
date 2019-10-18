@@ -36,6 +36,8 @@ src\ASF\thirdparty\fatfs\fatfs-port-r0.09\sam0\fattime_rtc.c
 
 src\ASF\thirdparty\fatfs\fatfs-r0.09\src\option\ccsbcs.c
 
+src\drivers\os_i2c.c
+
 src\drivers\os_usart.c
 
 src\util\os_sys_mem.c

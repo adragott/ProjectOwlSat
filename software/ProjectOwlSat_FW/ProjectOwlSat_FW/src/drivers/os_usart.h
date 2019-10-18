@@ -17,5 +17,5 @@ struct usart_module debug_mod;
 // USART GPS Module
 struct usart_module gps_mod;
 
-#define DEBUG(str, ...) pprint(DEBUG_MOD, (str), ##__VA_ARGS__)
+#define DEBUG(str, ...) os_print(&debug_mod, (str), ##__VA_ARGS__)
 #endif

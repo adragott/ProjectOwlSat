@@ -1,4 +1,5 @@
-src/main.d src/main.o: ../src/main.c ../src/asf.h \
+src/drivers/os_i2c.d src/drivers/os_i2c.o: ../src/drivers/os_i2c.c \
+ ../src/drivers/os_i2c.h ../src/project_owlsat.h ../src/asf.h \
  ../src/ASF/sam0/utils/compiler.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.3.1\include\stddef.h \
  ../src/ASF/common/utils/parts.h ../src/ASF/sam0/utils/status_codes.h \
@@ -177,9 +178,12 @@ src/main.d src/main.o: ../src/main.c ../src/asf.h \
  ../src/ASF/common/services/usb/udc/udi.h \
  ../src/ASF/common/utils/stdio/stdio_usb/stdio_usb.h \
  ../src/ASF/common/services/usb/udc/udc.h \
- ../src/ASF/common/services/usb/udc/udd.h ../src/main21.h \
- ../src/drivers/os_usart.h ../src/project_owlsat.h \
+ ../src/ASF/common/services/usb/udc/udd.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\inttypes.h
+
+../src/drivers/os_i2c.h:
+
+../src/project_owlsat.h:
 
 ../src/asf.h:
 
@@ -548,11 +552,5 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 ../src/ASF/common/services/usb/udc/udc.h:
 
 ../src/ASF/common/services/usb/udc/udd.h:
-
-../src/main21.h:
-
-../src/drivers/os_usart.h:
-
-../src/project_owlsat.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\inttypes.h:

@@ -60,4 +60,9 @@ typedef union i32
 	int32_t v;
 }i32;
 
+ #define Stringize( L )     #L
+ #define MakeString( M, L ) M(L)
+ #define $Line MakeString( Stringize, __LINE__ )
+ #define Reminder __FILE__ "(" $Line ") : Reminder: "
+
 #endif
