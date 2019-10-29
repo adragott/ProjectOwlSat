@@ -337,7 +337,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0xa0 src/ASF/common2/components/memory/sd_mmc/sd_mmc.o
  .debug_ranges  0x00000000      0x440 src/ASF/common2/components/memory/sd_mmc/sd_mmc.o
- .debug_macro   0x00000000      0x8e3 src/ASF/common2/components/memory/sd_mmc/sd_mmc.o
+ .debug_macro   0x00000000      0x8df src/ASF/common2/components/memory/sd_mmc/sd_mmc.o
  .debug_macro   0x00000000      0x8e0 src/ASF/common2/components/memory/sd_mmc/sd_mmc.o
  .debug_macro   0x00000000      0x16d src/ASF/common2/components/memory/sd_mmc/sd_mmc.o
  .debug_macro   0x00000000      0x708 src/ASF/common2/components/memory/sd_mmc/sd_mmc.o
@@ -473,17 +473,17 @@ Discarded input sections
  .debug_macro   0x00000000       0x49 src/ASF/common2/components/memory/sd_mmc/sd_mmc.o
  .debug_macro   0x00000000       0x10 src/ASF/common2/components/memory/sd_mmc/sd_mmc.o
  .debug_macro   0x00000000      0x21e src/ASF/common2/components/memory/sd_mmc/sd_mmc.o
- .debug_macro   0x00000000       0x81 src/ASF/common2/components/memory/sd_mmc/sd_mmc.o
- .debug_macro   0x00000000       0x99 src/ASF/common2/components/memory/sd_mmc/sd_mmc.o
+ .debug_macro   0x00000000       0x82 src/ASF/common2/components/memory/sd_mmc/sd_mmc.o
+ .debug_macro   0x00000000       0x9f src/ASF/common2/components/memory/sd_mmc/sd_mmc.o
  .debug_macro   0x00000000      0x241 src/ASF/common2/components/memory/sd_mmc/sd_mmc.o
  .debug_macro   0x00000000      0x162 src/ASF/common2/components/memory/sd_mmc/sd_mmc.o
  .debug_macro   0x00000000       0x16 src/ASF/common2/components/memory/sd_mmc/sd_mmc.o
- .debug_macro   0x00000000       0x1c src/ASF/common2/components/memory/sd_mmc/sd_mmc.o
+ .debug_macro   0x00000000       0x22 src/ASF/common2/components/memory/sd_mmc/sd_mmc.o
  .debug_macro   0x00000000      0x190 src/ASF/common2/components/memory/sd_mmc/sd_mmc.o
  .debug_macro   0x00000000      0xd3a src/ASF/common2/components/memory/sd_mmc/sd_mmc.o
  .debug_macro   0x00000000       0x52 src/ASF/common2/components/memory/sd_mmc/sd_mmc.o
  .debug_line    0x00000000     0x1627 src/ASF/common2/components/memory/sd_mmc/sd_mmc.o
- .debug_str     0x00000000    0x91d2a src/ASF/common2/components/memory/sd_mmc/sd_mmc.o
+ .debug_str     0x00000000    0x91d96 src/ASF/common2/components/memory/sd_mmc/sd_mmc.o
  .comment       0x00000000       0x5a src/ASF/common2/components/memory/sd_mmc/sd_mmc.o
  .debug_frame   0x00000000      0x1d4 src/ASF/common2/components/memory/sd_mmc/sd_mmc.o
  .ARM.attributes
@@ -946,7 +946,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0xb0 src/ASF/common2/components/memory/sd_mmc/sd_mmc_spi.o
  .debug_ranges  0x00000000      0x178 src/ASF/common2/components/memory/sd_mmc/sd_mmc_spi.o
- .debug_macro   0x00000000      0x832 src/ASF/common2/components/memory/sd_mmc/sd_mmc_spi.o
+ .debug_macro   0x00000000      0x82e src/ASF/common2/components/memory/sd_mmc/sd_mmc_spi.o
  .debug_macro   0x00000000      0x8e0 src/ASF/common2/components/memory/sd_mmc/sd_mmc_spi.o
  .debug_macro   0x00000000      0x16d src/ASF/common2/components/memory/sd_mmc/sd_mmc_spi.o
  .debug_macro   0x00000000      0x708 src/ASF/common2/components/memory/sd_mmc/sd_mmc_spi.o
@@ -1082,17 +1082,17 @@ Discarded input sections
  .debug_macro   0x00000000       0x49 src/ASF/common2/components/memory/sd_mmc/sd_mmc_spi.o
  .debug_macro   0x00000000       0x10 src/ASF/common2/components/memory/sd_mmc/sd_mmc_spi.o
  .debug_macro   0x00000000      0x21e src/ASF/common2/components/memory/sd_mmc/sd_mmc_spi.o
- .debug_macro   0x00000000       0x81 src/ASF/common2/components/memory/sd_mmc/sd_mmc_spi.o
- .debug_macro   0x00000000       0x99 src/ASF/common2/components/memory/sd_mmc/sd_mmc_spi.o
+ .debug_macro   0x00000000       0x82 src/ASF/common2/components/memory/sd_mmc/sd_mmc_spi.o
+ .debug_macro   0x00000000       0x9f src/ASF/common2/components/memory/sd_mmc/sd_mmc_spi.o
  .debug_macro   0x00000000      0x241 src/ASF/common2/components/memory/sd_mmc/sd_mmc_spi.o
  .debug_macro   0x00000000      0x162 src/ASF/common2/components/memory/sd_mmc/sd_mmc_spi.o
  .debug_macro   0x00000000       0x16 src/ASF/common2/components/memory/sd_mmc/sd_mmc_spi.o
- .debug_macro   0x00000000       0x1c src/ASF/common2/components/memory/sd_mmc/sd_mmc_spi.o
+ .debug_macro   0x00000000       0x22 src/ASF/common2/components/memory/sd_mmc/sd_mmc_spi.o
  .debug_macro   0x00000000      0x190 src/ASF/common2/components/memory/sd_mmc/sd_mmc_spi.o
  .debug_macro   0x00000000      0xd3a src/ASF/common2/components/memory/sd_mmc/sd_mmc_spi.o
  .debug_macro   0x00000000       0x52 src/ASF/common2/components/memory/sd_mmc/sd_mmc_spi.o
  .debug_line    0x00000000     0x14f5 src/ASF/common2/components/memory/sd_mmc/sd_mmc_spi.o
- .debug_str     0x00000000    0x925ca src/ASF/common2/components/memory/sd_mmc/sd_mmc_spi.o
+ .debug_str     0x00000000    0x92636 src/ASF/common2/components/memory/sd_mmc/sd_mmc_spi.o
  .comment       0x00000000       0x5a src/ASF/common2/components/memory/sd_mmc/sd_mmc_spi.o
  .debug_frame   0x00000000      0x254 src/ASF/common2/components/memory/sd_mmc/sd_mmc_spi.o
  .ARM.attributes
@@ -3025,6 +3025,7 @@ Discarded input sections
  .group         0x00000000        0x8 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
  .group         0x00000000        0x8 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
  .group         0x00000000        0x8 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
+ .group         0x00000000        0x8 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
  .text          0x00000000        0x0 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
  .data          0x00000000        0x0 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
  .bss           0x00000000        0x0 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
@@ -3096,7 +3097,7 @@ Discarded input sections
                 0x00000000       0x98 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
  .text.udd_disable
                 0x00000000       0x58 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
- .bss.b_shortpacket.13373
+ .bss.b_shortpacket.13494
                 0x00000000        0x1 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
  .bss.cpu_irq_critical_section_counter
                 0x00000000        0x4 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
@@ -3110,15 +3111,15 @@ Discarded input sections
                 0x00000000        0x1 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
  .bss.udd_ep_job
                 0x00000000       0x78 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
- .bss.udd_state.13230
+ .bss.udd_state.13351
                 0x00000000        0x1 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
- .debug_info    0x00000000     0x64c0 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
- .debug_abbrev  0x00000000      0x6bf src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
+ .debug_info    0x00000000     0x653f src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
+ .debug_abbrev  0x00000000      0x6c4 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
  .debug_loc     0x00000000     0x152e src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
  .debug_aranges
                 0x00000000      0x120 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
  .debug_ranges  0x00000000      0x428 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
- .debug_macro   0x00000000      0x6a1 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
+ .debug_macro   0x00000000      0x6cc src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
  .debug_macro   0x00000000      0x8e0 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
  .debug_macro   0x00000000       0x22 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
  .debug_macro   0x00000000       0x52 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
@@ -3225,13 +3226,14 @@ Discarded input sections
  .debug_macro   0x00000000       0x51 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
  .debug_macro   0x00000000       0x3e src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
  .debug_macro   0x00000000      0x3df src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
- .debug_macro   0x00000000       0x7b src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
+ .debug_macro   0x00000000       0x7c src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
  .debug_macro   0x00000000      0x21e src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
- .debug_macro   0x00000000       0x99 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
+ .debug_macro   0x00000000       0x9f src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
  .debug_macro   0x00000000      0x241 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
  .debug_macro   0x00000000      0x162 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
  .debug_macro   0x00000000       0x16 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
- .debug_macro   0x00000000       0x1c src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
+ .debug_macro   0x00000000       0x22 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
+ .debug_macro   0x00000000      0x190 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
  .debug_macro   0x00000000       0x11 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
  .debug_macro   0x00000000       0x18 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
  .debug_macro   0x00000000       0x2e src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
@@ -3243,13 +3245,14 @@ Discarded input sections
  .debug_macro   0x00000000       0x1c src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
  .debug_macro   0x00000000       0x10 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
  .debug_macro   0x00000000       0x16 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
- .debug_line    0x00000000     0x14a4 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
- .debug_str     0x00000000    0x89d31 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
+ .debug_line    0x00000000     0x14f1 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
+ .debug_str     0x00000000    0x8b239 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
  .comment       0x00000000       0x5a src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
  .debug_frame   0x00000000      0x3a4 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
  .ARM.attributes
                 0x00000000       0x32 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
  COMMON         0x00000000      0x280 src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.o
+ .group         0x00000000        0x8 src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
  .group         0x00000000        0x8 src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
  .group         0x00000000        0x8 src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
  .group         0x00000000        0x8 src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
@@ -3382,12 +3385,12 @@ Discarded input sections
                 0x00000000        0x4 src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
  .bss.cpu_irq_prev_interrupt_state
                 0x00000000        0x1 src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
- .debug_info    0x00000000      0xe8d src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
- .debug_abbrev  0x00000000      0x1e1 src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
+ .debug_info    0x00000000      0xf0c src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
+ .debug_abbrev  0x00000000      0x1e6 src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
  .debug_aranges
                 0x00000000       0x28 src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
  .debug_ranges  0x00000000       0x18 src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
- .debug_macro   0x00000000      0x5df src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
+ .debug_macro   0x00000000      0x60e src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
  .debug_macro   0x00000000      0x8e0 src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
  .debug_macro   0x00000000      0x16d src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
  .debug_macro   0x00000000      0x708 src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
@@ -3500,15 +3503,16 @@ Discarded input sections
  .debug_macro   0x00000000       0x19 src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
  .debug_macro   0x00000000       0x18 src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
  .debug_macro   0x00000000       0x1c src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
- .debug_macro   0x00000000       0x81 src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
+ .debug_macro   0x00000000       0x82 src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
  .debug_macro   0x00000000      0x21e src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
- .debug_macro   0x00000000       0x99 src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
+ .debug_macro   0x00000000       0x9f src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
  .debug_macro   0x00000000      0x241 src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
  .debug_macro   0x00000000      0x162 src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
  .debug_macro   0x00000000       0x16 src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
- .debug_macro   0x00000000       0x22 src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
- .debug_line    0x00000000      0xb0b src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
- .debug_str     0x00000000    0x87590 src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
+ .debug_macro   0x00000000       0x1c src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
+ .debug_macro   0x00000000      0x190 src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
+ .debug_line    0x00000000      0xb4f src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
+ .debug_str     0x00000000    0x88a8f src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
  .comment       0x00000000       0x5a src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
  .debug_frame   0x00000000       0x30 src/ASF/sam0/drivers/usb/stack_interface/usb_dual.o
  .ARM.attributes
@@ -4676,7 +4680,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x40 src/drivers/os_i2c.o
  .debug_ranges  0x00000000       0xb0 src/drivers/os_i2c.o
- .debug_macro   0x00000000      0x850 src/drivers/os_i2c.o
+ .debug_macro   0x00000000      0x84c src/drivers/os_i2c.o
  .debug_macro   0x00000000      0x8e0 src/drivers/os_i2c.o
  .debug_macro   0x00000000      0x16d src/drivers/os_i2c.o
  .debug_macro   0x00000000      0x708 src/drivers/os_i2c.o
@@ -4812,18 +4816,18 @@ Discarded input sections
  .debug_macro   0x00000000       0x49 src/drivers/os_i2c.o
  .debug_macro   0x00000000       0x10 src/drivers/os_i2c.o
  .debug_macro   0x00000000      0x21e src/drivers/os_i2c.o
- .debug_macro   0x00000000       0x81 src/drivers/os_i2c.o
- .debug_macro   0x00000000       0x99 src/drivers/os_i2c.o
+ .debug_macro   0x00000000       0x82 src/drivers/os_i2c.o
+ .debug_macro   0x00000000       0x9f src/drivers/os_i2c.o
  .debug_macro   0x00000000      0x241 src/drivers/os_i2c.o
  .debug_macro   0x00000000      0x162 src/drivers/os_i2c.o
  .debug_macro   0x00000000       0x16 src/drivers/os_i2c.o
- .debug_macro   0x00000000       0x1c src/drivers/os_i2c.o
+ .debug_macro   0x00000000       0x22 src/drivers/os_i2c.o
  .debug_macro   0x00000000      0x190 src/drivers/os_i2c.o
  .debug_macro   0x00000000       0x10 src/drivers/os_i2c.o
  .debug_macro   0x00000000      0x45d src/drivers/os_i2c.o
  .debug_macro   0x00000000       0x40 src/drivers/os_i2c.o
  .debug_line    0x00000000     0x12db src/drivers/os_i2c.o
- .debug_str     0x00000000    0x8ede7 src/drivers/os_i2c.o
+ .debug_str     0x00000000    0x8ee53 src/drivers/os_i2c.o
  .comment       0x00000000       0x5a src/drivers/os_i2c.o
  .debug_frame   0x00000000       0xc0 src/drivers/os_i2c.o
  .ARM.attributes
@@ -5119,12 +5123,12 @@ Discarded input sections
  .debug_macro   0x00000000       0x49 src/drivers/os_usart.o
  .debug_macro   0x00000000       0x10 src/drivers/os_usart.o
  .debug_macro   0x00000000      0x21e src/drivers/os_usart.o
- .debug_macro   0x00000000       0x81 src/drivers/os_usart.o
- .debug_macro   0x00000000       0x99 src/drivers/os_usart.o
+ .debug_macro   0x00000000       0x82 src/drivers/os_usart.o
+ .debug_macro   0x00000000       0x9f src/drivers/os_usart.o
  .debug_macro   0x00000000      0x241 src/drivers/os_usart.o
  .debug_macro   0x00000000      0x162 src/drivers/os_usart.o
  .debug_macro   0x00000000       0x16 src/drivers/os_usart.o
- .debug_macro   0x00000000       0x1c src/drivers/os_usart.o
+ .debug_macro   0x00000000       0x22 src/drivers/os_usart.o
  .debug_macro   0x00000000      0x190 src/drivers/os_usart.o
  .debug_macro   0x00000000       0x10 src/drivers/os_usart.o
  .debug_macro   0x00000000      0x45d src/drivers/os_usart.o
@@ -5285,7 +5289,7 @@ Discarded input sections
  .debug_abbrev  0x00000000      0x1b3 src/util/os_sys_mem.o
  .debug_aranges
                 0x00000000       0x18 src/util/os_sys_mem.o
- .debug_macro   0x00000000      0x84c src/util/os_sys_mem.o
+ .debug_macro   0x00000000      0x848 src/util/os_sys_mem.o
  .debug_macro   0x00000000      0x8e0 src/util/os_sys_mem.o
  .debug_macro   0x00000000      0x16d src/util/os_sys_mem.o
  .debug_macro   0x00000000      0x708 src/util/os_sys_mem.o
@@ -5421,18 +5425,18 @@ Discarded input sections
  .debug_macro   0x00000000       0x49 src/util/os_sys_mem.o
  .debug_macro   0x00000000       0x10 src/util/os_sys_mem.o
  .debug_macro   0x00000000      0x21e src/util/os_sys_mem.o
- .debug_macro   0x00000000       0x81 src/util/os_sys_mem.o
- .debug_macro   0x00000000       0x99 src/util/os_sys_mem.o
+ .debug_macro   0x00000000       0x82 src/util/os_sys_mem.o
+ .debug_macro   0x00000000       0x9f src/util/os_sys_mem.o
  .debug_macro   0x00000000      0x241 src/util/os_sys_mem.o
  .debug_macro   0x00000000      0x162 src/util/os_sys_mem.o
  .debug_macro   0x00000000       0x16 src/util/os_sys_mem.o
- .debug_macro   0x00000000       0x1c src/util/os_sys_mem.o
+ .debug_macro   0x00000000       0x22 src/util/os_sys_mem.o
  .debug_macro   0x00000000      0x190 src/util/os_sys_mem.o
  .debug_macro   0x00000000       0x10 src/util/os_sys_mem.o
  .debug_macro   0x00000000      0x45d src/util/os_sys_mem.o
  .debug_macro   0x00000000       0x40 src/util/os_sys_mem.o
  .debug_line    0x00000000     0x119f src/util/os_sys_mem.o
- .debug_str     0x00000000    0x8d228 src/util/os_sys_mem.o
+ .debug_str     0x00000000    0x8d294 src/util/os_sys_mem.o
  .comment       0x00000000       0x5a src/util/os_sys_mem.o
  .ARM.attributes
                 0x00000000       0x32 src/util/os_sys_mem.o
@@ -5597,7 +5601,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x28 src/util/os_sys_time.o
  .debug_ranges  0x00000000       0x18 src/util/os_sys_time.o
- .debug_macro   0x00000000      0x84c src/util/os_sys_time.o
+ .debug_macro   0x00000000      0x848 src/util/os_sys_time.o
  .debug_macro   0x00000000      0x8e0 src/util/os_sys_time.o
  .debug_macro   0x00000000      0x16d src/util/os_sys_time.o
  .debug_macro   0x00000000      0x708 src/util/os_sys_time.o
@@ -5733,18 +5737,18 @@ Discarded input sections
  .debug_macro   0x00000000       0x49 src/util/os_sys_time.o
  .debug_macro   0x00000000       0x10 src/util/os_sys_time.o
  .debug_macro   0x00000000      0x21e src/util/os_sys_time.o
- .debug_macro   0x00000000       0x81 src/util/os_sys_time.o
- .debug_macro   0x00000000       0x99 src/util/os_sys_time.o
+ .debug_macro   0x00000000       0x82 src/util/os_sys_time.o
+ .debug_macro   0x00000000       0x9f src/util/os_sys_time.o
  .debug_macro   0x00000000      0x241 src/util/os_sys_time.o
  .debug_macro   0x00000000      0x162 src/util/os_sys_time.o
  .debug_macro   0x00000000       0x16 src/util/os_sys_time.o
- .debug_macro   0x00000000       0x1c src/util/os_sys_time.o
+ .debug_macro   0x00000000       0x22 src/util/os_sys_time.o
  .debug_macro   0x00000000      0x190 src/util/os_sys_time.o
  .debug_macro   0x00000000       0x10 src/util/os_sys_time.o
  .debug_macro   0x00000000      0x45d src/util/os_sys_time.o
  .debug_macro   0x00000000       0x40 src/util/os_sys_time.o
  .debug_line    0x00000000     0x11c1 src/util/os_sys_time.o
- .debug_str     0x00000000    0x8d245 src/util/os_sys_time.o
+ .debug_str     0x00000000    0x8d2b1 src/util/os_sys_time.o
  .comment       0x00000000       0x5a src/util/os_sys_time.o
  .debug_frame   0x00000000       0x30 src/util/os_sys_time.o
  .ARM.attributes
@@ -7364,27 +7368,27 @@ Discarded input sections
  .text          0x00000000        0x0 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
  .data          0x00000000        0x0 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
  .bss           0x00000000        0x0 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
- .text.udi_cdc_comm_enable
-                0x00000000       0x50 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
  .text.udi_cdc_comm_disable
                 0x00000000       0x10 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
- .text.udi_cdc_data_disable
-                0x00000000       0x1c src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
  .text.udi_cdc_data_setup
                 0x00000000        0x4 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
  .text.udi_cdc_getsetting
                 0x00000000        0x4 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
  .text.udi_cdc_line_coding_received
                 0x00000000        0x4 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
+ .text.udi_cdc_data_disable
+                0x00000000       0x28 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
  .text.udi_cdc_comm_setup
                 0x00000000       0x5c src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
- .text.udi_cdc_ctrl_state_notify.isra.5.part.6
+ .text.udi_cdc_comm_enable
+                0x00000000       0x58 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
+ .text.udi_cdc_ctrl_state_notify.isra.6.part.7
                 0x00000000       0x34 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
  .text.udi_cdc_serial_state_msg_sent
                 0x00000000       0x38 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
- .text.udi_cdc_ctrl_state_change.isra.7
+ .text.udi_cdc_ctrl_state_change.isra.8
                 0x00000000       0x74 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
- .text.udi_cdc_tx_send.isra.2
+ .text.udi_cdc_tx_send.isra.3
                 0x00000000      0x170 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
  .text.udi_cdc_data_sent
                 0x00000000       0x38 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
@@ -7412,7 +7416,7 @@ Discarded input sections
                 0x00000000       0x10 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
  .text.udi_cdc_multi_get_nb_received_data
                 0x00000000       0x50 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
- .text.udi_cdc_rx_start.isra.9
+ .text.udi_cdc_rx_start.isra.10
                 0x00000000       0xc0 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
  .text.udi_cdc_data_enable
                 0x00000000       0x8c src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
@@ -7454,7 +7458,7 @@ Discarded input sections
                 0x00000000        0x4 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
  .bss.cpu_irq_prev_interrupt_state
                 0x00000000        0x1 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
- .bss.sof_zlp_counter.12444
+ .bss.sof_zlp_counter.12468
                 0x00000000        0x2 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
  .bss.udi_cdc_data_running
                 0x00000000        0x1 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
@@ -7496,13 +7500,13 @@ Discarded input sections
                 0x00000000       0x14 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
  .data.udi_api_cdc_data
                 0x00000000       0x14 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
- .debug_info    0x00000000     0x2c71 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
- .debug_abbrev  0x00000000      0x519 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
- .debug_loc     0x00000000     0x1340 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
+ .debug_info    0x00000000     0x2d30 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
+ .debug_abbrev  0x00000000      0x50f src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
+ .debug_loc     0x00000000     0x1360 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
  .debug_aranges
                 0x00000000      0x170 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
  .debug_ranges  0x00000000      0x3c0 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
- .debug_macro   0x00000000      0x640 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
+ .debug_macro   0x00000000      0x647 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
  .debug_macro   0x00000000      0x8e0 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
  .debug_macro   0x00000000      0x16d src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
  .debug_macro   0x00000000      0x708 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
@@ -7608,21 +7612,22 @@ Discarded input sections
  .debug_macro   0x00000000       0x51 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
  .debug_macro   0x00000000       0x3e src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
  .debug_macro   0x00000000      0x3df src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
- .debug_macro   0x00000000       0x7b src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
+ .debug_macro   0x00000000       0x7c src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
  .debug_macro   0x00000000      0x21e src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
- .debug_macro   0x00000000       0x99 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
+ .debug_macro   0x00000000       0x9f src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
  .debug_macro   0x00000000      0x241 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
  .debug_macro   0x00000000      0x162 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
  .debug_macro   0x00000000       0x16 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
- .debug_macro   0x00000000       0x1c src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
+ .debug_macro   0x00000000       0x22 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
  .debug_macro   0x00000000      0x190 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
  .debug_macro   0x00000000       0x16 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
- .debug_line    0x00000000     0x11af src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
- .debug_str     0x00000000    0x854b8 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
+ .debug_line    0x00000000     0x11e9 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
+ .debug_str     0x00000000    0x85571 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
  .comment       0x00000000       0x5a src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
- .debug_frame   0x00000000      0x48c src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
+ .debug_frame   0x00000000      0x494 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
  .ARM.attributes
                 0x00000000       0x32 src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
+ .group         0x00000000        0x8 src/ASF/common/services/usb/udc/udc.o
  .group         0x00000000        0x8 src/ASF/common/services/usb/udc/udc.o
  .group         0x00000000        0x8 src/ASF/common/services/usb/udc/udc.o
  .group         0x00000000        0x8 src/ASF/common/services/usb/udc/udc.o
@@ -7757,14 +7762,14 @@ Discarded input sections
  .text.udc_sof_notify
                 0x00000000       0x40 src/ASF/common/services/usb/udc/udc.o
  .text.udc_process_setup
-                0x00000000      0x3d4 src/ASF/common/services/usb/udc/udc.o
+                0x00000000      0x418 src/ASF/common/services/usb/udc/udc.o
  .bss.cpu_irq_critical_section_counter
                 0x00000000        0x4 src/ASF/common/services/usb/udc/udc.o
  .bss.cpu_irq_prev_interrupt_state
                 0x00000000        0x1 src/ASF/common/services/usb/udc/udc.o
  .bss.udc_device_status
                 0x00000000        0x2 src/ASF/common/services/usb/udc/udc.o
- .bss.udc_ep_status.12089
+ .bss.udc_ep_status.12194
                 0x00000000        0x2 src/ASF/common/services/usb/udc/udc.o
  .bss.udc_iface_setting
                 0x00000000        0x1 src/ASF/common/services/usb/udc/udc.o
@@ -7774,15 +7779,21 @@ Discarded input sections
                 0x00000000        0x4 src/ASF/common/services/usb/udc/udc.o
  .bss.udc_ptr_iface
                 0x00000000        0x4 src/ASF/common/services/usb/udc/udc.o
+ .data.udc_string_desc
+                0x00000000       0x18 src/ASF/common/services/usb/udc/udc.o
  .data.udc_string_desc_languageid
                 0x00000000        0x4 src/ASF/common/services/usb/udc/udc.o
- .debug_info    0x00000000     0x1bf8 src/ASF/common/services/usb/udc/udc.o
- .debug_abbrev  0x00000000      0x41e src/ASF/common/services/usb/udc/udc.o
- .debug_loc     0x00000000      0x625 src/ASF/common/services/usb/udc/udc.o
+ .data.udc_string_manufacturer_name
+                0x00000000        0xc src/ASF/common/services/usb/udc/udc.o
+ .data.udc_string_product_name
+                0x00000000        0x7 src/ASF/common/services/usb/udc/udc.o
+ .debug_info    0x00000000     0x1cdb src/ASF/common/services/usb/udc/udc.o
+ .debug_abbrev  0x00000000      0x41c src/ASF/common/services/usb/udc/udc.o
+ .debug_loc     0x00000000      0x692 src/ASF/common/services/usb/udc/udc.o
  .debug_aranges
                 0x00000000       0x68 src/ASF/common/services/usb/udc/udc.o
- .debug_ranges  0x00000000      0x1b8 src/ASF/common/services/usb/udc/udc.o
- .debug_macro   0x00000000      0x594 src/ASF/common/services/usb/udc/udc.o
+ .debug_ranges  0x00000000      0x1f0 src/ASF/common/services/usb/udc/udc.o
+ .debug_macro   0x00000000      0x5b6 src/ASF/common/services/usb/udc/udc.o
  .debug_macro   0x00000000      0x8e0 src/ASF/common/services/usb/udc/udc.o
  .debug_macro   0x00000000      0x16d src/ASF/common/services/usb/udc/udc.o
  .debug_macro   0x00000000      0x708 src/ASF/common/services/usb/udc/udc.o
@@ -7888,15 +7899,16 @@ Discarded input sections
  .debug_macro   0x00000000       0x51 src/ASF/common/services/usb/udc/udc.o
  .debug_macro   0x00000000       0x3e src/ASF/common/services/usb/udc/udc.o
  .debug_macro   0x00000000      0x3df src/ASF/common/services/usb/udc/udc.o
- .debug_macro   0x00000000       0x7b src/ASF/common/services/usb/udc/udc.o
+ .debug_macro   0x00000000       0x7c src/ASF/common/services/usb/udc/udc.o
  .debug_macro   0x00000000      0x21e src/ASF/common/services/usb/udc/udc.o
- .debug_macro   0x00000000       0x99 src/ASF/common/services/usb/udc/udc.o
+ .debug_macro   0x00000000       0x9f src/ASF/common/services/usb/udc/udc.o
  .debug_macro   0x00000000      0x241 src/ASF/common/services/usb/udc/udc.o
  .debug_macro   0x00000000      0x162 src/ASF/common/services/usb/udc/udc.o
  .debug_macro   0x00000000       0x16 src/ASF/common/services/usb/udc/udc.o
- .debug_macro   0x00000000       0x1c src/ASF/common/services/usb/udc/udc.o
- .debug_line    0x00000000      0xc10 src/ASF/common/services/usb/udc/udc.o
- .debug_str     0x00000000    0x83b6e src/ASF/common/services/usb/udc/udc.o
+ .debug_macro   0x00000000       0x22 src/ASF/common/services/usb/udc/udc.o
+ .debug_macro   0x00000000      0x190 src/ASF/common/services/usb/udc/udc.o
+ .debug_line    0x00000000      0xc68 src/ASF/common/services/usb/udc/udc.o
+ .debug_str     0x00000000    0x850eb src/ASF/common/services/usb/udc/udc.o
  .comment       0x00000000       0x5a src/ASF/common/services/usb/udc/udc.o
  .debug_frame   0x00000000      0x12c src/ASF/common/services/usb/udc/udc.o
  .ARM.attributes
@@ -8039,7 +8051,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x40 src/ASF/common/utils/stdio/stdio_usb/stdio_usb.o
  .debug_ranges  0x00000000       0x30 src/ASF/common/utils/stdio/stdio_usb/stdio_usb.o
- .debug_macro   0x00000000      0x59a src/ASF/common/utils/stdio/stdio_usb/stdio_usb.o
+ .debug_macro   0x00000000      0x59d src/ASF/common/utils/stdio/stdio_usb/stdio_usb.o
  .debug_macro   0x00000000      0x8e0 src/ASF/common/utils/stdio/stdio_usb/stdio_usb.o
  .debug_macro   0x00000000      0x16d src/ASF/common/utils/stdio/stdio_usb/stdio_usb.o
  .debug_macro   0x00000000      0x708 src/ASF/common/utils/stdio/stdio_usb/stdio_usb.o
@@ -8145,16 +8157,16 @@ Discarded input sections
  .debug_macro   0x00000000       0x51 src/ASF/common/utils/stdio/stdio_usb/stdio_usb.o
  .debug_macro   0x00000000       0x3e src/ASF/common/utils/stdio/stdio_usb/stdio_usb.o
  .debug_macro   0x00000000      0x3df src/ASF/common/utils/stdio/stdio_usb/stdio_usb.o
- .debug_macro   0x00000000       0x81 src/ASF/common/utils/stdio/stdio_usb/stdio_usb.o
+ .debug_macro   0x00000000       0x82 src/ASF/common/utils/stdio/stdio_usb/stdio_usb.o
  .debug_macro   0x00000000      0x21e src/ASF/common/utils/stdio/stdio_usb/stdio_usb.o
- .debug_macro   0x00000000       0x99 src/ASF/common/utils/stdio/stdio_usb/stdio_usb.o
+ .debug_macro   0x00000000       0x9f src/ASF/common/utils/stdio/stdio_usb/stdio_usb.o
  .debug_macro   0x00000000      0x241 src/ASF/common/utils/stdio/stdio_usb/stdio_usb.o
  .debug_macro   0x00000000      0x162 src/ASF/common/utils/stdio/stdio_usb/stdio_usb.o
  .debug_macro   0x00000000       0x16 src/ASF/common/utils/stdio/stdio_usb/stdio_usb.o
  .debug_macro   0x00000000       0x22 src/ASF/common/utils/stdio/stdio_usb/stdio_usb.o
  .debug_macro   0x00000000      0x190 src/ASF/common/utils/stdio/stdio_usb/stdio_usb.o
  .debug_line    0x00000000      0xa51 src/ASF/common/utils/stdio/stdio_usb/stdio_usb.o
- .debug_str     0x00000000    0x8480a src/ASF/common/utils/stdio/stdio_usb/stdio_usb.o
+ .debug_str     0x00000000    0x84876 src/ASF/common/utils/stdio/stdio_usb/stdio_usb.o
  .comment       0x00000000       0x5a src/ASF/common/utils/stdio/stdio_usb/stdio_usb.o
  .debug_frame   0x00000000       0x7c src/ASF/common/utils/stdio/stdio_usb/stdio_usb.o
  .ARM.attributes
@@ -8291,11 +8303,11 @@ Discarded input sections
                 0x00000000        0xc src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
  .data.udi_apis
                 0x00000000        0x8 src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
- .debug_info    0x00000000     0x1321 src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
- .debug_abbrev  0x00000000      0x1d6 src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
+ .debug_info    0x00000000     0x1386 src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
+ .debug_abbrev  0x00000000      0x1db src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
  .debug_aranges
                 0x00000000       0x18 src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
- .debug_macro   0x00000000      0x5a8 src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
+ .debug_macro   0x00000000      0x5bd src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
  .debug_macro   0x00000000      0x8e0 src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
  .debug_macro   0x00000000      0x16d src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
  .debug_macro   0x00000000      0x708 src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
@@ -8401,16 +8413,16 @@ Discarded input sections
  .debug_macro   0x00000000       0x51 src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
  .debug_macro   0x00000000       0x3e src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
  .debug_macro   0x00000000      0x3df src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
- .debug_macro   0x00000000       0x7b src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
+ .debug_macro   0x00000000       0x7c src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
  .debug_macro   0x00000000      0x21e src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
- .debug_macro   0x00000000       0x99 src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
+ .debug_macro   0x00000000       0x9f src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
  .debug_macro   0x00000000      0x241 src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
  .debug_macro   0x00000000      0x162 src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
  .debug_macro   0x00000000       0x16 src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
- .debug_macro   0x00000000       0x1c src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
+ .debug_macro   0x00000000       0x22 src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
  .debug_macro   0x00000000      0x190 src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
- .debug_line    0x00000000      0x9a2 src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
- .debug_str     0x00000000    0x84c0e src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
+ .debug_line    0x00000000      0x9e2 src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
+ .debug_str     0x00000000    0x84cad src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
  .comment       0x00000000       0x5a src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
  .ARM.attributes
                 0x00000000       0x32 src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.o
@@ -11253,12 +11265,12 @@ Discarded input sections
  .debug_macro   0x00000000       0x49 src/main.o
  .debug_macro   0x00000000       0x10 src/main.o
  .debug_macro   0x00000000      0x21e src/main.o
- .debug_macro   0x00000000       0x81 src/main.o
- .debug_macro   0x00000000       0x99 src/main.o
+ .debug_macro   0x00000000       0x82 src/main.o
+ .debug_macro   0x00000000       0x9f src/main.o
  .debug_macro   0x00000000      0x241 src/main.o
  .debug_macro   0x00000000      0x162 src/main.o
  .debug_macro   0x00000000       0x16 src/main.o
- .debug_macro   0x00000000       0x1c src/main.o
+ .debug_macro   0x00000000       0x22 src/main.o
  .debug_macro   0x00000000      0x190 src/main.o
  .debug_macro   0x00000000       0x10 src/main.o
  .debug_macro   0x00000000      0x45d src/main.o
@@ -12277,37 +12289,37 @@ OUTPUT(ProjectOwlSat_FW.elf elf32-littlearm)
  .debug_ranges  0x00000be8       0x50 src/ASF/sam0/utils/syscalls/gcc/syscalls.o
  .debug_ranges  0x00000c38       0x18 src/main.o
 
-.debug_macro    0x00000000     0x6563
+.debug_macro    0x00000000     0x655b
  .debug_macro   0x00000000      0x58a src/ASF/sam0/drivers/extint/extint_sam_d_r_h/extint.o
  .debug_macro   0x0000058a       0x16 src/ASF/sam0/drivers/extint/extint_sam_d_r_h/extint.o
  .debug_macro   0x000005a0      0x5a9 src/ASF/sam0/drivers/sercom/usart/usart.o
  .debug_macro   0x00000b49       0x51 src/ASF/sam0/drivers/sercom/usart/usart.o
  .debug_macro   0x00000b9a      0x5a9 src/ASF/sam0/drivers/sercom/usart/usart_interrupt.o
- .debug_macro   0x00001143      0x861 src/drivers/os_usart.o
- .debug_macro   0x000019a4       0x4c src/drivers/os_usart.o
- .debug_macro   0x000019f0      0x5e2 src/ASF/sam0/drivers/usb/usb_sam_d_r/usb.o
- .debug_macro   0x00001fd2      0x598 src/ASF/sam0/drivers/sercom/sercom.o
- .debug_macro   0x0000256a      0x595 src/ASF/sam0/drivers/sercom/sercom_interrupt.o
- .debug_macro   0x00002aff      0x530 src/ASF/sam0/drivers/extint/extint_callback.o
- .debug_macro   0x0000302f      0x50b src/ASF/common/utils/interrupt/interrupt_sam_nvic.o
- .debug_macro   0x0000353a      0x546 src/ASF/sam0/boards/samd21_xplained_pro/board_init.o
- .debug_macro   0x00003a80      0x525 src/ASF/sam0/drivers/port/port.o
- .debug_macro   0x00003fa5      0x58a src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da_ha1/clock.o
- .debug_macro   0x0000452f      0x541 src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da_ha1/gclk.o
- .debug_macro   0x00004a70      0x51b src/ASF/sam0/drivers/system/pinmux/pinmux.o
- .debug_macro   0x00004f8b       0x12 src/ASF/sam0/drivers/system/pinmux/pinmux.o
- .debug_macro   0x00004f9d      0x54e src/ASF/sam0/drivers/system/system.o
- .debug_macro   0x000054eb      0x2f2 src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.o
- .debug_macro   0x000057dd       0x3a src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.o
- .debug_macro   0x00005817      0x1d6 src/ASF/sam0/utils/syscalls/gcc/syscalls.o
- .debug_macro   0x000059ed       0x97 src/ASF/sam0/utils/syscalls/gcc/syscalls.o
- .debug_macro   0x00005a84       0xf6 src/ASF/sam0/utils/syscalls/gcc/syscalls.o
- .debug_macro   0x00005b7a       0x16 src/ASF/sam0/utils/syscalls/gcc/syscalls.o
- .debug_macro   0x00005b90       0x10 src/ASF/sam0/utils/syscalls/gcc/syscalls.o
- .debug_macro   0x00005ba0       0x10 src/ASF/sam0/utils/syscalls/gcc/syscalls.o
- .debug_macro   0x00005bb0       0x35 src/ASF/sam0/utils/syscalls/gcc/syscalls.o
- .debug_macro   0x00005be5      0x122 src/ASF/sam0/utils/syscalls/gcc/syscalls.o
- .debug_macro   0x00005d07      0x85c src/main.o
+ .debug_macro   0x00001143      0x85d src/drivers/os_usart.o
+ .debug_macro   0x000019a0       0x4c src/drivers/os_usart.o
+ .debug_macro   0x000019ec      0x5e2 src/ASF/sam0/drivers/usb/usb_sam_d_r/usb.o
+ .debug_macro   0x00001fce      0x598 src/ASF/sam0/drivers/sercom/sercom.o
+ .debug_macro   0x00002566      0x595 src/ASF/sam0/drivers/sercom/sercom_interrupt.o
+ .debug_macro   0x00002afb      0x530 src/ASF/sam0/drivers/extint/extint_callback.o
+ .debug_macro   0x0000302b      0x50b src/ASF/common/utils/interrupt/interrupt_sam_nvic.o
+ .debug_macro   0x00003536      0x546 src/ASF/sam0/boards/samd21_xplained_pro/board_init.o
+ .debug_macro   0x00003a7c      0x525 src/ASF/sam0/drivers/port/port.o
+ .debug_macro   0x00003fa1      0x58a src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da_ha1/clock.o
+ .debug_macro   0x0000452b      0x541 src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da_ha1/gclk.o
+ .debug_macro   0x00004a6c      0x51b src/ASF/sam0/drivers/system/pinmux/pinmux.o
+ .debug_macro   0x00004f87       0x12 src/ASF/sam0/drivers/system/pinmux/pinmux.o
+ .debug_macro   0x00004f99      0x54e src/ASF/sam0/drivers/system/system.o
+ .debug_macro   0x000054e7      0x2f2 src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.o
+ .debug_macro   0x000057d9       0x3a src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.o
+ .debug_macro   0x00005813      0x1d6 src/ASF/sam0/utils/syscalls/gcc/syscalls.o
+ .debug_macro   0x000059e9       0x97 src/ASF/sam0/utils/syscalls/gcc/syscalls.o
+ .debug_macro   0x00005a80       0xf6 src/ASF/sam0/utils/syscalls/gcc/syscalls.o
+ .debug_macro   0x00005b76       0x16 src/ASF/sam0/utils/syscalls/gcc/syscalls.o
+ .debug_macro   0x00005b8c       0x10 src/ASF/sam0/utils/syscalls/gcc/syscalls.o
+ .debug_macro   0x00005b9c       0x10 src/ASF/sam0/utils/syscalls/gcc/syscalls.o
+ .debug_macro   0x00005bac       0x35 src/ASF/sam0/utils/syscalls/gcc/syscalls.o
+ .debug_macro   0x00005be1      0x122 src/ASF/sam0/utils/syscalls/gcc/syscalls.o
+ .debug_macro   0x00005d03      0x858 src/main.o
 
 .debug_line     0x00000000     0xd3ac
  .debug_line    0x00000000      0xca5 src/ASF/sam0/drivers/extint/extint_sam_d_r_h/extint.o
@@ -12329,43 +12341,43 @@ OUTPUT(ProjectOwlSat_FW.elf elf32-littlearm)
  .debug_line    0x0000bdda      0x407 src/ASF/sam0/utils/syscalls/gcc/syscalls.o
  .debug_line    0x0000c1e1     0x11cb src/main.o
 
-.debug_str      0x00000000    0x94074
+.debug_str      0x00000000    0x940e0
  .debug_str     0x00000000    0x81b63 src/ASF/sam0/drivers/extint/extint_sam_d_r_h/extint.o
                               0x82542 (size before relaxing)
  .debug_str     0x00081b63     0x1938 src/ASF/sam0/drivers/sercom/usart/usart.o
                               0x831a2 (size before relaxing)
  .debug_str     0x0008349b      0x208 src/ASF/sam0/drivers/sercom/usart/usart_interrupt.o
                               0x823e8 (size before relaxing)
- .debug_str     0x000836a3     0xc1b8 src/drivers/os_usart.o
-                              0x8f0d8 (size before relaxing)
- .debug_str     0x0008f85b     0x14c3 src/ASF/sam0/drivers/usb/usb_sam_d_r/usb.o
+ .debug_str     0x000836a3     0xc224 src/drivers/os_usart.o
+                              0x8f144 (size before relaxing)
+ .debug_str     0x0008f8c7     0x14c3 src/ASF/sam0/drivers/usb/usb_sam_d_r/usb.o
                               0x837c7 (size before relaxing)
- .debug_str     0x00090d1e      0x245 src/ASF/sam0/drivers/sercom/sercom.o
+ .debug_str     0x00090d8a      0x245 src/ASF/sam0/drivers/sercom/sercom.o
                               0x823d7 (size before relaxing)
- .debug_str     0x00090f63      0x158 src/ASF/sam0/drivers/sercom/sercom_interrupt.o
+ .debug_str     0x00090fcf      0x158 src/ASF/sam0/drivers/sercom/sercom_interrupt.o
                               0x8223a (size before relaxing)
- .debug_str     0x000910bb      0x131 src/ASF/sam0/drivers/extint/extint_callback.o
+ .debug_str     0x00091127      0x131 src/ASF/sam0/drivers/extint/extint_callback.o
                               0x81539 (size before relaxing)
- .debug_str     0x000911ec       0x66 src/ASF/common/utils/interrupt/interrupt_sam_nvic.o
+ .debug_str     0x00091258       0x66 src/ASF/common/utils/interrupt/interrupt_sam_nvic.o
                               0x80cf6 (size before relaxing)
- .debug_str     0x00091252      0x301 src/ASF/sam0/boards/samd21_xplained_pro/board_init.o
+ .debug_str     0x000912be      0x301 src/ASF/sam0/boards/samd21_xplained_pro/board_init.o
                               0x84fe4 (size before relaxing)
- .debug_str     0x00091553       0x5e src/ASF/sam0/drivers/port/port.o
+ .debug_str     0x000915bf       0x5e src/ASF/sam0/drivers/port/port.o
                               0x81122 (size before relaxing)
- .debug_str     0x000915b1     0x178e src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da_ha1/clock.o
+ .debug_str     0x0009161d     0x178e src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da_ha1/clock.o
                               0x83f79 (size before relaxing)
- .debug_str     0x00092d3f      0x1d9 src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da_ha1/gclk.o
+ .debug_str     0x00092dab      0x1d9 src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da_ha1/gclk.o
                               0x819b9 (size before relaxing)
- .debug_str     0x00092f18      0x179 src/ASF/sam0/drivers/system/pinmux/pinmux.o
+ .debug_str     0x00092f84      0x179 src/ASF/sam0/drivers/system/pinmux/pinmux.o
                               0x81198 (size before relaxing)
- .debug_str     0x00093091       0x47 src/ASF/sam0/drivers/system/system.o
+ .debug_str     0x000930fd       0x47 src/ASF/sam0/drivers/system/system.o
                               0x80dd3 (size before relaxing)
- .debug_str     0x000930d8      0x8f0 src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.o
+ .debug_str     0x00093144      0x8f0 src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.o
                               0x6bdf6 (size before relaxing)
- .debug_str     0x000939c8      0x685 src/ASF/sam0/utils/syscalls/gcc/syscalls.o
+ .debug_str     0x00093a34      0x685 src/ASF/sam0/utils/syscalls/gcc/syscalls.o
                                0x7450 (size before relaxing)
- .debug_str     0x0009404d       0x27 src/main.o
-                              0x8e44b (size before relaxing)
+ .debug_str     0x000940b9       0x27 src/main.o
+                              0x8e4b7 (size before relaxing)
 
 .debug_frame    0x00000000     0x12dc
  .debug_frame   0x00000000       0xa8 src/ASF/sam0/drivers/extint/extint_sam_d_r_h/extint.o
@@ -12968,7 +12980,9 @@ stdio_base                                        src/ASF/sam0/utils/stdio/write
                                                   src/ASF/common/utils/stdio/stdio_usb/stdio_usb.o
                                                   src/ASF/sam0/utils/stdio/read.o
 stdio_usb_disable                                 src/ASF/common/utils/stdio/stdio_usb/stdio_usb.o
+                                                  src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
 stdio_usb_enable                                  src/ASF/common/utils/stdio/stdio_usb/stdio_usb.o
+                                                  src/ASF/common/services/usb/class/cdc/device/udi_cdc.o
 stdio_usb_getchar                                 src/ASF/common/utils/stdio/stdio_usb/stdio_usb.o
 stdio_usb_init                                    src/ASF/common/utils/stdio/stdio_usb/stdio_usb.o
 stdio_usb_putchar                                 src/ASF/common/utils/stdio/stdio_usb/stdio_usb.o

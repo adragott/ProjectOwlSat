@@ -112,14 +112,18 @@ src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.d \
  ../src/ASF/common/utils/interrupt/interrupt_sam_nvic.h \
  ../src/ASF/common/services/usb/class/cdc/device/udi_cdc_conf.h \
  ../src/ASF/common/services/usb/class/cdc/usb_protocol_cdc.h \
- ../src/ASF/common/services/usb/udc/udd.h \
+ ../src/ASF/common/utils/stdio/stdio_usb/stdio_usb.h \
+ ../src/ASF/common/services/usb/udc/udc.h \
  ../src/ASF/common/services/usb/usb_protocol.h \
  ../src/ASF/common/services/usb/usb_atmel.h \
  ../src/ASF/common/services/usb/udc/udc_desc.h \
  ../src/ASF/common/services/usb/udc/udi.h \
- ../src/ASF/common/services/usb/udc/udc_desc.h \
+ ../src/ASF/common/services/usb/udc/udd.h \
  ../src/ASF/common/services/usb/class/cdc/device/udi_cdc.h \
- ../src/ASF/common/services/usb/udc/udi.h
+ ../src/ASF/common/services/usb/udc/udd.h \
+ ../src/ASF/common/services/usb/udc/udc_desc.h \
+ ../src/ASF/common/services/usb/udc/udi.h \
+ ../src/ASF/common/services/usb/class/cdc/device/udi_cdc.h
 
 ../src/config/conf_usb.h:
 
@@ -347,7 +351,9 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 
 ../src/ASF/common/services/usb/class/cdc/usb_protocol_cdc.h:
 
-../src/ASF/common/services/usb/udc/udd.h:
+../src/ASF/common/utils/stdio/stdio_usb/stdio_usb.h:
+
+../src/ASF/common/services/usb/udc/udc.h:
 
 ../src/ASF/common/services/usb/usb_protocol.h:
 
@@ -357,8 +363,14 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 
 ../src/ASF/common/services/usb/udc/udi.h:
 
-../src/ASF/common/services/usb/udc/udc_desc.h:
+../src/ASF/common/services/usb/udc/udd.h:
 
 ../src/ASF/common/services/usb/class/cdc/device/udi_cdc.h:
 
+../src/ASF/common/services/usb/udc/udd.h:
+
+../src/ASF/common/services/usb/udc/udc_desc.h:
+
 ../src/ASF/common/services/usb/udc/udi.h:
+
+../src/ASF/common/services/usb/class/cdc/device/udi_cdc.h:
