@@ -3,9 +3,11 @@
 #include "os_usart.h"
 int main (void)
 {
+	system_interrupt_enable_global();
+	sleepmgr_init();
+	
 	system_init();
 	owlsat_init();
-	
 	DEBUG("Hello World\n");
 	for(;;)
 	{

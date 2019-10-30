@@ -8,10 +8,6 @@ src\ASF\common2\services\delay\sam0\systick_counter.c
 
 src\ASF\common2\components\memory\sd_mmc\sd_mmc_spi.c
 
-src\ASF\common2\components\memory\serial_flash\at25dfx\at25dfx.c
-
-src\ASF\sam0\drivers\extint\extint_sam_d_r_h\extint.c
-
 src\ASF\sam0\drivers\rtc\rtc_sam_d_r_h\rtc_calendar.c
 
 src\ASF\sam0\drivers\sercom\i2c\i2c_sam0\i2c_master.c
@@ -21,14 +17,6 @@ src\ASF\sam0\drivers\sercom\i2c\i2c_sam0\i2c_master_interrupt.c
 src\ASF\sam0\drivers\sercom\usart\usart.c
 
 src\ASF\sam0\drivers\sercom\usart\usart_interrupt.c
-
-src\ASF\sam0\drivers\usb\stack_interface\usb_device_udd.c
-
-src\ASF\sam0\drivers\usb\stack_interface\usb_dual.c
-
-src\ASF\sam0\utils\stdio\read.c
-
-src\ASF\sam0\utils\stdio\write.c
 
 src\ASF\thirdparty\fatfs\fatfs-port-r0.09\diskio.c
 
@@ -44,25 +32,11 @@ src\util\os_sys_mem.c
 
 src\util\os_sys_time.c
 
-src\ASF\sam0\drivers\usb\usb_sam_d_r\usb.c
-
 src\ASF\sam0\drivers\sercom\spi\spi.c
 
 src\ASF\sam0\drivers\sercom\sercom.c
 
 src\ASF\sam0\drivers\sercom\sercom_interrupt.c
-
-src\ASF\sam0\drivers\extint\extint_callback.c
-
-src\ASF\common\services\sleepmgr\samd\sleepmgr.c
-
-src\ASF\common\services\usb\class\cdc\device\udi_cdc.c
-
-src\ASF\common\services\usb\udc\udc.c
-
-src\ASF\common\utils\stdio\stdio_usb\stdio_usb.c
-
-src\ASF\common\services\usb\class\cdc\device\udi_cdc_desc.c
 
 src\ASF\common\services\storage\ctrl_access\ctrl_access.c
 

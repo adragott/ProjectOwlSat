@@ -56,9 +56,6 @@
 #include <compiler.h>
 #include <status_codes.h>
 
-// From module: Common files for AT25DFx SerialFlash drivers
-#include <at25dfx.h>
-
 // From module: Delay routines
 #include <delay.h>
 
@@ -148,7 +145,7 @@
 // From module: USB CDC Protocol
 #include <usb_protocol_cdc.h>
 
-// From module: USB Device CDC (Single Interface Device)
+// From module: USB Device CDC (Composite Device)
 #include <udi_cdc.h>
 
 // From module: USB Device CDC Standard I/O (stdio) - SAM0 implementation

@@ -15,7 +15,7 @@
 #elif
 	#define ENABLE_DEBUG	(0)
 #endif
-#define ENABLE_USB		(0)
+#define ENABLE_USB		(1)
 #define ENABLE_SD		(1)
 #define ENABLE_GPS		(0)
 #define ENABLE_IMU		(1)
