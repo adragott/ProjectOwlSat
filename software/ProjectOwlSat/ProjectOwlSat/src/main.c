@@ -1,53 +1,32 @@
-/**
- * \file
- *
- * \brief Empty user application template
- *
- */
+#include "project_owlsat.h"
+#include "main21.h"
+#include "os_usart.h"
+#include "os_i2c.h"
 
-/**
- * \mainpage User Application template doxygen documentation
- *
- * \par Empty user application template
- *
- * This is a bare minimum user application template.
- *
- * For documentation of the board, go \ref group_common_boards "here" for a link
- * to the board-specific documentation.
- *
- * \par Content
- *
- * -# Include the ASF header files (through asf.h)
- * -# Minimal main function that starts with a call to system_init()
- * -# Basic usage of on-board LED and button
- * -# "Insert application code here" comment
- *
- */
-
-/*
- * Include header files for all drivers that have been imported from
- * Atmel Software Framework (ASF).
- */
-/*
- * Support and FAQ: visit <a href="https://www.microchip.com/support/">Microchip Support</a>
- */
-#include <asf.h>
-
-int main (void)
+int main(void)
 {
+	irq_initialize_vectors();
+	cpu_irq_enable();
+
+	// Initialize the sleep manager
+	sleepmgr_init();
 	system_init();
+	system_interrupt_enable_global();
+	//os_usart_init();
+	//os_usart_service_start();
+	//PDEBUG("hi\r\n");
+	ui_init();
+	ui_powerdown();
 
-	/* Insert application code here, after the board has been initialized. */
 
-	/* This skeleton code simply sets the LED to the state of the button. */
-	while (1) {
-		/* Is button pressed? */
-		if (port_pin_get_input_level(BUTTON_0_PIN) == BUTTON_0_ACTIVE) {
-			/* Yes, so turn LED on. */
-			port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE);
-		} else {
-			/* No, so turn LED off. */
-			port_pin_set_output_level(LED_0_PIN, !LED_0_ACTIVE);
-		}
+	// Start USB stack to authorize VBus monitoring
+	udc_start();
+	// The main loop manages only the power mode
+	// because the USB management is done by interrupt
+	for(;;)
+	{
+		sleepmgr_enter_sleep();
 	}
+	
+	return 0;
 }
