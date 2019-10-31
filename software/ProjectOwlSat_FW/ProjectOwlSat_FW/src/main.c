@@ -1,21 +1,25 @@
-#include <asf.h>
+#include "project_owlsat.h"
 #include "main21.h"
 #include "os_usart.h"
-int main (void)
+#include "os_i2c.h"
+
+int main(void)
 {
-	system_interrupt_enable_global();
+	irq_initialize_vectors();
+	cpu_irq_enable();
+
+	// Initialize the sleep manager
 	sleepmgr_init();
-	
 	system_init();
-	owlsat_init();
-	DEBUG("Hello World\n");
+	system_interrupt_enable_global();
+	delay_init();
+	os_usart_init();
+	os_usart_service_start();
+	PDEBUG("hi\r\n");
 	for(;;)
 	{
 		
 	}
-}
-
-void owlsat_init(void)
-{
-	os_usart_init();
+	
+	return 0;
 }

@@ -10,11 +10,7 @@
 #include <asf.h>
 #include <inttypes.h>
 
-#ifdef DEBUG
-	#define ENABLE_DEBUG	(1)
-#elif
-	#define ENABLE_DEBUG	(0)
-#endif
+#define ENABLE_DEBUG	(1)
 #define ENABLE_USB		(1)
 #define ENABLE_SD		(1)
 #define ENABLE_GPS		(0)
@@ -60,9 +56,9 @@ typedef union i32
 	int32_t v;
 }i32;
 
- #define Stringize( L )     #L
- #define MakeString( M, L ) M(L)
- #define $Line MakeString( Stringize, __LINE__ )
- #define Reminder __FILE__ "(" $Line ") : Reminder: "
+#define Stringize( L )     #L
+#define MakeString( M, L ) M(L)
+#define $Line MakeString( Stringize, __LINE__ )
+#define Reminder __FILE__ "(" $Line ") : Reminder: "
 
 #endif

@@ -6,7 +6,7 @@
  */ 
 
 #include "os_i2c.h"
-
+#include <string.h>
 #define OS_I2C_BUFFER_SIZE 256
 
 struct i2c_master_module os_i2c_mod;

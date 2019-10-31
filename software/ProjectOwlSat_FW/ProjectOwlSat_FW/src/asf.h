@@ -59,10 +59,6 @@
 // From module: Delay routines
 #include <delay.h>
 
-// From module: EXTINT - External Interrupt (Callback APIs)
-#include <extint.h>
-#include <extint_callback.h>
-
 // From module: FatFS file system
 #include <diskio.h>
 #include <ff.h>
@@ -87,9 +83,6 @@
 // From module: RTC - Real Time Counter in Calendar Mode (Polled APIs)
 #include <rtc_calendar.h>
 #include <rtc_tamper.h>
-
-// From module: SAM D21/R21/D11/L21/DA1/L22 USB Dual role interface
-#include <usb_dual.h>
 
 // From module: SD/MMC stack on SPI interface
 #include <sd_mmc.h>
@@ -139,20 +132,8 @@
 // From module: Supported ports of FatFS
 #include <diskio.h>
 
-// From module: USB - Universal Serial Bus
-#include <usb.h>
-
-// From module: USB CDC Protocol
-#include <usb_protocol_cdc.h>
-
-// From module: USB Device CDC (Composite Device)
-#include <udi_cdc.h>
-
-// From module: USB Device CDC Standard I/O (stdio) - SAM0 implementation
-#include <stdio_usb.h>
-
-// From module: USB Device Stack Core (Common API)
-#include <udc.h>
-#include <udd.h>
+// From module: TCC - Timer Counter for Control Applications (Callback APIs)
+#include <tcc.h>
+#include <tcc_callback.h>
 
 #endif // ASF_H

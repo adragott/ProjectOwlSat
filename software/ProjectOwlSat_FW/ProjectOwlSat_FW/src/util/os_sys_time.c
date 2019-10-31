@@ -14,5 +14,5 @@ void os_sys_time_init(void)
 
 uint32_t os_millis(void)
 {
-
+	return 0;
 }

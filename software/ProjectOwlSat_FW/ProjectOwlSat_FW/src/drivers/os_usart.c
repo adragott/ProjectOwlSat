@@ -23,9 +23,9 @@ static void os_gps_init(void);
 
 void os_usart_init(void)
 {
-	#if ENABLE_DEBUG
+	//#if ENABLE_DEBUG
 	os_debug_init();
-	#endif
+	//#endif
 	
 	#if ENABLE_GPS
 	os_gps_init();
@@ -36,14 +36,14 @@ static void os_debug_init(void)
 {
 	struct usart_config debug_conf;
 	usart_get_config_defaults(&debug_conf);
-	debug_conf.baudrate =		DEBUG_USART_MODULE;
+	debug_conf.baudrate =		DEBUG_USART_BAUDRATE;
 	debug_conf.character_size = USART_CHARACTER_SIZE_8BIT;
 	debug_conf.parity =			USART_PARITY_NONE;
 	debug_conf.stopbits =		USART_STOPBITS_1;
 	debug_conf.pinmux_pad0 =	DEBUG_USART_PINMUX_PAD0;
-	debug_conf.pinmux_pad1 =	DEBUG_USART_PINMUX_PAD0;
-	debug_conf.pinmux_pad2 =	DEBUG_USART_PINMUX_PAD0;
-	debug_conf.pinmux_pad3 =	DEBUG_USART_PINMUX_PAD0;
+	debug_conf.pinmux_pad1 =	DEBUG_USART_PINMUX_PAD1;
+	debug_conf.pinmux_pad2 =	DEBUG_USART_PINMUX_PAD2;
+	debug_conf.pinmux_pad3 =	DEBUG_USART_PINMUX_PAD3;
 	debug_conf.mux_setting =	DEBUG_USART_MUX_SETTING;
 		
 	usart_init(&debug_mod, DEBUG_USART_MODULE, &debug_conf);
